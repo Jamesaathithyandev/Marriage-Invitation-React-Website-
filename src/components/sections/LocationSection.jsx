@@ -1,0 +1,186 @@
+import React from 'react';
+import { WEDDING_VENUE } from '../../data/weddingData';
+import { LotusMotif } from '../decorative/LotusMotif';
+import { RoyalOrnament } from '../decorative/RoyalOrnament';
+import { OrnamentalDivider } from '../decorative/OrnamentalDivider';
+
+/**
+ * LocationSection — Venue & Map
+ *
+ * Features:
+ * - Palace doorway arch framing the venue details
+ * - Satellite map embed in a royal gold-bordered frame (no Maps API)
+ * - "Get Directions" triggers the curtain transition, then opens Google Maps
+ * - Full address from centralized data
+ */
+export function LocationSection({ onExternalNavigate }) {
+
+  const handleGetDirections = () => {
+    const url = WEDDING_VENUE.googleMapsSearchUrl;
+    if (onExternalNavigate) {
+      onExternalNavigate(url);
+    } else {
+      window.open(url, '_blank', 'noopener');
+    }
+  };
+
+  return (
+    <section
+      id="venue"
+      className="relative w-full py-16 sm:py-24 px-4 sm:px-6 md:px-8 bg-ivory paper-grain overflow-hidden"
+      aria-label="Wedding Venue and Location"
+    >
+      {/* Background Atmosphere */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-b from-emerald-deep/5 via-transparent to-gold-champagne/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 jali-watermark opacity-[0.15]" />
+      </div>
+
+      <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
+
+        {/* Section Header */}
+        <div className="text-center mb-10 sm:mb-12">
+          <div className="inline-flex items-center justify-center gap-3 mb-2">
+            <div className="h-[0.5px] w-8 sm:w-14 bg-gradient-to-r from-transparent to-gold" />
+            <span className="font-caps text-[10px] sm:text-xs tracking-monumental text-gold-deep uppercase font-semibold">
+              Where To Find Us
+            </span>
+            <div className="h-[0.5px] w-8 sm:w-14 bg-gradient-to-l from-transparent to-gold" />
+          </div>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-palace-green font-normal tracking-wide">
+            The Venue
+          </h2>
+          <div className="mt-3 flex justify-center">
+            <OrnamentalDivider motif="lotus" lineStyle="dual" className="max-w-xs" />
+          </div>
+        </div>
+
+        {/* ── PALACE DOORWAY VENUE ARCH ────────────────────── */}
+        <div className="w-full max-w-lg mb-8">
+          <svg viewBox="0 0 320 60" fill="none" className="w-full h-auto text-gold" aria-hidden="true">
+            {/* Grand cusped entrance arch */}
+            <path
+              d="M10 58 C10 28 36 22 60 14 C78 8 94 12 108 6 C117 3 122 0 160 0 C198 0 203 3 212 6 C226 12 242 8 260 14 C284 22 310 28 310 58"
+              stroke="currentColor" strokeWidth="1.2" fill="none"
+            />
+            <path
+              d="M20 58 C20 34 42 28 64 21 C80 15 95 19 109 14 C118 11 123 7 160 7 C197 7 202 11 211 14 C225 19 240 15 256 21 C278 28 300 34 300 58"
+              stroke="currentColor" strokeWidth="0.7" strokeDasharray="3 2" fill="none" opacity="0.65"
+            />
+            {/* Keystone */}
+            <circle cx="160" cy="0" r="4" fill="#C6A66B"/>
+            <circle cx="160" cy="0" r="2" fill="#F3E4C8"/>
+            {/* Bead accents */}
+            {[[108,6],[212,6],[60,14],[260,14]].map(([cx,cy],i) => (
+              <circle key={i} cx={cx} cy={cy} r="1.8" fill="#C6A66B"/>
+            ))}
+            {/* Spandrel foliage */}
+            <path d="M25 46 C32 34 44 30 52 36 C44 38 36 44 25 46 Z" fill="#174C3C" fillOpacity="0.2"/>
+            <path d="M295 46 C288 34 276 30 268 36 C276 38 284 44 295 46 Z" fill="#174C3C" fillOpacity="0.2"/>
+          </svg>
+        </div>
+
+        {/* ── EMBEDDED MAP CARD ─────────────────────────────── */}
+        <div className="w-full border border-gold/45 rounded-2xl p-1 bg-gradient-to-b from-gold/20 via-transparent to-gold/10 shadow-palace-elevation overflow-hidden">
+          <div className="relative border border-gold/20 rounded-xl overflow-hidden bg-ivory-light/95">
+
+            {/* Map Frame Header */}
+            <div className="relative bg-gradient-to-r from-palace-green via-emerald-deep to-palace-dark px-5 py-3 flex items-center justify-between">
+              <div className="absolute inset-0 jali-watermark opacity-[0.15] pointer-events-none" />
+              <div className="relative z-10 flex items-center gap-2">
+                <LotusMotif variant="crest" size="sm" className="w-5 h-5 opacity-80" />
+                <div>
+                  <p className="font-display text-sm sm:text-base font-normal tracking-wide text-gold-champagne leading-tight">
+                    {WEDDING_VENUE.name}
+                  </p>
+                  <p className="font-caps text-[8px] sm:text-[9px] tracking-monumental text-gold/60 uppercase">
+                    Bannerghatta Road · Bangalore
+                  </p>
+                </div>
+              </div>
+              {/* Satellite badge */}
+              <div className="relative z-10 px-2 py-0.5 rounded border border-gold/40 bg-gold/10">
+                <span className="font-caps text-[8px] tracking-wider text-gold uppercase">Satellite View</span>
+              </div>
+            </div>
+
+            {/* Google Maps Satellite Iframe */}
+            <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
+              <iframe
+                title="Tranquil Wedding Venue - Bannerghatta Road, Bangalore"
+                src="https://maps.google.com/maps?q=Tranquil+Wedding+Venue,+Sakalavara+Road,+Bannerghatta+Road,+Bangalore+560083,+India&t=k&z=17&output=embed&iwloc=near"
+                className="absolute inset-0 w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              {/* Vignette overlay to blend with our palette */}
+              <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_40px_rgba(198,166,107,0.12)]" />
+              {/* Corner Bead Accents over map */}
+              {['top-2 left-2', 'top-2 right-2', 'bottom-2 left-2', 'bottom-2 right-2'].map((pos, i) => (
+                <div key={i} className={`absolute ${pos} w-3 h-3 pointer-events-none`}>
+                  <div className="w-2 h-2 rounded-full bg-gold/70 shadow-sm" />
+                </div>
+              ))}
+            </div>
+
+            {/* Address Strip */}
+            <div className="px-5 sm:px-6 py-4 border-t border-gold/25 bg-ivory-light/90">
+              <div className="flex items-start gap-3">
+                {/* Palace-pin icon (SVG) */}
+                <svg viewBox="0 0 14 20" fill="none" className="w-3.5 h-5 flex-shrink-0 mt-0.5 text-gold" aria-hidden="true">
+                  <path d="M7 0 C3.13 0 0 3.13 0 7 C0 12.25 7 20 7 20 C7 20 14 12.25 14 7 C14 3.13 10.87 0 7 0 Z" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="0.8"/>
+                  <circle cx="7" cy="7" r="2.5" fill="currentColor"/>
+                </svg>
+                <div>
+                  <p className="font-serif font-semibold text-sm sm:text-base text-palace-green leading-tight mb-1">
+                    {WEDDING_VENUE.name}
+                  </p>
+                  {WEDDING_VENUE.address.map((line, i) => (
+                    <p key={i} className="font-serif text-xs sm:text-sm text-palace-green/75 leading-relaxed">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* ── GET DIRECTIONS BUTTON ────────────────────────── */}
+        <button
+          onClick={handleGetDirections}
+          className="
+            group relative mt-6 flex items-center justify-center gap-2.5
+            w-full max-w-xs px-6 py-4 rounded-xl
+            border border-gold/50 bg-gradient-to-b from-ivory to-ivory-dark
+            hover:from-emerald-deep hover:to-palace-green
+            shadow-gold-subtle hover:shadow-palace-elevation
+            text-palace-green hover:text-gold-champagne
+            transition-all duration-400
+          "
+          aria-label="Open Google Maps directions to Tranquil Wedding Venue"
+        >
+          {/* Navigation Arrow Icon */}
+          <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4 text-gold group-hover:text-gold-champagne flex-shrink-0 transition-colors duration-300" aria-hidden="true">
+            <path d="M10 2 L18 10 L10 18 L10 13 C5.58 13 2 14.58 2 18 C2 10 5.58 7 10 7 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span className="font-caps text-xs sm:text-sm tracking-royal font-semibold uppercase">
+            Get Directions
+          </span>
+          {/* Hover shimmer */}
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        </button>
+
+        {/* Decorative bottom pillar pair */}
+        <div className="w-full max-w-xs mt-8 opacity-30">
+          <RoyalOrnament variant="border-strip" className="opacity-60 text-gold" />
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+export default LocationSection;
