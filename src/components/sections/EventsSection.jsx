@@ -137,7 +137,7 @@ export function EventsSection() {
                         </div>
 
                         {/* Event Title */}
-                        <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-gold-foil font-normal tracking-wide leading-tight my-1.5">
+                        <h3 className="font-caps text-xl sm:text-2xl md:text-3xl text-gold-foil font-semibold tracking-wider leading-tight my-1.5">
                           {event.title}
                         </h3>
 
