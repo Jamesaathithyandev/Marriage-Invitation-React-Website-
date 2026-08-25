@@ -115,7 +115,21 @@ export function Intro({
         </div>
       </div>
 
-      {/* ========================================================================= */}
+            {/* ── Top Right Quick Skip Button (Always visible on all screen sizes) ── */}
+      <div className="absolute top-3 right-3 sm:top-5 sm:right-6 z-50">
+        <button
+          onClick={handleProceed}
+          className="group inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 rounded-full border border-gold/70 bg-emerald-deep/90 hover:bg-gold hover:text-emerald-night text-gold-champagne backdrop-blur-md transition-all duration-300 shadow-[0_2px_10px_rgba(0,0,0,0.5)] text-[10px] sm:text-xs font-caps tracking-royal font-semibold uppercase cursor-pointer active:scale-95"
+          aria-label="Quick Skip Intro"
+        >
+          <span>Skip Intro</span>
+          <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5 text-gold group-hover:text-emerald-night group-hover:translate-x-0.5 transition-all">
+            <path d="M6 3 L11 8 L6 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+{/* ========================================================================= */
       {/* TOP HEADER: Sacred Invocation & Auspicious Blessing */}
       {/* ========================================================================= */}
       <header className="relative z-20 pt-6 sm:pt-10 px-4 text-center w-full max-w-lg mx-auto">
@@ -254,28 +268,27 @@ export function Intro({
       {/* ========================================================================= */}
       {/* BOTTOM CONTROLS: Luxury Stationery "Skip Intro" Button */}
       {/* ========================================================================= */}
-      <footer className="relative z-30 pb-6 sm:pb-8 px-4 w-full flex flex-col items-center">
+      <footer className="relative z-30 pb-4 sm:pb-6 px-4 w-full flex flex-col items-center flex-shrink-0">
         <button
           onClick={handleProceed}
-          className="group relative inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 rounded-full border border-gold/40 bg-palace-deep/50 hover:bg-gold/15 backdrop-blur-md text-gold-bright hover:text-ivory transition-all duration-300 shadow-lg hover:shadow-gold-glow hover:border-gold active:scale-95 min-h-[44px]"
+          className="group relative inline-flex items-center justify-center gap-2.5 px-7 sm:px-9 py-2.5 sm:py-3 rounded-full border-2 border-gold bg-gradient-to-r from-emerald-deep via-palace-green to-emerald-night hover:from-gold hover:to-gold-deep text-gold-light hover:text-emerald-night backdrop-blur-md transition-all duration-300 shadow-[0_0_20px_rgba(198,166,107,0.45)] hover:shadow-[0_0_28px_rgba(198,166,107,0.85)] active:scale-95 min-h-[44px] cursor-pointer"
           aria-label="Skip Introduction and Enter Invitation"
         >
-          {/* Subtle Button Hairline Glow */}
-          <span className="font-caps text-[11px] sm:text-xs tracking-royal uppercase font-semibold">
-            Skip Intro
+          <span className="font-caps text-xs sm:text-sm tracking-royal uppercase font-bold text-gold-champagne group-hover:text-palace-dark">
+            Skip Intro • Enter Invitation
           </span>
           <svg
             viewBox="0 0 20 20"
             fill="none"
-            className="w-3.5 h-3.5 text-gold group-hover:translate-x-1 transition-transform duration-300"
+            className="w-4 h-4 text-gold group-hover:text-palace-dark group-hover:translate-x-1 transition-transform duration-300"
           >
-            <path d="M4 10 H14 M10 6 L14 10 L10 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M4 10 H14 M10 6 L14 10 L10 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
 
         {/* Understated Visual Subtitle */}
-        <span className="text-[10px] font-caps tracking-monumental text-gold/40 uppercase mt-2.5">
-          Palace Experience • Tap to Enter
+        <span className="text-[9px] sm:text-[10px] font-caps tracking-monumental text-gold/70 uppercase mt-1.5">
+          Palace Experience • Click to Enter
         </span>
       </footer>
     </div>
