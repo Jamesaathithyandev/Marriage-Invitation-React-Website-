@@ -129,7 +129,7 @@ export function Intro({
         </button>
       </div>
 
-{/* ========================================================================= */
+      {/* ========================================================================= */}
       {/* TOP HEADER: Sacred Invocation & Auspicious Blessing */}
       {/* ========================================================================= */}
       <header className="relative z-20 pt-6 sm:pt-10 px-4 text-center w-full max-w-lg mx-auto">
