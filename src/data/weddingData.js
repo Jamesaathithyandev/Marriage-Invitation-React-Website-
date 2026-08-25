@@ -44,40 +44,40 @@ export const WEDDING_EVENTS = [
   {
     id: 'haldi',
     title: 'Haldi',
-    day: 'Sunday',
-    date: '25th October 2026',
-    time: '10:00 AM – 11:00 AM',
+    day: 'Saturday',
+    date: '24th October 2026',
+    time: '3:00 PM onwards',
     description: 'A vibrant ritual of sacred turmeric, love, laughter, and family blessings.',
     motif: 'sun-bloom',
     accentColor: '#C6A66B', // Antique Gold
+  },
+  {
+    id: 'sangeet',
+    title: 'Sangeet',
+    day: 'Saturday',
+    date: '24th October 2026',
+    time: '7:00 PM onwards',
+    description: 'A magical royal evening of music, dance, laughter, and celebratory performances.',
+    motif: 'peacock',
+    accentColor: '#315A78', // Muted Royal Blue
   },
   {
     id: 'muhurtham',
     title: 'Muhurtham Ceremony',
     day: 'Sunday',
     date: '25th October 2026',
-    time: '3:00 PM onwards',
+    time: '10:00 AM – 11:00 AM',
     description: 'The sacred union of two souls amidst Vedic hymns, holy fire, and timeless traditions.',
     motif: 'palace-crest',
     accentColor: '#174C3C', // Deep Emerald
     isMain: true,
   },
   {
-    id: 'sangeet',
-    title: 'Sangeet',
-    day: 'Sunday',
-    date: '25th October 2026',
-    time: '6:30 PM onwards',
-    description: 'A magical royal evening of music, dance, laughter, and celebratory performances.',
-    motif: 'peacock',
-    accentColor: '#315A78', // Muted Royal Blue
-  },
-  {
     id: 'reception',
     title: 'Reception',
     day: 'Sunday',
     date: '25th October 2026',
-    time: '7:00 PM onwards',
+    time: '6:30 PM onwards',
     description: 'A grand celebratory banquet with dinner, toasts, and joyful beginnings.',
     motif: 'lotus-crest',
     accentColor: '#C6A66B', // Antique Gold
@@ -85,7 +85,7 @@ export const WEDDING_EVENTS = [
 ];
 
 export const WEDDING_DATE_CONFIG = {
-  targetDateISO: '2026-10-25T15:00:00', // Muhurtham Ceremony Time
+  targetDateISO: '2026-10-25T10:00:00', // Muhurtham Ceremony Time
   displayDate: 'Sunday, 25th October 2026',
   displayYear: '2026',
 };
@@ -112,33 +112,41 @@ export const CALENDAR_EVENTS = [
   {
     title: 'Vinay & Kishma – Mehendi',
     startISO: '2026-10-24T11:00:00',
-    endISO: '2026-10-24T16:00:00',
+    endISO: '2026-10-24T14:30:00',
     description:
       'Mehendi Ceremony — An auspicious morning of intricate henna, folk melodies and celebration. Tranquil Wedding Venue, Bannerghatta Road, Bangalore.',
     location: 'Tranquil Wedding Venue, Bannerghatta Road, Bangalore 560083',
   },
   {
     title: 'Vinay & Kishma – Haldi',
-    startISO: '2026-10-25T10:00:00',
-    endISO: '2026-10-25T11:00:00',
+    startISO: '2026-10-24T15:00:00',
+    endISO: '2026-10-24T18:00:00',
     description:
       'Haldi Ceremony — A vibrant ritual of sacred turmeric, love, laughter and family blessings.',
     location: 'Tranquil Wedding Venue, Bannerghatta Road, Bangalore 560083',
   },
   {
+    title: 'Vinay & Kishma – Sangeet',
+    startISO: '2026-10-24T19:00:00',
+    endISO: '2026-10-24T23:00:00',
+    description:
+      'Sangeet Ceremony — A magical royal evening of music, dance, laughter and celebratory performances.',
+    location: 'Tranquil Wedding Venue, Bannerghatta Road, Bangalore 560083',
+  },
+  {
     title: 'Vinay & Kishma – Muhurtham Ceremony',
-    startISO: '2026-10-25T15:00:00',
-    endISO: '2026-10-25T18:00:00',
+    startISO: '2026-10-25T10:00:00',
+    endISO: '2026-10-25T11:00:00',
     description:
       'Muhurtham — The sacred union of two souls amidst Vedic hymns, holy fire, and timeless traditions. Two Hearts. Two Traditions. One Beautiful Beginning.',
     location: 'Tranquil Wedding Venue, Bannerghatta Road, Bangalore 560083',
   },
   {
-    title: 'Vinay & Kishma – Sangeet & Reception',
+    title: 'Vinay & Kishma – Reception',
     startISO: '2026-10-25T18:30:00',
-    endISO: '2026-10-25T22:00:00',
+    endISO: '2026-10-25T23:00:00',
     description:
-      'Sangeet (6:30 PM) — A magical royal evening of music, dance, laughter and celebratory performances. Followed by Reception (7:00 PM onwards).',
+      'Reception — A grand celebratory banquet with dinner, toasts, and joyful beginnings.',
     location: 'Tranquil Wedding Venue, Bannerghatta Road, Bangalore 560083',
   },
 ];

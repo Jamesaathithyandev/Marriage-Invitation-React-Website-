@@ -23,13 +23,13 @@ export function CalendarSection({ onExternalNavigate }) {
   // Event metadata
   const eventDays = {
     24: {
-      label: 'Mehendi',
+      label: 'Festivities',
       time: '11:00 AM',
       motif: 'peacock',
     },
     25: {
       label: 'Wedding Day',
-      time: '3:00 PM',
+      time: '10:00 AM',
       isMain: true,
       motif: 'lotus',
     },
@@ -136,7 +136,7 @@ export function CalendarSection({ onExternalNavigate }) {
                 if (event) {
                   // ── PROMINENT EYE-CATCHY EVENT DAYS (24 & 25) ──
                   const isMain = Boolean(event.isMain);
-                  const shortLabel = isMain ? 'Wedding' : 'Mehendi';
+                  const shortLabel = isMain ? 'Wedding' : 'Festivities';
 
                   return (
                     <div
@@ -203,14 +203,14 @@ export function CalendarSection({ onExternalNavigate }) {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-1.5">
                     <span className="font-serif font-bold text-xs sm:text-sm text-palace-green">
-                      Mehendi Ceremony
+                      Mehendi, Haldi &amp; Sangeet
                     </span>
                     <span className="text-[8px] font-caps px-1.5 py-0.5 rounded bg-peacock-teal/20 text-peacock-dark font-semibold">
                       Saturday
                     </span>
                   </div>
                   <p className="font-serif italic text-[11px] sm:text-xs text-palace-green/70">
-                    11:00 AM onwards · Folk Songs, Henna &amp; Festivity
+                    Mehendi (11:00 AM) · Haldi (3:00 PM) · Sangeet (7:00 PM onwards)
                   </p>
                 </div>
               </div>
@@ -224,14 +224,14 @@ export function CalendarSection({ onExternalNavigate }) {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-1.5">
                     <span className="font-serif font-bold text-xs sm:text-sm text-palace-green">
-                      Sacred Wedding Day &amp; Celebrations
+                      Sacred Muhurtham &amp; Reception
                     </span>
                     <span className="text-[8px] font-caps px-1.5 py-0.5 rounded bg-emerald-deep text-gold-light font-semibold">
                       Sunday
                     </span>
                   </div>
                   <p className="font-serif italic text-[11px] sm:text-xs text-palace-green/70">
-                    Haldi (10:00 AM) · Muhurtham (3:00 PM) · Sangeet (6:30 PM) · Reception (7:00 PM)
+                    Muhurtham (10:00 AM – 11:00 AM) · Reception (6:30 PM onwards)
                   </p>
                 </div>
               </div>
