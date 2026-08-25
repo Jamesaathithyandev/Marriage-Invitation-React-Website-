@@ -44,6 +44,9 @@ export function App() {
   }, []);
 
   // â”€â”€ Navigation Curtain State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // Loading screen completes -> go to intro
+  const handleLoadingComplete = useCallback(() => setStage('intro'), []);
+
   const [navCurtainActive, setNavCurtainActive] = useState(false);
   const pendingNavUrl = useRef(null);
 
@@ -81,6 +84,11 @@ export function App() {
   return (
     <>
       {/* â”€â”€ 1. CINEMATIC INTRO SCREEN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* 0. LOADING SCREEN */}
+      {stage === 'loading' && (
+        <LoadingScreen onComplete={handleLoadingComplete} />
+      )}
+
       {(stage === 'intro' || (stage === 'transition' && !revealedMain)) && (
         <Intro
           onComplete={handleStartTransition}
@@ -217,4 +225,5 @@ export function App() {
 }
 
 export default App;
+
 
