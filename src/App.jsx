@@ -1,6 +1,7 @@
-import React, { useState, useCallback, useRef } from 'react';
+﻿import React, { useState, useCallback, useRef } from 'react';
 
 import { Intro } from './components/intro/Intro';
+import { LoadingScreen } from './components/intro/LoadingScreen';
 import { CurtainTransition } from './components/transition/CurtainTransition';
 import { HeroSection } from './components/hero/HeroSection';
 import { CoupleSection } from './components/sections/CoupleSection';
@@ -16,21 +17,21 @@ import { LotusMotif } from './components/decorative/LotusMotif';
 import { OrnamentalDivider } from './components/decorative/OrnamentalDivider';
 
 /**
- * App — Royal Wedding Invitation State Machine
+ * App â€” Royal Wedding Invitation State Machine
  *
  * Two curtain layers:
  *
- * 1. INTRO CURTAIN (stage: 'intro' → 'transition' → 'main')
+ * 1. INTRO CURTAIN (stage: 'intro' â†’ 'transition' â†’ 'main')
  *    Theatrical drape opening from the cinematic intro into the wedding invitation.
  *
  * 2. NAVIGATION CURTAIN (navCurtainActive)
  *    Royal drape triggered when the user clicks "Get Directions" or "Add to Google Calendar".
- *    - Curtains close → pause (external URL opens in new tab) → curtains reopen.
+ *    - Curtains close â†’ pause (external URL opens in new tab) â†’ curtains reopen.
  *    - Keeps the user's immersion in the palace experience.
  */
 export function App() {
-  // ── Intro State Machine ────────────────────────────────
-  const [stage, setStage] = useState('intro'); // 'intro' | 'transition' | 'main'
+  // â”€â”€ Intro State Machine â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  const [stage, setStage] = useState('loading'); // 'loading' | 'intro' | 'transition' | 'main'
   const [revealedMain, setRevealedMain] = useState(false);
 
   const handleStartTransition = useCallback(() => setStage('transition'), []);
@@ -42,7 +43,7 @@ export function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
-  // ── Navigation Curtain State ───────────────────────────
+  // â”€â”€ Navigation Curtain State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   const [navCurtainActive, setNavCurtainActive] = useState(false);
   const pendingNavUrl = useRef(null);
 
@@ -50,7 +51,7 @@ export function App() {
    * Triggered by LocationSection / CalendarSection when user clicks
    * "Get Directions" or "Add to Google Calendar".
    * Closes the velvet drapes, opens the external URL during the pause,
-   * then reopens the drapes — preserving the cinematic palace atmosphere.
+   * then reopens the drapes â€” preserving the cinematic palace atmosphere.
    */
   const handleExternalNavigate = useCallback((url) => {
     if (navCurtainActive) return; // Debounce: prevent double-trigger
@@ -60,7 +61,7 @@ export function App() {
 
   /**
    * Called when the navigation curtain is fully CLOSED (midpoint).
-   * We open the external URL here — during the regal pause while drapes are shut.
+   * We open the external URL here â€” during the regal pause while drapes are shut.
    */
   const handleNavCurtainMidpoint = useCallback(() => {
     if (pendingNavUrl.current) {
@@ -79,7 +80,7 @@ export function App() {
 
   return (
     <>
-      {/* ── 1. CINEMATIC INTRO SCREEN ─────────────────── */}
+      {/* â”€â”€ 1. CINEMATIC INTRO SCREEN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {(stage === 'intro' || (stage === 'transition' && !revealedMain)) && (
         <Intro
           onComplete={handleStartTransition}
@@ -87,7 +88,7 @@ export function App() {
         />
       )}
 
-      {/* ── 2. INTRO CURTAIN (Close → Hold → Open) ─── */}
+      {/* â”€â”€ 2. INTRO CURTAIN (Close â†’ Hold â†’ Open) â”€â”€â”€ */}
       {stage === 'transition' && (
         <CurtainTransition
           isActive={true}
@@ -96,11 +97,11 @@ export function App() {
         />
       )}
 
-      {/* ── 3. MAIN WEDDING INVITATION EXPERIENCE ─────────── */}
+      {/* â”€â”€ 3. MAIN WEDDING INVITATION EXPERIENCE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {(stage === 'main' || (stage === 'transition' && revealedMain)) && (
         <JaliBackground opacity="subtle" showPalaceVignette>
 
-          {/* ── NAVIGATION CURTAIN (for Get Directions / Calendar) ─ */}
+          {/* â”€â”€ NAVIGATION CURTAIN (for Get Directions / Calendar) â”€ */}
           {navCurtainActive && (
             <CurtainTransition
               isActive={true}
@@ -110,7 +111,7 @@ export function App() {
             />
           )}
 
-          {/* ── Sticky Royal Header ────────────────────────── */}
+          {/* â”€â”€ Sticky Royal Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <header className="w-full border-b border-gold/30 bg-ivory/85 backdrop-blur-md sticky top-0 z-40">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
               {/* Monogram Brand */}
@@ -121,7 +122,7 @@ export function App() {
                     Vinay <span className="text-gold font-normal">&amp;</span> Kishma
                   </span>
                   <span className="font-caps text-[8px] sm:text-[9px] tracking-monumental text-gold-deep uppercase block">
-                    25 · 10 · 2026
+                    25 Â· 10 Â· 2026
                   </span>
                 </div>
               </div>
@@ -142,50 +143,50 @@ export function App() {
             </div>
           </header>
 
-          {/* ── Main Sections Flow ──────────────────────────── */}
+          {/* â”€â”€ Main Sections Flow â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <main className="w-full flex flex-col items-center">
 
-            {/* 1 — Hero Invitation Card */}
+            {/* 1 â€” Hero Invitation Card */}
             <HeroSection />
 
-            {/* 2 — The Couple */}
+            {/* 2 â€” The Couple */}
             <RevealOnScroll className="w-full">
               <CoupleSection />
             </RevealOnScroll>
 
-            {/* 3 — Wedding Message */}
+            {/* 3 â€” Wedding Message */}
             <RevealOnScroll className="w-full">
               <WeddingMessageSection />
             </RevealOnScroll>
 
-            {/* 4 — Events Timeline */}
+            {/* 4 â€” Events Timeline */}
             <RevealOnScroll className="w-full">
               <EventsSection />
             </RevealOnScroll>
 
-            {/* 5 — Auspicious Countdown */}
+            {/* 5 â€” Auspicious Countdown */}
             <RevealOnScroll className="w-full">
               <CountdownSection />
             </RevealOnScroll>
 
-            {/* 6 — Venue & Satellite Map */}
+            {/* 6 â€” Venue & Satellite Map */}
             <RevealOnScroll className="w-full">
               <LocationSection onExternalNavigate={handleExternalNavigate} />
             </RevealOnScroll>
 
-            {/* 7 — Add to Calendar */}
+            {/* 7 â€” Add to Calendar */}
             <RevealOnScroll className="w-full">
               <CalendarSection onExternalNavigate={handleExternalNavigate} />
             </RevealOnScroll>
 
-            {/* 8 — Grand Closing */}
+            {/* 8 â€” Grand Closing */}
             <RevealOnScroll className="w-full">
               <ClosingSection />
             </RevealOnScroll>
 
           </main>
 
-          {/* ── Royal Palace Footer ────────────────────────── */}
+          {/* â”€â”€ Royal Palace Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <footer className="w-full border-t border-gold/30 bg-ivory-dark/60 py-12 px-4 text-center">
             <div className="max-w-md mx-auto space-y-4">
               <LotusMotif variant="crest" size="lg" className="mx-auto opacity-90" />
@@ -194,7 +195,7 @@ export function App() {
                   Vinay <span className="font-script text-2xl text-gold-deep">&amp;</span> Kishma
                 </h4>
                 <p className="font-caps text-[9px] sm:text-[10px] tracking-monumental text-gold-deep uppercase font-semibold">
-                  Sunday, 25th October 2026 · Bengaluru
+                  Sunday, 25th October 2026 Â· Bengaluru
                 </p>
               </div>
               <div className="flex justify-center">
@@ -216,3 +217,4 @@ export function App() {
 }
 
 export default App;
+
