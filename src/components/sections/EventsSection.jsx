@@ -79,7 +79,7 @@ export function EventsSection() {
                         isMain ? 'ring-4 ring-gold/30 bg-ivory-light' : ''
                       }`}
                     >
-                      <LotusMotif variant="crest" size="sm" className="w-5 h-5 sm:w-6 sm:h-6" />
+                      <LotusMotif variant="crest" size="md" className="w-7 h-7 sm:w-9 sm:h-9" />
                     </div>
                   </div>
 
@@ -98,7 +98,7 @@ export function EventsSection() {
                     >
                       {/* Palace Arched Frame Top Silhouette */}
                       <div className="w-full bg-ivory-light/95 rounded-t-md pt-3 px-5 sm:px-6 flex justify-center">
-                        <svg viewBox="0 0 160 30" fill="none" className="w-28 sm:w-36 h-auto text-gold" aria-hidden="true">
+                        <svg viewBox="0 0 160 30" fill="none" className="w-36 sm:w-48 h-auto text-gold" aria-hidden="true">
                           <path
                             d="M0 30 C10 15 25 8 45 8 C60 8 70 2 80 0 C90 2 100 8 115 8 C135 8 150 15 160 30"
                             stroke="currentColor"
@@ -158,9 +158,9 @@ export function EventsSection() {
                         {/* Bottom Motif Accent */}
                         <div className="mt-3 flex items-center justify-center opacity-60">
                           {isMain ? (
-                            <LotusMotif variant="crest" size="sm" className="w-6 h-4" />
+                            <LotusMotif variant="crest" size="md" className="w-10 h-7 opacity-90" />
                           ) : (
-                            <PeacockMotif variant="feather-crown" size="sm" className="w-6 h-3" />
+                            <PeacockMotif variant="feather-crown" size="md" className="w-10 h-6 opacity-90" />
                           )}
                         </div>
 

@@ -188,7 +188,7 @@ export function App() {
           {/* ── Royal Palace Footer ────────────────────────── */}
           <footer className="w-full border-t border-gold/30 bg-ivory-dark/60 py-12 px-4 text-center">
             <div className="max-w-md mx-auto space-y-4">
-              <LotusMotif variant="crest" size="md" className="mx-auto opacity-70" />
+              <LotusMotif variant="crest" size="lg" className="mx-auto opacity-90" />
               <div className="space-y-1">
                 <h4 className="font-display text-lg sm:text-xl text-palace-green font-normal tracking-wider">
                   Vinay <span className="font-script text-2xl text-gold-deep">&amp;</span> Kishma

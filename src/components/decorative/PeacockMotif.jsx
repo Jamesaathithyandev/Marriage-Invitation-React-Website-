@@ -6,10 +6,10 @@ import React from 'react';
  */
 export function PeacockMotif({ variant = 'feather-crown', className = '', size = 'md' }) {
   const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-14 h-14',
-    lg: 'w-20 h-20',
-    xl: 'w-32 h-32',
+    sm: 'w-10 h-10 sm:w-12 sm:h-12',
+    md: 'w-16 h-16 sm:w-20 sm:h-20',
+    lg: 'w-24 h-24 sm:w-28 sm:h-28',
+    xl: 'w-36 h-36 sm:w-48 sm:h-48',
     custom: '',
   };
 
@@ -27,10 +27,10 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
           d="M70 4 C64 16 60 32 70 58 C80 32 76 16 70 4 Z"
           fill="#176B70"
           stroke="#C6A66B"
-          strokeWidth="1"
+          strokeWidth="1.5"
         />
         {/* Center Plume Eye */}
-        <ellipse cx="70" cy="22" rx="4" ry="7" fill="#315A78" stroke="#C6A66B" strokeWidth="0.8"/>
+        <ellipse cx="70" cy="22" rx="4" ry="7" fill="#315A78" stroke="#C6A66B" strokeWidth="1.2"/>
         <circle cx="70" cy="22" r="2" fill="#C6A66B" />
 
         {/* Left Primary Plume */}
@@ -38,7 +38,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
           d="M70 58 C50 48 38 32 44 14 C52 28 62 44 70 58 Z"
           fill="#174C3C"
           stroke="#C6A66B"
-          strokeWidth="0.9"
+          strokeWidth="1.3"
         />
         <ellipse cx="49" cy="26" rx="3.5" ry="5.5" transform="rotate(-25 49 26)" fill="#176B70" stroke="#C6A66B" strokeWidth="0.6"/>
         <circle cx="49" cy="26" r="1.5" fill="#C6A66B"/>
@@ -48,7 +48,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
           d="M70 58 C90 48 102 32 96 14 C88 28 78 44 70 58 Z"
           fill="#174C3C"
           stroke="#C6A66B"
-          strokeWidth="0.9"
+          strokeWidth="1.3"
         />
         <ellipse cx="91" cy="26" rx="3.5" ry="5.5" transform="rotate(25 91 26)" fill="#176B70" stroke="#C6A66B" strokeWidth="0.6"/>
         <circle cx="91" cy="26" r="1.5" fill="#C6A66B"/>
@@ -89,12 +89,12 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         xmlns="http://www.w3.org/2000/svg"
         className={`${sizeClasses[size]} ${className}`}
       >
-        <path d="M25 85 Q26 50 25 5" stroke="#C6A66B" strokeWidth="1" strokeLinecap="round"/>
+        <path d="M25 85 Q26 50 25 5" stroke="#C6A66B" strokeWidth="1.5" strokeLinecap="round"/>
         {/* Feather Quill Rays */}
         <path d="M25 45 C15 35 10 25 15 15 C20 25 24 35 25 45 Z" fill="#174C3C" fillOpacity="0.7" stroke="#C6A66B" strokeWidth="0.5"/>
         <path d="M25 45 C35 35 40 25 35 15 C30 25 26 35 25 45 Z" fill="#174C3C" fillOpacity="0.7" stroke="#C6A66B" strokeWidth="0.5"/>
         {/* Feather Eye Outer Oval */}
-        <ellipse cx="25" cy="20" rx="9" ry="12" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+        <ellipse cx="25" cy="20" rx="9" ry="12" fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Feather Eye Inner Heart/Teardrop */}
         <path d="M25 12 C20 18 20 24 25 28 C30 24 30 18 25 12 Z" fill="#315A78" stroke="#C6A66B" strokeWidth="0.6"/>
         <circle cx="25" cy="21" r="2.5" fill="#DFC48E" />
@@ -115,7 +115,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         {/* Central Floral Kalash */}
         <circle cx="100" cy="24" r="5" fill="#C6A66B" stroke="#9E7E45" strokeWidth="0.75"/>
         <path d="M96 30 C96 26 104 26 104 30 L103 38 L97 38 Z" fill="#C6A66B"/>
-        <path d="M100 12 L100 19" stroke="#C6A66B" strokeWidth="1"/>
+        <path d="M100 12 L100 19" stroke="#C6A66B" strokeWidth="1.5"/>
         <circle cx="100" cy="11" r="1.5" fill="#D99A9D"/>
 
         {/* Left Regal Peacock Silhouette */}
@@ -202,11 +202,11 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         {/* ── Body ── */}
         {/* Neck */}
         <path d="M72 148 C70 140 68 128 70 118 C72 110 76 106 80 104 C84 106 88 110 90 118 C92 128 90 140 88 148 Z"
-          fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"
+          fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"
         />
         {/* Chest / Body */}
         <ellipse cx="80" cy="162" rx="18" ry="22"
-          fill="#174C3C" stroke="#C6A66B" strokeWidth="0.8"
+          fill="#174C3C" stroke="#C6A66B" strokeWidth="1.2"
         />
         {/* Wing highlight */}
         <path d="M64 155 C60 162 62 172 68 178 C70 170 68 162 64 155 Z"
@@ -217,7 +217,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         />
 
         {/* ── Head & Crown ── */}
-        <circle cx="80" cy="100" r="12" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+        <circle cx="80" cy="100" r="12" fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Crest feathers */}
         {[-10, -4, 0, 4, 10].map((dx, i) => (
           <g key={i}>
@@ -235,11 +235,11 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         <path d="M91 101 L98 104 L91 106 Z" fill="#C6A66B"/>
 
         {/* ── Legs ── */}
-        <line x1="74" y1="183" x2="72" y2="210" stroke="#C6A66B" strokeWidth="1" strokeLinecap="round"/>
-        <line x1="86" y1="183" x2="88" y2="210" stroke="#C6A66B" strokeWidth="1" strokeLinecap="round"/>
+        <line x1="74" y1="183" x2="72" y2="210" stroke="#C6A66B" strokeWidth="1.5" strokeLinecap="round"/>
+        <line x1="86" y1="183" x2="88" y2="210" stroke="#C6A66B" strokeWidth="1.5" strokeLinecap="round"/>
         {/* Feet */}
-        <path d="M72 210 L66 214 M72 210 L72 215 M72 210 L78 213" stroke="#C6A66B" strokeWidth="0.8" strokeLinecap="round"/>
-        <path d="M88 210 L94 214 M88 210 L88 215 M88 210 L82 213" stroke="#C6A66B" strokeWidth="0.8" strokeLinecap="round"/>
+        <path d="M72 210 L66 214 M72 210 L72 215 M72 210 L78 213" stroke="#C6A66B" strokeWidth="1.2" strokeLinecap="round"/>
+        <path d="M88 210 L94 214 M88 210 L88 215 M88 210 L82 213" stroke="#C6A66B" strokeWidth="1.2" strokeLinecap="round"/>
 
         {/* Ground shadow */}
         <ellipse cx="80" cy="216" rx="20" ry="3" fill="#174C3C" fillOpacity="0.15"/>
@@ -277,7 +277,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
               <path
                 d={`M200 195 Q${200 + dx * 0.45} ${195 + dy * 0.4} ${x} ${y}`}
                 stroke="#C6A66B"
-                strokeWidth="0.9"
+                strokeWidth="1.3"
                 strokeLinecap="round"
               />
               {/* Feather barbs left */}
@@ -294,7 +294,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
               />
               {/* Eye at tip */}
               <g transform={`rotate(${rot} ${x} ${y})`}>
-                <ellipse cx={x} cy={y} rx="14" ry="18" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+                <ellipse cx={x} cy={y} rx="14" ry="18" fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"/>
                 <ellipse cx={x} cy={y+2} rx="8" ry="10" fill="#315A78"/>
                 <ellipse cx={x} cy={y+1} rx="4" ry="6" fill="#174C3C"/>
                 <circle cx={x} cy={y} r="3" fill="#DFC48E"/>

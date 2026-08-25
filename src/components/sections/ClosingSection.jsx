@@ -176,7 +176,7 @@ export function ClosingSection() {
           {/* Gold ornamental divider */}
           <div className="flex items-center justify-center gap-3">
             <div className="h-[0.5px] flex-1 max-w-[4rem] bg-gradient-to-r from-transparent to-gold" />
-            <LotusMotif variant="crest" size="sm" className="opacity-90 w-8 h-8" />
+            <LotusMotif variant="crest" size="md" className="opacity-95 w-12 h-12" />
             <div className="h-[0.5px] flex-1 max-w-[4rem] bg-gradient-to-l from-transparent to-gold" />
           </div>
 
@@ -208,7 +208,7 @@ export function ClosingSection() {
               <path d="M15 38 C15 38 1 22 6 8 C9 14 12 25 15 38 Z" fill="#174C3C" fillOpacity="0.5"/>
               <path d="M15 38 C7 30 6 17 9 6" stroke="#C6A66B" strokeWidth="0.5" strokeLinecap="round"/>
             </svg>
-            <LotusMotif variant="bloom" size="md" className="opacity-90" />
+            <LotusMotif variant="bloom" size="lg" className="opacity-95" />
             <svg viewBox="0 0 30 40" fill="none" className="w-6 h-8 sm:w-8 sm:h-10 opacity-55 -scale-x-100">
               <path d="M15 38 C15 38 3 28 5 14 C8 19 11 27 15 38 Z" fill="#174C3C"/>
               <path d="M15 38 C15 38 1 22 6 8 C9 14 12 25 15 38 Z" fill="#174C3C" fillOpacity="0.5"/>

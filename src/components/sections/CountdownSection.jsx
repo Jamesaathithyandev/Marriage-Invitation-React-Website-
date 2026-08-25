@@ -93,7 +93,7 @@ export function CountdownSection() {
 
                 {/* Palace Arch Silhouette at Kiosk Top */}
                 <div className="w-full bg-ivory-light/95 rounded-t-md pt-2.5 px-3 flex justify-center">
-                  <svg viewBox="0 0 100 24" fill="none" className="w-16 sm:w-20 h-auto text-gold" aria-hidden="true">
+                  <svg viewBox="0 0 100 24" fill="none" className="w-24 sm:w-28 h-auto text-gold" aria-hidden="true">
                     <path
                       d="M0 24 C10 12 25 6 40 6 C46 6 48 2 50 0 C52 2 54 6 60 6 C75 6 90 12 100 24"
                       stroke="currentColor"
@@ -136,7 +136,7 @@ export function CountdownSection() {
 
         {/* ── Auspicious Blessing Tagline ──────────────────── */}
         <div className="mt-10 sm:mt-12 flex flex-col items-center">
-          <LotusMotif variant="crest" size="sm" className="opacity-80 mb-2" />
+          <LotusMotif variant="crest" size="md" className="opacity-95 mb-3" />
           <p className="font-script text-xl sm:text-2xl text-palace-green/90 leading-tight">
             "Every passing moment brings us closer to a lifetime of togetherness."
           </p>

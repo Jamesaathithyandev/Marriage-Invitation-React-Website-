@@ -88,7 +88,7 @@ export function LocationSection({ onExternalNavigate }) {
             <div className="relative bg-gradient-to-r from-palace-green via-emerald-deep to-palace-dark px-5 py-3 flex items-center justify-between">
               <div className="absolute inset-0 jali-watermark opacity-[0.15] pointer-events-none" />
               <div className="relative z-10 flex items-center gap-2">
-                <LotusMotif variant="crest" size="sm" className="w-5 h-5 opacity-80" />
+                <LotusMotif variant="crest" size="md" className="w-8 h-8 opacity-95 text-gold" />
                 <div>
                   <p className="font-display text-sm sm:text-base font-normal tracking-wide text-gold-champagne leading-tight">
                     {WEDDING_VENUE.name}

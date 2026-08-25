@@ -154,7 +154,7 @@ export function Intro({
         <div className="relative w-full max-w-lg mx-auto flex flex-col items-center">
           {/* Arch Crown Pinnacle Finial & Lotus Crest */}
           <div className="relative -mb-3 sm:-mb-4 z-30 flex flex-col items-center drop-shadow-[0_4px_12px_rgba(198,166,107,0.35)]">
-            <LotusMotif variant="crest" size="md" />
+            <LotusMotif variant="crest" size="lg" className="drop-shadow-[0_4px_16px_rgba(198,166,107,0.6)]" />
           </div>
 
           {/* Palace Arch Top Outline */}
@@ -169,14 +169,14 @@ export function Intro({
               <path
                 d="M10 75 C10 35 45 35 70 25 C95 15 125 28 145 12 C152 6 156 2 160 0 C164 2 168 6 175 12 C195 28 225 15 250 25 C275 35 310 35 310 75"
                 stroke="currentColor"
-                strokeWidth="1.2"
+                strokeWidth="1.8"
                 strokeLinecap="round"
               />
               {/* Inner Parallel Arch Line */}
               <path
                 d="M20 75 C20 42 50 42 74 32 C96 24 124 34 144 20 C151 15 155 9 160 6 C165 9 169 15 176 20 C196 34 224 24 246 32 C270 42 300 42 300 75"
                 stroke="currentColor"
-                strokeWidth="0.75"
+                strokeWidth="1.1"
                 strokeDasharray="2 2"
                 opacity="0.7"
               />
@@ -228,7 +228,7 @@ export function Intro({
 
             {/* Understated Peacock Feather Filigree Motif */}
             <div className="my-3 flex justify-center opacity-85">
-              <PeacockMotif variant="feather-crown" size="sm" className="w-10 h-6 text-gold" />
+              <PeacockMotif variant="feather-crown" size="md" className="w-16 h-10 text-gold drop-shadow-md" />
             </div>
 
             {/* Date Presentation */}

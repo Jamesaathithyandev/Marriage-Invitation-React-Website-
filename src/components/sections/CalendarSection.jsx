@@ -104,7 +104,7 @@ export function CalendarSection({ onExternalNavigate }) {
 
               {/* Month & Year */}
               <div className="relative z-10">
-                <LotusMotif variant="crest" size="sm" className="mx-auto mb-1 opacity-90" />
+                <LotusMotif variant="crest" size="md" className="mx-auto mb-2 opacity-95" />
                 <h3 className="font-display text-xl sm:text-2xl font-normal tracking-wider text-gold-champagne leading-tight">
                   October 2026
                 </h3>
@@ -150,9 +150,9 @@ export function CalendarSection({ onExternalNavigate }) {
                       {/* Top Motif Icon */}
                       <div className="w-full flex justify-center items-center h-3 sm:h-3.5 flex-shrink-0">
                         {isMain ? (
-                          <LotusMotif variant="crest" size="sm" className="w-3.5 h-3 sm:w-4 sm:h-3.5 text-gold-champagne drop-shadow" />
+                          <LotusMotif variant="crest" size="sm" className="w-5 h-4 sm:w-6 sm:h-5 text-gold-champagne drop-shadow" />
                         ) : (
-                          <PeacockMotif variant="feather-crown" size="sm" className="w-3.5 h-3 sm:w-4 sm:h-3.5 text-gold drop-shadow" />
+                          <PeacockMotif variant="feather-crown" size="sm" className="w-5 h-4 sm:w-6 sm:h-5 text-gold drop-shadow" />
                         )}
                       </div>
 

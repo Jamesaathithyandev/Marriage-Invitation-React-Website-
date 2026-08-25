@@ -93,7 +93,7 @@ export function CoupleSection() {
 
                 {/* Peacock Feather Accent */}
                 <div className="my-2.5 flex justify-center opacity-85">
-                  <PeacockMotif variant="feather-crown" size="sm" className="w-8 h-5" />
+                  <PeacockMotif variant="feather-crown" size="md" className="w-12 h-7 opacity-95" />
                 </div>
 
                 {/* Parentage Line */}
@@ -118,7 +118,7 @@ export function CoupleSection() {
                 <div className="relative flex flex-col items-center">
                   {/* Decorative Radial Sun / Lotus Ring */}
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-gold/50 bg-gradient-to-b from-ivory to-ivory-dark flex flex-col items-center justify-center shadow-gold-subtle">
-                    <LotusMotif variant="crest" size="sm" className="opacity-90 -mt-1" />
+                    <LotusMotif variant="crest" size="md" className="opacity-95 -mt-1" />
                     <span className="font-script text-2xl sm:text-3xl text-gold-deep leading-none mt-0.5">
                       &amp;
                     </span>
@@ -149,7 +149,7 @@ export function CoupleSection() {
 
                 {/* Lotus Motif Accent */}
                 <div className="my-2.5 flex justify-center opacity-85">
-                  <LotusMotif variant="crest" size="sm" className="w-8 h-5" />
+                  <LotusMotif variant="crest" size="md" className="w-12 h-8 opacity-95" />
                 </div>
 
                 {/* Parentage Line */}

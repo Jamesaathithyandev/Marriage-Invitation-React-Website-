@@ -6,10 +6,10 @@ import React from 'react';
  */
 export function LotusMotif({ variant = 'crest', className = '', size = 'md', color = 'gold' }) {
   const sizeClasses = {
-    sm: 'w-6 h-6',
-    md: 'w-10 h-10',
-    lg: 'w-16 h-16',
-    xl: 'w-24 h-24',
+    sm: 'w-8 h-8 sm:w-10 sm:h-10',
+    md: 'w-14 h-14 sm:w-16 sm:h-16',
+    lg: 'w-20 h-20 sm:w-24 sm:h-24',
+    xl: 'w-32 h-32 sm:w-40 sm:h-40',
     custom: '',
   };
 
@@ -26,32 +26,32 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md', col
         <path
           d="M60 72 C35 72 20 62 10 48 C28 50 48 60 60 72 Z"
           fill="#174C3C"
-          fillOpacity="0.25"
+          fillOpacity="0.45"
           stroke="#C6A66B"
-          strokeWidth="0.75"
+          strokeWidth="1.6"
         />
         <path
           d="M60 72 C85 72 100 62 110 48 C92 50 72 60 60 72 Z"
           fill="#174C3C"
-          fillOpacity="0.25"
+          fillOpacity="0.45"
           stroke="#C6A66B"
-          strokeWidth="0.75"
+          strokeWidth="1.6"
         />
 
         {/* Outer Lotus Petals (Lotus Blush) */}
         <path
           d="M60 70 C30 58 16 38 25 22 C32 38 48 56 60 70 Z"
           fill="#D99A9D"
-          fillOpacity="0.75"
+          fillOpacity="0.9"
           stroke="#C6A66B"
-          strokeWidth="1"
+          strokeWidth="1.4"
         />
         <path
           d="M60 70 C90 58 104 38 95 22 C88 38 72 56 60 70 Z"
           fill="#D99A9D"
-          fillOpacity="0.75"
+          fillOpacity="0.9"
           stroke="#C6A66B"
-          strokeWidth="1"
+          strokeWidth="1.4"
         />
 
         {/* Secondary Petals */}
@@ -60,14 +60,14 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md', col
           fill="#E8B6B9"
           fillOpacity="0.85"
           stroke="#C6A66B"
-          strokeWidth="1"
+          strokeWidth="1.4"
         />
         <path
           d="M60 68 C80 52 88 32 80 14 C72 30 65 50 60 68 Z"
           fill="#E8B6B9"
           fillOpacity="0.85"
           stroke="#C6A66B"
-          strokeWidth="1"
+          strokeWidth="1.4"
         />
 
         {/* Center Royal Crown Petal */}
@@ -75,7 +75,7 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md', col
           d="M60 6 C52 22 45 42 60 68 C75 42 68 22 60 6 Z"
           fill="#DFC48E"
           stroke="#C6A66B"
-          strokeWidth="1.2"
+          strokeWidth="1.6"
         />
 
         {/* Center Stamen & Core Details */}
@@ -101,9 +101,9 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md', col
       <div className={`flex items-center justify-center gap-3 w-full my-4 ${className}`}>
         <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/50 to-gold" />
         <svg viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-12 h-6 flex-shrink-0">
-          <path d="M40 3 C36 10 32 18 40 28 C48 18 44 10 40 3 Z" fill="#C6A66B" stroke="#9E7E45" strokeWidth="0.75"/>
-          <path d="M40 28 C26 22 18 14 22 8 C26 14 34 22 40 28 Z" fill="#D99A9D" fillOpacity="0.8" stroke="#C6A66B" strokeWidth="0.75"/>
-          <path d="M40 28 C54 22 62 14 58 8 C54 14 46 22 40 28 Z" fill="#D99A9D" fillOpacity="0.8" stroke="#C6A66B" strokeWidth="0.75"/>
+          <path d="M40 3 C36 10 32 18 40 28 C48 18 44 10 40 3 Z" fill="#C6A66B" stroke="#9E7E45" strokeWidth="1.6"/>
+          <path d="M40 28 C26 22 18 14 22 8 C26 14 34 22 40 28 Z" fill="#D99A9D" fillOpacity="0.8" stroke="#C6A66B" strokeWidth="1.6"/>
+          <path d="M40 28 C54 22 62 14 58 8 C54 14 46 22 40 28 Z" fill="#D99A9D" fillOpacity="0.8" stroke="#C6A66B" strokeWidth="1.6"/>
           <circle cx="40" cy="2" r="1.5" fill="#C6A66B"/>
           <circle cx="10" cy="20" r="1" fill="#C6A66B"/>
           <circle cx="70" cy="20" r="1" fill="#C6A66B"/>
@@ -122,7 +122,7 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md', col
         xmlns="http://www.w3.org/2000/svg"
         className={`${sizeClasses[size]} ${className}`}
       >
-        <path d="M0 0 L40 0 C30 0 20 10 20 20 L20 40 L0 40 L0 0 Z" fill="none" stroke="#C6A66B" strokeWidth="0.75" />
+        <path d="M0 0 L40 0 C30 0 20 10 20 20 L20 40 L0 40 L0 0 Z" fill="none" stroke="#C6A66B" strokeWidth="1.6" />
         <path d="M4 4 L30 4 C24 4 16 12 16 20 L16 30 L4 30 Z" fill="none" stroke="#C6A66B" strokeWidth="0.5" strokeOpacity="0.6"/>
         <path d="M12 12 C18 6 22 8 20 14 C16 16 14 16 12 12 Z" fill="#D99A9D" fillOpacity="0.7" stroke="#C6A66B" strokeWidth="0.5"/>
         <circle cx="4" cy="4" r="1.5" fill="#C6A66B"/>
@@ -202,7 +202,7 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md', col
         ))}
 
         {/* Stem */}
-        <path d="M100 130 C98 145 100 155 100 162" stroke="#174C3C" strokeWidth="1.2" strokeLinecap="round"/>
+        <path d="M100 130 C98 145 100 155 100 162" stroke="#174C3C" strokeWidth="1.6" strokeLinecap="round"/>
 
         {/* Water reflection (mirrored, faint, below) */}
         <g transform="translate(0 340) scale(1 -1)" opacity="0.12">
@@ -262,9 +262,9 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md', col
   // Minimal Single Petal Icon
   return (
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={`${sizeClasses[size]} ${className}`}>
-      <path d="M12 2 C9 7 8 13 12 21 C16 13 15 7 12 2 Z" fill="#C6A66B" stroke="#9E7E45" strokeWidth="0.75"/>
-      <path d="M12 21 C6 17 3 12 5 8 C7 12 10 17 12 21 Z" fill="#D99A9D" fillOpacity="0.75" stroke="#C6A66B" strokeWidth="0.5"/>
-      <path d="M12 21 C18 17 21 12 19 8 C17 12 14 17 12 21 Z" fill="#D99A9D" fillOpacity="0.75" stroke="#C6A66B" strokeWidth="0.5"/>
+      <path d="M12 2 C9 7 8 13 12 21 C16 13 15 7 12 2 Z" fill="#C6A66B" stroke="#9E7E45" strokeWidth="1.6"/>
+      <path d="M12 21 C6 17 3 12 5 8 C7 12 10 17 12 21 Z" fill="#D99A9D" fillOpacity="0.9" stroke="#C6A66B" strokeWidth="0.5"/>
+      <path d="M12 21 C18 17 21 12 19 8 C17 12 14 17 12 21 Z" fill="#D99A9D" fillOpacity="0.9" stroke="#C6A66B" strokeWidth="0.5"/>
     </svg>
   );
 }

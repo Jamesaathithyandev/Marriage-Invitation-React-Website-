@@ -88,7 +88,7 @@ export function HeroSection() {
                  C200 4 204 10 210 16
                  C230 34 260 22 284 32
                  C312 44 348 44 348 96"
-              stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"
+              stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"
             />
             {/* Inner Parallel Arch Line */}
             <path
@@ -97,10 +97,10 @@ export function HeroSection() {
                  C200 14 204 22 210 28
                  C230 42 258 32 280 42
                  C306 52 336 52 336 96"
-              stroke="currentColor" strokeWidth="0.8" strokeDasharray="3 2" opacity="0.65"
+              stroke="currentColor" strokeWidth="1.2" strokeDasharray="3 2" opacity="0.65"
             />
             {/* Keystone Medallion */}
-            <circle cx="180" cy="0" r="5" fill="#C6A66B" />
+            <circle cx="180" cy="0" r="7" fill="#C6A66B" /><circle cx="180" cy="0" r="3.5" fill="#F3E4C8" />
             <circle cx="180" cy="0" r="2.5" fill="#F3E4C8" />
             {/* Arch Peak Accent Beads */}
             {[[150,16],[210,16],[76,32],[284,32]].map(([cx,cy],i) => (
@@ -165,7 +165,7 @@ export function HeroSection() {
               {/* ── Couple's Names (The Primary Visual Focus) ── */}
               <div className="relative z-10 py-5 sm:py-7 hero-fade-up delay-800">
                 {/* Soft Lotus Crest Watermark behind names */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.07]">
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.14]">
                   <LotusMotif variant="crest" size="xl" />
                 </div>
 
@@ -176,7 +176,7 @@ export function HeroSection() {
                 <div className="flex items-center justify-center my-3 sm:my-4">
                   <div className="flex-1 max-w-[3rem] sm:max-w-[5rem] h-[1px] bg-gradient-to-r from-transparent to-gold/60" />
                   <div className="mx-3 sm:mx-4 flex flex-col items-center gap-1">
-                    <PeacockMotif variant="feather-crown" size="sm" className="w-8 h-5 sm:w-12 sm:h-7" />
+                    <PeacockMotif variant="feather-crown" size="md" className="w-12 h-7 sm:w-16 sm:h-9 text-gold drop-shadow-sm" />
                     <span className="font-script text-3xl sm:text-4xl text-lotus-blush italic leading-none">
                       &amp;
                     </span>
@@ -206,7 +206,7 @@ export function HeroSection() {
 
               {/* ── Flanking Peacocks Bottom Ornament ────── */}
               <div className="mt-5 sm:mt-7 flex justify-center hero-fade-in delay-1200">
-                <PeacockMotif variant="flanking-peacocks" className="max-w-[180px] sm:max-w-[220px] opacity-80" />
+                <PeacockMotif variant="flanking-peacocks" className="max-w-[220px] sm:max-w-[280px] opacity-95 drop-shadow-sm" />
               </div>
 
               {/* ── Bottom Foliage & Lotus Bloom ─────────── */}
@@ -217,7 +217,7 @@ export function HeroSection() {
                   <path d="M20 48 C20 48 2 28 8 10 C12 18 16 32 20 48 Z" fill="#174C3C" fillOpacity="0.6" />
                   <path d="M20 48 C10 38 8 22 12 8" stroke="#C6A66B" strokeWidth="0.6" strokeLinecap="round" />
                 </svg>
-                <LotusMotif variant="crest" size="md" className="opacity-90" />
+                <LotusMotif variant="crest" size="lg" className="opacity-95 drop-shadow-md" />
                 {/* Right Emerald Leaf */}
                 <svg viewBox="0 0 40 50" fill="none" className="w-7 h-9 sm:w-9 sm:h-12 opacity-60 -scale-x-100">
                   <path d="M20 48 C20 48 4 36 6 18 C10 24 14 34 20 48 Z" fill="#174C3C" />
