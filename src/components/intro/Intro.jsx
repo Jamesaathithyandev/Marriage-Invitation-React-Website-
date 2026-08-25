@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { LotusMotif } from '../decorative/LotusMotif';
 import { PeacockMotif } from '../decorative/PeacockMotif';
 
 /**
  * Intro.jsx: Fullscreen Cinematic Royal Indian Palace Opening Experience
- * Responsive & optimized to fit 100% within any screen height with zero clipping.
+ * Supports video playback with sound toggle, auto-advance, and responsive stationery layout.
  */
 export function Intro({
   onComplete,
-  videoSrc = null,
+  videoSrc = '/assets/wedding-intro.mp4',
   autoAdvanceSeconds = null,
 }) {
   const [videoAvailable, setVideoAvailable] = useState(Boolean(videoSrc));
+  const [isMuted, setIsMuted] = useState(true);
   const [isFadingOut, setIsFadingOut] = useState(false);
+  const videoRef = useRef(null);
 
   const handleProceed = () => {
     if (onComplete) onComplete();
@@ -27,6 +29,16 @@ export function Intro({
     }
   }, [autoAdvanceSeconds, videoAvailable]);
 
+  // Attempt video play on mount
+  useEffect(() => {
+    if (videoRef.current && videoAvailable) {
+      videoRef.current.play().catch(() => {
+        // Autoplay policy fallback
+        console.log('Video autoplay requires interaction or muted state');
+      });
+    }
+  }, [videoAvailable]);
+
   return (
     <div
       className={`fixed inset-0 z-50 w-full h-[100dvh] bg-palace-dark overflow-y-auto sm:overflow-hidden flex flex-col justify-between items-center py-2 sm:py-3 select-none transition-opacity duration-700 ${
@@ -35,17 +47,37 @@ export function Intro({
       role="region"
       aria-label="Wedding Invitation Cinematic Intro"
     >
-      {/* Background Atmosphere */}
-      <div className="absolute inset-0 bg-gradient-to-b from-palace-deep via-emerald-night to-palace-dark z-0" />
+      {/* ── CINEMATIC FULLSCREEN VIDEO BACKGROUND ── */}
+      {videoAvailable && videoSrc ? (
+        <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+          <video
+            ref={videoRef}
+            src={videoSrc}
+            autoPlay
+            playsInline
+            muted={isMuted}
+            onEnded={handleProceed}
+            onError={() => setVideoAvailable(false)}
+            className="w-full h-full object-cover opacity-75"
+          />
+          {/* Palace vignette gradient overlay for typography readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-palace-dark/95 via-palace-dark/50 to-palace-dark/80 pointer-events-none" />
+        </div>
+      ) : (
+        /* Fallback Ambient Background */
+        <>
+          <div className="absolute inset-0 bg-gradient-to-b from-palace-deep via-emerald-night to-palace-dark z-0" />
+          <div className="absolute inset-0 pointer-events-none z-[1] overflow-hidden">
+            <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[500px] bg-gradient-to-b from-gold-champagne/15 via-gold/5 to-transparent rounded-full blur-3xl animate-pulse duration-[8000ms]" />
+            <div className="absolute bottom-0 left-0 w-[350px] sm:w-[550px] h-[400px] bg-peacock-teal/10 rounded-full blur-3xl" />
+            <div className="absolute top-1/3 right-0 w-[350px] sm:w-[500px] h-[400px] bg-emerald-deep/15 rounded-full blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.03] to-transparent opacity-60 mix-blend-overlay animate-float-subtle" />
+          </div>
+        </>
+      )}
 
-      <div className="absolute inset-0 pointer-events-none z-[1] overflow-hidden">
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[500px] bg-gradient-to-b from-gold-champagne/15 via-gold/5 to-transparent rounded-full blur-3xl animate-pulse duration-[8000ms]" />
-        <div className="absolute bottom-0 left-0 w-[350px] sm:w-[550px] h-[400px] bg-peacock-teal/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/3 right-0 w-[350px] sm:w-[500px] h-[400px] bg-emerald-deep/15 rounded-full blur-3xl" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.03] to-transparent opacity-60 mix-blend-overlay animate-float-subtle" />
-      </div>
-
-      <div className="absolute inset-0 jali-watermark opacity-[0.20] pointer-events-none z-[2]" />
+      {/* Repeating Royal Jali Screen */}
+      <div className="absolute inset-0 jali-watermark opacity-[0.16] pointer-events-none z-[2]" />
 
       {/* Decorative Outer Stationery Margin */}
       <div className="absolute inset-2 sm:inset-4 md:inset-6 border border-gold/30 rounded-xl pointer-events-none z-10 flex flex-col justify-between">
@@ -64,8 +96,17 @@ export function Intro({
         </div>
       </div>
 
-      {/* ── Top Right Quick Skip Button (Always visible on all screen sizes) ── */}
-      <div className="absolute top-3 right-3 sm:top-4 sm:right-6 z-50">
+      {/* ── Top Controls: Sound Toggle & Quick Skip Button ── */}
+      <div className="absolute top-3 right-3 sm:top-4 sm:right-6 z-50 flex items-center gap-2">
+        {videoAvailable && videoSrc && (
+          <button
+            onClick={() => setIsMuted(!isMuted)}
+            className="group inline-flex items-center gap-1.5 px-3 py-1 sm:py-1.5 rounded-full border border-gold/60 bg-emerald-deep/90 hover:bg-gold hover:text-emerald-night text-gold-champagne backdrop-blur-md transition-all duration-300 shadow-md text-[10px] sm:text-xs font-caps tracking-royal font-semibold uppercase cursor-pointer active:scale-95"
+            aria-label={isMuted ? "Unmute Video Sound" : "Mute Video Sound"}
+          >
+            <span>{isMuted ? "🔇 Unmute" : "🔊 Sound On"}</span>
+          </button>
+        )}
         <button
           onClick={handleProceed}
           className="group inline-flex items-center gap-1.5 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-gold/70 bg-emerald-deep/90 hover:bg-gold hover:text-emerald-night text-gold-champagne backdrop-blur-md transition-all duration-300 shadow-[0_2px_10px_rgba(0,0,0,0.5)] text-[10px] sm:text-xs font-caps tracking-royal font-semibold uppercase cursor-pointer active:scale-95"
@@ -133,7 +174,7 @@ export function Intro({
           </div>
 
           {/* Architectural Content Card */}
-          <div className="w-full bg-gradient-to-b from-emerald-deep/70 via-palace-green/50 to-emerald-night/80 backdrop-blur-sm border border-gold/35 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 text-center shadow-2xl relative">
+          <div className="w-full bg-gradient-to-b from-emerald-deep/75 via-palace-green/55 to-emerald-night/85 backdrop-blur-md border border-gold/40 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 text-center shadow-2xl relative">
             <div className="absolute inset-1.5 border border-gold/15 rounded-xl pointer-events-none" />
 
             {/* Top Label: WEDDING INVITATION */}
@@ -192,7 +233,7 @@ export function Intro({
         </div>
       </main>
 
-      {/* ── BOTTOM CONTROLS: "Skip Intro" Button (Guaranteed fully on screen) ── */}
+      {/* ── BOTTOM CONTROLS: "Skip Intro" Button ── */}
       <footer className="relative z-30 pt-1 pb-2 sm:pb-3 px-4 w-full flex flex-col items-center flex-shrink-0">
         <button
           onClick={handleProceed}

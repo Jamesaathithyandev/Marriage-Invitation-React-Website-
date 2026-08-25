@@ -83,7 +83,7 @@ export function App() {
       {(stage === 'intro' || (stage === 'transition' && !revealedMain)) && (
         <Intro
           onComplete={handleStartTransition}
-          videoSrc={null} // Set to '/assets/wedding-intro.mp4' when video is ready
+          videoSrc={'/assets/wedding-intro.mp4'}
         />
       )}
 
