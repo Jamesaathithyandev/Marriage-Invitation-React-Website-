@@ -10,7 +10,6 @@ export function Intro({
   onComplete,
   videoSrc = '/assets/wedding-intro.mp4',
 }) {
-  const [isMuted, setIsMuted] = useState(true);
   const [videoAvailable, setVideoAvailable] = useState(Boolean(videoSrc));
   const videoRef = useRef(null);
 
@@ -23,12 +22,6 @@ export function Intro({
       videoRef.current.play().catch(() => {});
     }
   }, [videoAvailable]);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = isMuted;
-    }
-  }, [isMuted]);
 
   return (
     <div
@@ -137,7 +130,7 @@ export function Intro({
                 src={videoSrc}
                 autoPlay
                 playsInline
-                muted={isMuted}
+                muted
                 onEnded={handleProceed}
                 onError={() => setVideoAvailable(false)}
                 className="w-full h-auto max-h-[44vh] sm:max-h-[50vh] md:max-h-[54vh] object-contain block"
@@ -146,18 +139,6 @@ export function Intro({
               <div className="w-full aspect-video flex flex-col items-center justify-center bg-gradient-to-b from-emerald-deep to-palace-dark">
                 <p className="font-caps text-gold text-sm tracking-wider">Video unavailable</p>
               </div>
-            )}
-
-            {/* Sound toggle bottom-right of video */}
-            {videoAvailable && (
-              <button
-                onClick={() => setIsMuted(!isMuted)}
-                className="absolute bottom-2.5 right-2.5 flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-palace-dark/85 border border-gold/50 text-gold-champagne backdrop-blur-sm text-[10px] sm:text-xs font-caps tracking-wide uppercase hover:bg-gold hover:text-palace-dark transition-all duration-200 cursor-pointer active:scale-95 shadow-md"
-                aria-label={isMuted ? 'Unmute video' : 'Mute video'}
-              >
-                <span className="text-sm leading-none">{isMuted ? String.fromCodePoint(0x1F507) : String.fromCodePoint(0x1F50A)}</span>
-                <span className="hidden sm:inline font-semibold">{isMuted ? 'Unmute' : 'Mute'}</span>
-              </button>
             )}
           </div>
         </div>
@@ -199,3 +180,4 @@ export function Intro({
 }
 
 export default Intro;
+
