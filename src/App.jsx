@@ -15,6 +15,7 @@ import { RevealOnScroll } from './components/common/RevealOnScroll';
 import { JaliBackground } from './components/decorative/JaliBackground';
 import { LotusMotif } from './components/decorative/LotusMotif';
 import { OrnamentalDivider } from './components/decorative/OrnamentalDivider';
+import { BackgroundMusic } from './components/common/BackgroundMusic';
 
 /**
  * App â€” Royal Wedding Invitation State Machine
@@ -108,6 +109,9 @@ export function App() {
       {/* â”€â”€ 3. MAIN WEDDING INVITATION EXPERIENCE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {(stage === 'main' || (stage === 'transition' && revealedMain)) && (
         <JaliBackground opacity="subtle" showPalaceVignette>
+
+          {/* Background music - Mast Magan */}
+          <BackgroundMusic />
 
           {/* â”€â”€ NAVIGATION CURTAIN (for Get Directions / Calendar) â”€ */}
           {navCurtainActive && (

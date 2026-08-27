@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -83,6 +83,15 @@ export default {
         'gold-glow': '0 0 25px rgba(198, 166, 107, 0.3)',
         'gold-subtle': '0 4px 20px -2px rgba(198, 166, 107, 0.25)',
         'palace-elevation': '0 30px 60px -12px rgba(11, 38, 32, 0.22), 0 18px 36px -18px rgba(11, 38, 32, 0.15)',
+      },
+      keyframes: {
+        'music-bar': {
+          '0%, 100%': { height: '4px' },
+          '50%': { height: '14px' },
+        },
+      },
+      animation: {
+        'music-bar': 'music-bar 0.8s ease-in-out infinite',
       },
       letterSpacing: {
         'royal': '0.25em',
