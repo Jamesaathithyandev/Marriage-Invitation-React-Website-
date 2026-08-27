@@ -2,6 +2,7 @@
 
 import { Intro } from './components/intro/Intro';
 import { LoadingScreen } from './components/intro/LoadingScreen';
+import { EnterSplash } from './components/intro/EnterSplash';
 import { CurtainTransition } from './components/transition/CurtainTransition';
 import { HeroSection } from './components/hero/HeroSection';
 import { CoupleSection } from './components/sections/CoupleSection';
@@ -46,7 +47,13 @@ export function App() {
 
   // â”€â”€ Navigation Curtain State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Loading screen completes -> go to intro
-  const handleLoadingComplete = useCallback(() => setStage('intro'), []);
+  const handleLoadingComplete = useCallback(() => setStage('splash'), []);
+
+  // Splash enter button clicked -> start music + go to intro
+  const handleEnterSplash = useCallback(() => {
+    if (musicRef.current) musicRef.current.start();
+    setStage('intro');
+  }, []);
 
   const [navCurtainActive, setNavCurtainActive] = useState(false);
   const musicRef = useRef(null);
@@ -90,7 +97,12 @@ export function App() {
       {/* â”€â”€ 1. CINEMATIC INTRO SCREEN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {/* 0. LOADING SCREEN */}
       {stage === 'loading' && (
-        <LoadingScreen onComplete={handleLoadingComplete} onReady={() => musicRef.current && musicRef.current.start()} />
+        <LoadingScreen onComplete={handleLoadingComplete} />
+      )}
+
+      {/* SPLASH: Enter gate - user click guarantees music autoplay */}
+      {stage === 'splash' && (
+        <EnterSplash onEnter={handleEnterSplash} />
       )}
 
       {(stage === 'intro' || (stage === 'transition' && !revealedMain)) && (
