@@ -2,67 +2,78 @@
 
 /**
  * BackgroundMusic.jsx
- * Plays Mast Magan across ALL stages: loading screen, intro video, and main invitation.
- * Starts on first user interaction (click/tap anywhere) to satisfy browser autoplay policy.
- * Intro video stays muted; this audio track plays throughout.
+ * Autoplays Mast Magan the moment the site loads.
+ *
+ * Browser autoplay trick:
+ *   1. Create audio with muted = true
+ *   2. Call play() — browsers allow muted autoplay
+ *   3. Immediately set muted = false — unmuting a playing track IS allowed
+ *   4. Fade volume in smoothly
+ *
+ * Fallback: if even muted autoplay is blocked, listen for first interaction.
  */
 export function BackgroundMusic({ src = '/assets/bg-music.mp3', volume = 0.22 }) {
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
-  const [started, setStarted] = useState(false);
   const [visible, setVisible] = useState(false);
   const [fadeIn, setFadeIn] = useState(false);
 
   const fadeVolumeTo = (audio, target, durationMs) => {
-    const steps = 60;
+    const steps = 80;
     const interval = durationMs / steps;
-    const startVol = audio.volume;
-    const delta = (target - startVol) / steps;
+    const delta = (target - audio.volume) / steps;
     let step = 0;
-    const timer = setInterval(() => {
+    const id = setInterval(() => {
       step++;
       audio.volume = Math.min(Math.max(audio.volume + delta, 0), 1);
-      if (step >= steps) clearInterval(timer);
+      if (step >= steps) clearInterval(id);
     }, interval);
   };
 
-  // Create audio on mount
+  const showPill = () => {
+    setVisible(true);
+    setTimeout(() => setFadeIn(true), 60);
+  };
+
   useEffect(() => {
     const audio = new Audio(src);
     audio.loop = true;
     audio.volume = 0;
+    audio.muted = true; // start muted so browser allows play()
     audioRef.current = audio;
 
-    // Try immediate autoplay (works if browser allows it)
-    audio.play()
-      .then(() => {
-        fadeVolumeTo(audio, volume, 2000);
+    const startAudio = async () => {
+      try {
+        await audio.play();        // succeeds: muted autoplay is always allowed
+        audio.muted = false;       // unmute while already playing — browsers permit this
+        fadeVolumeTo(audio, volume, 2200);
         setPlaying(true);
-        setStarted(true);
         showPill();
-      })
-      .catch(() => {
-        // Autoplay blocked — wait for first user interaction
-        const startOnInteraction = () => {
-          if (started) return;
+      } catch {
+        // Last resort: wait for any user interaction
+        const onInteract = () => {
+          audio.muted = false;
           audio.play()
             .then(() => {
               fadeVolumeTo(audio, volume, 1500);
               setPlaying(true);
-              setStarted(true);
-              showPill();
             })
             .catch(() => {});
-          document.removeEventListener('click', startOnInteraction);
-          document.removeEventListener('keydown', startOnInteraction);
-          document.removeEventListener('touchstart', startOnInteraction);
+          cleanup();
         };
-        document.addEventListener('click', startOnInteraction);
-        document.addEventListener('keydown', startOnInteraction);
-        document.addEventListener('touchstart', startOnInteraction);
-        // Show pill anyway so user can manually start
-        setTimeout(showPill, 2000);
-      });
+        const cleanup = () => {
+          document.removeEventListener('click', onInteract);
+          document.removeEventListener('touchstart', onInteract);
+          document.removeEventListener('keydown', onInteract);
+        };
+        document.addEventListener('click', onInteract, { once: true });
+        document.addEventListener('touchstart', onInteract, { once: true });
+        document.addEventListener('keydown', onInteract, { once: true });
+        showPill();
+      }
+    };
+
+    startAudio();
 
     return () => {
       audio.pause();
@@ -70,24 +81,19 @@ export function BackgroundMusic({ src = '/assets/bg-music.mp3', volume = 0.22 })
     };
   }, []);
 
-  const showPill = () => {
-    setVisible(true);
-    setTimeout(() => setFadeIn(true), 50);
-  };
-
   const toggle = () => {
     const audio = audioRef.current;
     if (!audio) return;
     if (playing) {
-      fadeVolumeTo(audio, 0, 600);
-      setTimeout(() => audio.pause(), 620);
+      fadeVolumeTo(audio, 0, 500);
+      setTimeout(() => { audio.pause(); }, 520);
       setPlaying(false);
     } else {
+      audio.muted = false;
       audio.play()
         .then(() => {
-          fadeVolumeTo(audio, volume, 1000);
+          fadeVolumeTo(audio, volume, 800);
           setPlaying(true);
-          setStarted(true);
         })
         .catch(() => {});
     }
@@ -104,8 +110,8 @@ export function BackgroundMusic({ src = '/assets/bg-music.mp3', volume = 0.22 })
     <div className={pillClass}>
       <button
         onClick={toggle}
-        className="group flex items-center gap-2 px-4 py-2 rounded-full border border-gold/55 bg-palace-dark/85 backdrop-blur-md shadow-[0_0_18px_rgba(198,166,107,0.3)] hover:shadow-[0_0_28px_rgba(198,166,107,0.6)] hover:border-gold/90 transition-all duration-300 cursor-pointer active:scale-95 select-none"
-        aria-label={playing ? 'Pause background music' : 'Play background music'}
+        className="group flex items-center gap-2 px-4 py-2 rounded-full border border-gold/55 bg-palace-dark/85 backdrop-blur-md shadow-[0_0_18px_rgba(198,166,107,0.3)] hover:shadow-[0_0_28px_rgba(198,166,107,0.65)] hover:border-gold/90 transition-all duration-300 cursor-pointer active:scale-95 select-none"
+        aria-label={playing ? 'Pause music' : 'Play music'}
       >
         {/* Equalizer bars */}
         <div className="flex items-end gap-[3px] h-4 w-5 flex-shrink-0">
@@ -119,7 +125,7 @@ export function BackgroundMusic({ src = '/assets/bg-music.mp3', volume = 0.22 })
                 height: playing ? '14px' : '4px',
                 transition: 'height 0.3s ease',
                 animation: playing
-                  ? 'musicBarAnim 0.8s ease-in-out ' + delay + 's infinite alternate'
+                  ? `musicBarAnim 0.75s ease-in-out ${delay}s infinite alternate`
                   : 'none',
               }}
             />
@@ -144,7 +150,6 @@ export function BackgroundMusic({ src = '/assets/bg-music.mp3', volume = 0.22 })
         </span>
       </button>
 
-      {/* CSS keyframe via style tag */}
       <style>{`
         @keyframes musicBarAnim {
           from { height: 4px; }
