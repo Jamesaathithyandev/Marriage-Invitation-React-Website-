@@ -5,7 +5,7 @@
  * Royal palace themed loading screen shown for ~3.5 seconds before the intro video.
  * Features: animated lotus bloom, gold progress bar, animated Sanskrit blessing reveal.
  */
-export function LoadingScreen({ onComplete }) {
+export function LoadingScreen({ onComplete, onReady }) {
   const [progress, setProgress] = useState(0);
   const [fadeOut, setFadeOut] = useState(false);
   const DURATION_MS = 3500;
@@ -20,7 +20,10 @@ export function LoadingScreen({ onComplete }) {
       setProgress(pct);
 
       if (pct < 100) {
-        raf = requestAnimationFrame(tick);
+        // Signal parent to start music immediately
+    if (onReady) onReady();
+
+    raf = requestAnimationFrame(tick);
       } else {
         // Begin fade-out
         setTimeout(() => {
@@ -31,6 +34,9 @@ export function LoadingScreen({ onComplete }) {
         }, 200);
       }
     };
+
+    // Signal parent to start music immediately
+    if (onReady) onReady();
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);

@@ -49,6 +49,7 @@ export function App() {
   const handleLoadingComplete = useCallback(() => setStage('intro'), []);
 
   const [navCurtainActive, setNavCurtainActive] = useState(false);
+  const musicRef = useRef(null);
   const pendingNavUrl = useRef(null);
 
   /**
@@ -85,11 +86,11 @@ export function App() {
   return (
     <>
       {/* Music plays across ALL stages - loading, intro, main */}
-      <BackgroundMusic />
+      <BackgroundMusic ref={musicRef} />
       {/* â”€â”€ 1. CINEMATIC INTRO SCREEN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {/* 0. LOADING SCREEN */}
       {stage === 'loading' && (
-        <LoadingScreen onComplete={handleLoadingComplete} />
+        <LoadingScreen onComplete={handleLoadingComplete} onReady={() => musicRef.current && musicRef.current.start()} />
       )}
 
       {(stage === 'intro' || (stage === 'transition' && !revealedMain)) && (
