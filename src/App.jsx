@@ -84,6 +84,8 @@ export function App() {
 
   return (
     <>
+      {/* Music plays across ALL stages - loading, intro, main */}
+      <BackgroundMusic />
       {/* â”€â”€ 1. CINEMATIC INTRO SCREEN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {/* 0. LOADING SCREEN */}
       {stage === 'loading' && (
@@ -109,9 +111,6 @@ export function App() {
       {/* â”€â”€ 3. MAIN WEDDING INVITATION EXPERIENCE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {(stage === 'main' || (stage === 'transition' && revealedMain)) && (
         <JaliBackground opacity="subtle" showPalaceVignette>
-
-          {/* Background music - Mast Magan */}
-          <BackgroundMusic />
 
           {/* â”€â”€ NAVIGATION CURTAIN (for Get Directions / Calendar) â”€ */}
           {navCurtainActive && (
