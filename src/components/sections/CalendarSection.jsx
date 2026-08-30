@@ -105,10 +105,10 @@ export function CalendarSection({ onExternalNavigate }) {
               {/* Month & Year */}
               <div className="relative z-10">
                 <LotusMotif variant="crest" size="md" className="mx-auto mb-2 opacity-95" />
-                <h3 className="font-display text-xl sm:text-2xl font-normal tracking-wider text-gold-champagne leading-tight">
+                <h3 className="font-display text-2xl sm:text-3xl font-normal tracking-wider text-gold-champagne leading-tight">
                   October 2026
                 </h3>
-                <p className="font-caps text-[8px] sm:text-[9px] tracking-monumental text-gold/80 uppercase mt-0.5">
+                <p className="font-caps text-[10px] sm:text-xs tracking-monumental text-gold/90 uppercase font-semibold mt-1">
                   Vinay &amp; Kishma · Wedding Celebrations
                 </p>
               </div>
@@ -117,8 +117,8 @@ export function CalendarSection({ onExternalNavigate }) {
             {/* Weekday Labels */}
             <div className="grid grid-cols-7 border-b border-gold/20 bg-ivory/60">
               {weekDays.map((day) => (
-                <div key={day} className="py-2 text-center">
-                  <span className="font-caps text-[8px] sm:text-[10px] tracking-wider text-palace-green/70 font-semibold uppercase">
+                <div key={day} className="py-2.5 text-center">
+                  <span className="font-caps text-xs sm:text-sm tracking-wider text-palace-green/85 font-bold uppercase">
                     {day}
                   </span>
                 </div>
@@ -126,7 +126,7 @@ export function CalendarSection({ onExternalNavigate }) {
             </div>
 
             {/* Calendar Days Grid */}
-            <div className="grid grid-cols-7 p-2 sm:p-3.5 gap-1 sm:gap-2">
+            <div className="grid grid-cols-7 p-2.5 sm:p-4 gap-1.5 sm:gap-2.5">
               {calendarDays.map((day, idx) => {
                 if (!day) {
                   return <div key={`empty-${idx}`} className="h-12 sm:h-14 md:h-16 w-full" />;
@@ -141,14 +141,14 @@ export function CalendarSection({ onExternalNavigate }) {
                   return (
                     <div
                       key={day}
-                      className={`relative h-12 sm:h-14 md:h-16 w-full flex flex-col items-center justify-between py-1 px-0.5 rounded-xl transition-all duration-300 transform hover:scale-105 text-center overflow-hidden ${
+                      className={`relative h-13 sm:h-15 md:h-17 w-full flex flex-col items-center justify-between py-1 px-0.5 rounded-xl transition-all duration-300 transform hover:scale-105 text-center overflow-hidden ${
                         isMain
                           ? 'bg-gradient-to-b from-emerald-deep via-palace-green to-emerald-night text-gold-light border-2 border-gold shadow-[0_0_16px_rgba(198,166,107,0.55)] z-10'
                           : 'bg-gradient-to-b from-peacock-teal to-peacock-dark text-white border-2 border-gold/80 shadow-[0_0_12px_rgba(23,107,112,0.45)] z-10'
                       }`}
                     >
                       {/* Top Motif Icon */}
-                      <div className="w-full flex justify-center items-center h-3 sm:h-3.5 flex-shrink-0">
+                      <div className="w-full flex justify-center items-center h-3.5 sm:h-4 flex-shrink-0">
                         {isMain ? (
                           <LotusMotif variant="crest" size="sm" className="w-5 h-4 sm:w-6 sm:h-5 text-gold-champagne drop-shadow" />
                         ) : (
@@ -157,14 +157,14 @@ export function CalendarSection({ onExternalNavigate }) {
                       </div>
 
                       {/* Day Number */}
-                      <span className="font-display text-xs sm:text-base font-bold leading-none tracking-tight text-gold-foil my-auto flex-shrink-0">
+                      <span className="font-display text-sm sm:text-lg font-bold leading-none tracking-tight text-gold-foil my-auto flex-shrink-0">
                         {day}
                       </span>
 
                       {/* Event Tagline - Centered & Single-Line */}
                       <div className="w-full flex justify-center flex-shrink-0">
                         <span
-                          className={`inline-flex items-center justify-center text-center whitespace-nowrap font-caps text-[6px] sm:text-[7.5px] tracking-wider uppercase font-bold px-1 py-0.5 rounded leading-none ${
+                          className={`inline-flex items-center justify-center text-center whitespace-nowrap font-caps text-[7px] sm:text-[8.5px] tracking-wider uppercase font-bold px-1.5 py-0.5 rounded leading-none ${
                             isMain
                               ? 'bg-gold/25 text-gold-bright border border-gold/50 shadow-sm'
                               : 'bg-white/20 text-white border border-white/40 shadow-sm'
@@ -181,9 +181,9 @@ export function CalendarSection({ onExternalNavigate }) {
                 return (
                   <div
                     key={day}
-                    className="relative h-12 sm:h-14 md:h-16 w-full flex items-center justify-center rounded-lg hover:bg-gold/10 transition-colors duration-150"
+                    className="relative h-13 sm:h-15 md:h-17 w-full flex items-center justify-center rounded-lg hover:bg-gold/10 transition-colors duration-150"
                   >
-                    <span className="font-serif text-xs sm:text-sm md:text-base font-medium text-palace-green/70">
+                    <span className="font-serif text-sm sm:text-base font-semibold text-palace-green/75">
                       {day}
                     </span>
                   </div>
@@ -192,45 +192,45 @@ export function CalendarSection({ onExternalNavigate }) {
             </div>
 
             {/* ── HIGHLIGHTED EVENT CARDS (LEGEND / QUICK OVERVIEW) ── */}
-            <div className="p-3 sm:p-4 border-t border-gold/20 bg-ivory-dark/30 space-y-2.5">
+            <div className="p-3.5 sm:p-5 border-t border-gold/20 bg-ivory-dark/30 space-y-3">
               
               {/* 24th Card */}
-              <div className="flex items-center gap-3 p-2.5 rounded-xl border border-peacock-teal/40 bg-peacock-teal/10">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-peacock-teal flex flex-col items-center justify-center text-white border border-gold/50 shadow-sm flex-shrink-0">
-                  <span className="font-caps text-[7px] uppercase leading-none text-gold">Oct</span>
-                  <span className="font-display text-sm sm:text-base font-bold leading-none text-white">24</span>
+              <div className="flex items-center gap-3.5 p-3 rounded-xl border border-peacock-teal/40 bg-peacock-teal/10">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-peacock-teal flex flex-col items-center justify-center text-white border border-gold/50 shadow-sm flex-shrink-0">
+                  <span className="font-caps text-[8px] uppercase leading-none text-gold font-bold">Oct</span>
+                  <span className="font-display text-base sm:text-lg font-bold leading-none text-white">24</span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1.5">
-                    <span className="font-serif font-bold text-xs sm:text-sm text-palace-green">
+                  <div className="flex items-center gap-2">
+                    <span className="font-serif font-bold text-sm sm:text-base text-palace-green">
                       Mehendi, Haldi &amp; Sangeet
                     </span>
-                    <span className="text-[8px] font-caps px-1.5 py-0.5 rounded bg-peacock-teal/20 text-peacock-dark font-semibold">
+                    <span className="text-[9px] font-caps px-2 py-0.5 rounded bg-peacock-teal/20 text-peacock-dark font-bold">
                       Saturday
                     </span>
                   </div>
-                  <p className="font-serif italic text-[11px] sm:text-xs text-palace-green/70">
+                  <p className="font-serif italic text-xs sm:text-sm text-palace-green/80 mt-0.5">
                     Mehendi (11:00 AM) · Haldi (3:00 PM) · Sangeet (7:00 PM onwards)
                   </p>
                 </div>
               </div>
 
               {/* 25th Card */}
-              <div className="flex items-center gap-3 p-2.5 rounded-xl border border-gold/60 bg-gradient-to-r from-emerald-deep/10 via-gold/10 to-emerald-deep/5">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-emerald-deep flex flex-col items-center justify-center text-gold-light border-2 border-gold shadow-md flex-shrink-0">
-                  <span className="font-caps text-[7px] uppercase leading-none text-gold">Oct</span>
-                  <span className="font-display text-sm sm:text-base font-bold leading-none text-gold-foil">25</span>
+              <div className="flex items-center gap-3.5 p-3 rounded-xl border border-gold/60 bg-gradient-to-r from-emerald-deep/10 via-gold/10 to-emerald-deep/5">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-emerald-deep flex flex-col items-center justify-center text-gold-light border-2 border-gold shadow-md flex-shrink-0">
+                  <span className="font-caps text-[8px] uppercase leading-none text-gold font-bold">Oct</span>
+                  <span className="font-display text-base sm:text-lg font-bold leading-none text-gold-foil">25</span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1.5">
-                    <span className="font-serif font-bold text-xs sm:text-sm text-palace-green">
+                  <div className="flex items-center gap-2">
+                    <span className="font-serif font-bold text-sm sm:text-base text-palace-green">
                       Sacred Muhurtham &amp; Reception
                     </span>
-                    <span className="text-[8px] font-caps px-1.5 py-0.5 rounded bg-emerald-deep text-gold-light font-semibold">
+                    <span className="text-[9px] font-caps px-2 py-0.5 rounded bg-emerald-deep text-gold-light font-bold">
                       Sunday
                     </span>
                   </div>
-                  <p className="font-serif italic text-[11px] sm:text-xs text-palace-green/70">
+                  <p className="font-serif italic text-xs sm:text-sm text-palace-green/80 mt-0.5">
                     Muhurtham (10:00 AM – 11:00 AM) · Reception (6:30 PM onwards)
                   </p>
                 </div>

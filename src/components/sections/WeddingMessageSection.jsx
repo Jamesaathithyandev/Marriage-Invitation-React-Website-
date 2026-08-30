@@ -33,10 +33,10 @@ export function WeddingMessageSection() {
 
         {/* Lead Quote (Script & Serif) */}
         <div className="space-y-3 mb-8">
-          <p className="font-caps text-[10px] sm:text-xs tracking-monumental text-gold-deep uppercase font-semibold">
+          <p className="font-caps text-xs sm:text-sm tracking-monumental text-gold-deep uppercase font-semibold">
             A Celebratory Union
           </p>
-          <h2 className="font-script text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-palace-green leading-tight drop-shadow-sm px-2">
+          <h2 className="font-script text-3xl sm:text-5xl md:text-6xl text-palace-green leading-tight drop-shadow-sm px-2">
             "{WEDDING_MESSAGES.leadQuote}"
           </h2>
         </div>
@@ -45,26 +45,26 @@ export function WeddingMessageSection() {
         <div className="w-full max-w-md my-4 flex items-center justify-center gap-3">
           <div className="h-[0.5px] flex-1 bg-gradient-to-r from-transparent via-gold/50 to-gold" />
           <div className="flex items-center gap-1.5">
-            <div className="w-1 h-1 rotate-45 bg-gold" />
-            <PeacockMotif variant="feather-crown" size="sm" className="w-7 h-4 text-gold opacity-80" />
-            <div className="w-1 h-1 rotate-45 bg-gold" />
+            <div className="w-1.5 h-1.5 rotate-45 bg-gold" />
+            <PeacockMotif variant="feather-crown" size="sm" className="w-8 h-5 text-gold opacity-80" />
+            <div className="w-1.5 h-1.5 rotate-45 bg-gold" />
           </div>
           <div className="h-[0.5px] flex-1 bg-gradient-to-l from-transparent via-gold/50 to-gold" />
         </div>
 
         {/* Invitation Message Body */}
         <div className="max-w-2xl px-4 sm:px-6 my-6">
-          <p className="font-serif text-lg sm:text-xl md:text-2xl text-palace-green/85 leading-relaxed sm:leading-loose font-normal">
+          <p className="font-serif text-xl sm:text-2xl md:text-3xl text-palace-green/90 leading-relaxed sm:leading-loose font-normal">
             "{WEDDING_MESSAGES.invitationText}"
           </p>
         </div>
 
         {/* Formal Invitation Signoff */}
         <div className="mt-8 space-y-1.5">
-          <p className="font-caps text-xs sm:text-sm tracking-royal text-gold-deep font-semibold uppercase">
+          <p className="font-caps text-sm sm:text-base tracking-royal text-gold-deep font-semibold uppercase">
             Vinay &amp; Kishma
           </p>
-          <p className="font-serif italic text-xs sm:text-sm text-palace-green/60">
+          <p className="font-serif italic text-sm sm:text-base text-palace-green/70 font-medium">
             Along with the Sahani &amp; Xavier Families
           </p>
         </div>

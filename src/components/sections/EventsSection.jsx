@@ -151,39 +151,39 @@ export function EventsSection() {
 
                         {/* Main Event Highlight Badge */}
                         {isMain && (
-                          <div className="mb-2">
-                            <span className="inline-block px-3 py-0.5 rounded-full border border-gold/60 bg-emerald-deep/90 text-gold-light text-[9px] font-caps tracking-monumental uppercase font-semibold">
+                          <div className="mb-2.5">
+                            <span className="inline-block px-3.5 py-1 rounded-full border border-gold/60 bg-emerald-deep/90 text-gold-light text-xs font-caps tracking-monumental uppercase font-bold shadow-sm">
                               ★ Main Auspicious Ceremony ★
                             </span>
                           </div>
                         )}
 
                         {/* Day & Date Line */}
-                        <div className="space-y-0.5 mb-1.5">
-                          <span className="font-caps text-[9px] sm:text-[10px] tracking-monumental text-gold-deep uppercase font-semibold block">
+                        <div className="space-y-0.5 mb-2">
+                          <span className="font-caps text-xs sm:text-sm tracking-monumental text-gold-deep uppercase font-bold block">
                             {event.day}
                           </span>
-                          <p className="font-serif font-semibold text-xs sm:text-sm text-palace-green">
+                          <p className="font-serif font-semibold text-sm sm:text-base text-palace-green">
                             {event.date}
                           </p>
                         </div>
 
                         {/* Event Title */}
-                        <h3 className="font-caps text-xl sm:text-2xl md:text-3xl text-gold-foil font-semibold tracking-wider leading-tight my-1.5">
+                        <h3 className="font-caps text-2xl sm:text-3xl md:text-4xl text-gold-foil font-semibold tracking-wider leading-tight my-2">
                           {event.title}
                         </h3>
 
                         {/* Time Pill Badge */}
-                        <div className="my-2.5 inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full border border-gold/50 bg-ivory-dark/60 text-palace-green text-xs font-serif font-medium">
-                          <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5 text-gold-deep" aria-hidden="true">
+                        <div className="my-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/50 bg-ivory-dark/60 text-palace-green text-sm font-serif font-medium">
+                          <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-gold-deep" aria-hidden="true">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.2" />
                             <path d="M8 4.5 V8 L10.5 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
                           </svg>
-                          <span className="tracking-wide">{event.time}</span>
+                          <span className="tracking-wide font-medium">{event.time}</span>
                         </div>
 
                         {/* Event Description */}
-                        <p className="font-serif italic text-xs sm:text-sm text-palace-green/75 leading-relaxed mt-2">
+                        <p className="font-serif italic text-sm sm:text-base text-palace-green/80 leading-relaxed mt-2">
                           "{event.description}"
                         </p>
 

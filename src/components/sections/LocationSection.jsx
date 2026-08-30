@@ -143,22 +143,22 @@ export function LocationSection({ onExternalNavigate }) {
           <div className="relative border border-gold/20 rounded-xl overflow-hidden bg-ivory-light/95">
 
             {/* Map Frame Header */}
-            <div className="relative bg-gradient-to-r from-palace-green via-emerald-deep to-palace-dark px-5 py-3 flex items-center justify-between">
+            <div className="relative bg-gradient-to-r from-palace-green via-emerald-deep to-palace-dark px-5 py-3.5 flex items-center justify-between">
               <div className="absolute inset-0 jali-watermark opacity-[0.15] pointer-events-none" />
-              <div className="relative z-10 flex items-center gap-2">
-                <LotusMotif variant="crest" size="md" className="w-8 h-8 opacity-95 text-gold" />
+              <div className="relative z-10 flex items-center gap-2.5">
+                <LotusMotif variant="crest" size="md" className="w-9 h-9 opacity-95 text-gold" />
                 <div>
-                  <p className="font-display text-sm sm:text-base font-normal tracking-wide text-gold-champagne leading-tight">
+                  <p className="font-display text-base sm:text-lg font-normal tracking-wide text-gold-champagne leading-tight">
                     {WEDDING_VENUE.name}
                   </p>
-                  <p className="font-caps text-[8px] sm:text-[9px] tracking-monumental text-gold/60 uppercase">
+                  <p className="font-caps text-[9px] sm:text-[10px] tracking-monumental text-gold/80 uppercase font-semibold">
                     Bannerghatta Road · Bangalore
                   </p>
                 </div>
               </div>
               {/* Satellite badge */}
-              <div className="relative z-10 px-2 py-0.5 rounded border border-gold/40 bg-gold/10">
-                <span className="font-caps text-[8px] tracking-wider text-gold uppercase">Satellite View</span>
+              <div className="relative z-10 px-2.5 py-1 rounded border border-gold/40 bg-gold/10">
+                <span className="font-caps text-[9px] sm:text-[10px] tracking-wider text-gold uppercase font-bold">Satellite View</span>
               </div>
             </div>
 
@@ -183,19 +183,19 @@ export function LocationSection({ onExternalNavigate }) {
             </div>
 
             {/* Address Strip */}
-            <div className="px-5 sm:px-6 py-4 border-t border-gold/25 bg-ivory-light/90">
-              <div className="flex items-start gap-3">
+            <div className="px-5 sm:px-7 py-5 border-t border-gold/25 bg-ivory-light/90">
+              <div className="flex items-start gap-3.5">
                 {/* Palace-pin icon (SVG) */}
-                <svg viewBox="0 0 14 20" fill="none" className="w-3.5 h-5 flex-shrink-0 mt-0.5 text-gold" aria-hidden="true">
+                <svg viewBox="0 0 14 20" fill="none" className="w-4 h-6 flex-shrink-0 mt-0.5 text-gold" aria-hidden="true">
                   <path d="M7 0 C3.13 0 0 3.13 0 7 C0 12.25 7 20 7 20 C7 20 14 12.25 14 7 C14 3.13 10.87 0 7 0 Z" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="0.8"/>
                   <circle cx="7" cy="7" r="2.5" fill="currentColor"/>
                 </svg>
                 <div>
-                  <p className="font-serif font-semibold text-sm sm:text-base text-palace-green leading-tight mb-1">
+                  <p className="font-serif font-semibold text-base sm:text-lg text-palace-green leading-tight mb-1.5">
                     {WEDDING_VENUE.name}
                   </p>
                   {WEDDING_VENUE.address.map((line, i) => (
-                    <p key={i} className="font-serif text-xs sm:text-sm text-palace-green/75 leading-relaxed">
+                    <p key={i} className="font-serif text-sm sm:text-base text-palace-green/80 leading-relaxed">
                       {line}
                     </p>
                   ))}
@@ -210,9 +210,9 @@ export function LocationSection({ onExternalNavigate }) {
         <button
           onClick={handleGetDirections}
           className="
-            group relative mt-6 flex items-center justify-center gap-2.5
-            w-full max-w-xs px-6 py-4 rounded-xl
-            border border-gold/50 bg-gradient-to-b from-ivory to-ivory-dark
+            group relative mt-7 flex items-center justify-center gap-3
+            w-full max-w-xs px-7 py-4.5 rounded-xl
+            border border-gold/60 bg-gradient-to-b from-ivory to-ivory-dark
             hover:from-emerald-deep hover:to-palace-green
             shadow-gold-subtle hover:shadow-palace-elevation
             text-palace-green hover:text-gold-champagne
@@ -221,10 +221,10 @@ export function LocationSection({ onExternalNavigate }) {
           aria-label="Open Google Maps directions to Tranquil Wedding Venue"
         >
           {/* Navigation Arrow Icon */}
-          <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4 text-gold group-hover:text-gold-champagne flex-shrink-0 transition-colors duration-300" aria-hidden="true">
+          <svg viewBox="0 0 20 20" fill="none" className="w-4.5 h-4.5 text-gold group-hover:text-gold-champagne flex-shrink-0 transition-colors duration-300" aria-hidden="true">
             <path d="M10 2 L18 10 L10 18 L10 13 C5.58 13 2 14.58 2 18 C2 10 5.58 7 10 7 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          <span className="font-caps text-xs sm:text-sm tracking-royal font-semibold uppercase">
+          <span className="font-caps text-sm sm:text-base tracking-royal font-bold uppercase">
             Get Directions
           </span>
           {/* Hover shimmer */}

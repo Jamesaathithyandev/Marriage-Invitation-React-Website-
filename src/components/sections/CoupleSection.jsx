@@ -81,30 +81,30 @@ export function CoupleSection() {
               <div className="md:col-span-5 flex flex-col items-center text-center px-2 sm:px-4">
                 {/* Role Pill */}
                 <div className="mb-2">
-                  <span className="font-caps text-[9px] sm:text-[10px] tracking-monumental text-gold-deep uppercase font-semibold">
+                  <span className="font-caps text-xs sm:text-sm tracking-monumental text-gold-deep uppercase font-bold">
                     {groom.role}
                   </span>
                 </div>
 
                 {/* Groom Name */}
-                <h3 className="font-display text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide text-gold-foil drop-shadow-sm leading-tight">
+                <h3 className="font-display text-4xl sm:text-5xl md:text-6xl font-normal tracking-wide text-gold-foil drop-shadow-sm leading-tight">
                   {groom.name}
                 </h3>
 
                 {/* Peacock Feather Accent */}
-                <div className="my-2.5 flex justify-center opacity-85">
-                  <PeacockMotif variant="feather-crown" size="md" className="w-12 h-7 opacity-95" />
+                <div className="my-3 flex justify-center opacity-90">
+                  <PeacockMotif variant="feather-crown" size="md" className="w-14 h-8 opacity-95" />
                 </div>
 
                 {/* Parentage Line */}
-                <div className="space-y-1 mt-1">
-                  <p className="font-serif italic text-xs sm:text-sm text-gold-deep font-medium">
+                <div className="space-y-1.5 mt-1">
+                  <p className="font-serif italic text-sm sm:text-base text-gold-deep font-semibold">
                     {groom.relation}
                   </p>
-                  <p className="font-serif text-base sm:text-lg md:text-xl text-palace-green font-medium leading-snug">
+                  <p className="font-serif text-lg sm:text-xl md:text-2xl text-palace-green font-semibold leading-snug">
                     {groom.parents}
                   </p>
-                  <span className="font-caps text-[8px] sm:text-[9px] tracking-monumental text-palace-green/50 uppercase block pt-1">
+                  <span className="font-caps text-[10px] sm:text-xs tracking-monumental text-palace-green/70 uppercase block pt-1 font-semibold">
                     {groom.heritage}
                   </span>
                 </div>
@@ -113,13 +113,13 @@ export function CoupleSection() {
               {/* ── CENTERPIECE: SACRED EMBLEM (Center) ─────── */}
               <div className="md:col-span-1 flex flex-col items-center justify-center my-2 md:my-0">
                 {/* Mobile divider line */}
-                <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold/60 to-transparent md:hidden mb-4" />
+                <div className="w-28 h-[1px] bg-gradient-to-r from-transparent via-gold/60 to-transparent md:hidden mb-4" />
 
                 <div className="relative flex flex-col items-center">
                   {/* Decorative Radial Sun / Lotus Ring */}
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-gold/50 bg-gradient-to-b from-ivory to-ivory-dark flex flex-col items-center justify-center shadow-gold-subtle">
+                  <div className="w-18 h-18 sm:w-22 sm:h-22 rounded-full border border-gold/50 bg-gradient-to-b from-ivory to-ivory-dark flex flex-col items-center justify-center shadow-gold-subtle">
                     <LotusMotif variant="crest" size="md" className="opacity-95 -mt-1" />
-                    <span className="font-script text-2xl sm:text-3xl text-gold-deep leading-none mt-0.5">
+                    <span className="font-script text-3xl sm:text-4xl text-gold-deep leading-none mt-0.5">
                       &amp;
                     </span>
                   </div>
@@ -130,37 +130,37 @@ export function CoupleSection() {
                 </div>
 
                 {/* Mobile divider line */}
-                <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold/60 to-transparent md:hidden mt-4" />
+                <div className="w-28 h-[1px] bg-gradient-to-r from-transparent via-gold/60 to-transparent md:hidden mt-4" />
               </div>
 
               {/* ── BRIDE: KISHMA (Right Wing) ──────────────── */}
               <div className="md:col-span-5 flex flex-col items-center text-center px-2 sm:px-4">
                 {/* Role Pill */}
                 <div className="mb-2">
-                  <span className="font-caps text-[9px] sm:text-[10px] tracking-monumental text-gold-deep uppercase font-semibold">
+                  <span className="font-caps text-xs sm:text-sm tracking-monumental text-gold-deep uppercase font-bold">
                     {bride.role}
                   </span>
                 </div>
 
                 {/* Bride Name */}
-                <h3 className="font-display text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide text-gold-foil drop-shadow-sm leading-tight">
+                <h3 className="font-display text-4xl sm:text-5xl md:text-6xl font-normal tracking-wide text-gold-foil drop-shadow-sm leading-tight">
                   {bride.name}
                 </h3>
 
                 {/* Lotus Motif Accent */}
-                <div className="my-2.5 flex justify-center opacity-85">
-                  <LotusMotif variant="crest" size="md" className="w-12 h-8 opacity-95" />
+                <div className="my-3 flex justify-center opacity-90">
+                  <LotusMotif variant="crest" size="md" className="w-14 h-9 opacity-95" />
                 </div>
 
                 {/* Parentage Line */}
-                <div className="space-y-1 mt-1">
-                  <p className="font-serif italic text-xs sm:text-sm text-gold-deep font-medium">
+                <div className="space-y-1.5 mt-1">
+                  <p className="font-serif italic text-sm sm:text-base text-gold-deep font-semibold">
                     {bride.relation}
                   </p>
-                  <p className="font-serif text-base sm:text-lg md:text-xl text-palace-green font-medium leading-snug">
+                  <p className="font-serif text-lg sm:text-xl md:text-2xl text-palace-green font-semibold leading-snug">
                     {bride.parents}
                   </p>
-                  <span className="font-caps text-[8px] sm:text-[9px] tracking-monumental text-palace-green/50 uppercase block pt-1">
+                  <span className="font-caps text-[10px] sm:text-xs tracking-monumental text-palace-green/70 uppercase block pt-1 font-semibold">
                     {bride.heritage}
                   </span>
                 </div>
@@ -169,8 +169,8 @@ export function CoupleSection() {
             </div>
 
             {/* ── BLESSING FOOTER QUOTE ───────────────────── */}
-            <div className="relative z-10 mt-8 pt-6 border-t border-gold/20 text-center">
-              <p className="font-serif italic text-xs sm:text-sm text-palace-green/75 max-w-lg mx-auto leading-relaxed">
+            <div className="relative z-10 mt-10 pt-7 border-t border-gold/20 text-center">
+              <p className="font-serif italic text-sm sm:text-base text-palace-green/80 max-w-lg mx-auto leading-relaxed">
                 "Together with their families, they seek your blessings as they step into a lifetime of shared dreams and everlasting love."
               </p>
             </div>

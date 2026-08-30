@@ -6,9 +6,8 @@ This guide shows you how to connect your **CounterAPI** counter (`marriage-headc
 
 ## 🚀 Quick Setup (Takes 2 Minutes)
 
-### Step 1: Create a Google Sheet
-1. Open your browser and go to **[sheets.new](https://sheets.new)** (or create a new blank Google Sheet).
-2. Name your sheet: `Vinay & Kishma Wedding RSVP Tracker`.
+### Step 1: Open Your Google Sheet
+1. Open your Google Sheet: **[Vinay & Kishma Wedding RSVP Tracker](https://docs.google.com/spreadsheets/d/1X1ikj7PbyMTO0ksd8s-KGqb4OFo6ZAso5wQovs9gKaY/edit)**.
 
 ### Step 2: Open Apps Script
 1. In the top menu, click **Extensions** > **Apps Script**.

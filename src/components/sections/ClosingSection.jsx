@@ -275,17 +275,17 @@ export function ClosingSection() {
             <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold tracking-wide text-gold-foil drop-shadow-md leading-none">
               Vinay &amp; Kishma
             </h2>
-            <p className="font-caps text-xs sm:text-sm tracking-monumental text-gold-deep uppercase mt-4 font-bold">
-              Sunday, 25th October 2026
+            <p className="font-caps text-sm sm:text-base tracking-monumental text-gold-deep uppercase mt-4 font-bold">
+              24th &amp; 25th October 2026
             </p>
           </div>
 
           {/* Love sign-off — stronger weight */}
           <div className="pt-1">
-            <p className="font-serif italic text-sm sm:text-base text-palace-green/80 leading-relaxed font-medium">
+            <p className="font-serif italic text-base sm:text-lg text-palace-green/85 leading-relaxed font-medium">
               "With immense love, joy, and gratitude —"
             </p>
-            <p className="font-serif font-bold text-base sm:text-xl text-palace-green mt-2">
+            <p className="font-serif font-bold text-lg sm:text-2xl text-palace-green mt-2">
               The Sahani &amp; Xavier Families
             </p>
           </div>

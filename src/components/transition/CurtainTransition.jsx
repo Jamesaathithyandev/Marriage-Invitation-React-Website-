@@ -142,7 +142,7 @@ export function CurtainTransition({
               </span>
               <div className="w-14 h-[0.5px] bg-gradient-to-r from-transparent via-gold to-transparent my-1.5" />
               <span className="font-caps text-[8.5px] sm:text-[9.5px] tracking-royal text-gold-champagne uppercase font-semibold whitespace-nowrap leading-none block text-center">
-                25 · 10 · 2026
+                24 &amp; 25 · 10 · 2026
               </span>
             </div>
           </div>

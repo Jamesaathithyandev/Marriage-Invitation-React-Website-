@@ -157,34 +157,71 @@ export function HeroSection() {
 
               {/* ── Date ─────────────────────────────────── */}
               <div className="relative z-10 hero-fade-up delay-600">
-                <p className="font-caps text-[11px] sm:text-sm tracking-royal text-palace-green/80 uppercase">
-                  Sunday, 25<sup className="text-[8px] font-sans font-normal text-gold-deep">th</sup> October 2026
+                <p className="font-caps text-xs sm:text-base tracking-royal text-palace-green font-semibold uppercase">
+                  24<sup className="text-[9px] font-sans font-normal text-gold-deep">th</sup> &amp; 25<sup className="text-[9px] font-sans font-normal text-gold-deep">th</sup> October 2026
                 </p>
               </div>
 
               {/* ── Couple's Names (The Primary Visual Focus) ── */}
-              <div className="relative z-10 py-5 sm:py-7 hero-fade-up delay-800">
-                {/* Soft Lotus Crest Watermark behind names */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.14]">
-                  <LotusMotif variant="crest" size="xl" />
+              <div className="relative z-10 py-6 sm:py-8 hero-fade-up delay-800">
+                {/* Royal Palace Sunburst & Filigree Medallion Halo behind names */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.22]">
+                  <svg viewBox="0 0 300 300" fill="none" className="w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] text-gold" aria-hidden="true">
+                    {/* Soft radial glow */}
+                    <circle cx="150" cy="150" r="130" fill="#C6A66B" fillOpacity="0.06" />
+                    {/* Outer fine decorative ring with bead chain */}
+                    <circle cx="150" cy="150" r="120" stroke="currentColor" strokeWidth="0.8" strokeDasharray="3 3" opacity="0.6" />
+                    <circle cx="150" cy="150" r="105" stroke="currentColor" strokeWidth="1" opacity="0.75" />
+                    <circle cx="150" cy="150" r="95" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 2" opacity="0.5" />
+                    <circle cx="150" cy="150" r="65" stroke="currentColor" strokeWidth="0.8" opacity="0.7" />
+                    
+                    {/* 16 Radiating Golden Sunburst Rays */}
+                    {Array.from({ length: 16 }, (_, i) => {
+                      const angle = (i * 22.5 * Math.PI) / 180;
+                      const x1 = 150 + Math.cos(angle) * 70;
+                      const y1 = 150 + Math.sin(angle) * 70;
+                      const x2 = 150 + Math.cos(angle) * (i % 2 === 0 ? 115 : 100);
+                      const y2 = 150 + Math.sin(angle) * (i % 2 === 0 ? 115 : 100);
+                      return (
+                        <g key={i}>
+                          <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="currentColor" strokeWidth={i % 2 === 0 ? "0.9" : "0.5"} opacity={i % 2 === 0 ? "0.65" : "0.4"} strokeLinecap="round" />
+                          {i % 2 === 0 && (
+                            <circle cx={x2} cy={y2} r="1.8" fill="currentColor" opacity="0.7" />
+                          )}
+                        </g>
+                      );
+                    })}
+
+                    {/* 8-point geometric palace diamond star in center */}
+                    <path d="M150 100 L158 142 L200 150 L158 158 L150 200 L142 158 L100 150 L142 142 Z" stroke="currentColor" strokeWidth="0.8" fill="none" opacity="0.5" />
+                    <path d="M150 115 L155 145 L185 150 L155 155 L150 185 L145 155 L115 150 L145 145 Z" stroke="currentColor" strokeWidth="0.6" fill="#C6A66B" fillOpacity="0.08" opacity="0.6" />
+                    
+                    {/* Concentric bead accents */}
+                    {Array.from({ length: 12 }, (_, i) => {
+                      const angle = (i * 30 * Math.PI) / 180;
+                      const x = 150 + Math.cos(angle) * 95;
+                      const y = 150 + Math.sin(angle) * 95;
+                      return <circle key={`b-${i}`} cx={x} cy={y} r="1.5" fill="currentColor" opacity="0.6" />;
+                    })}
+                  </svg>
                 </div>
 
-                <h1 className="font-display text-[2.6rem] sm:text-6xl md:text-7xl font-normal tracking-wide text-gold-foil drop-shadow-sm leading-none">
+                <h1 className="font-display text-[2.8rem] sm:text-6xl md:text-7xl font-normal tracking-wide text-gold-foil drop-shadow-sm leading-none">
                   Vinay
                 </h1>
 
-                <div className="flex items-center justify-center my-3 sm:my-4">
-                  <div className="flex-1 max-w-[3rem] sm:max-w-[5rem] h-[1px] bg-gradient-to-r from-transparent to-gold/60" />
+                <div className="flex items-center justify-center my-3.5 sm:my-4.5">
+                  <div className="flex-1 max-w-[3.5rem] sm:max-w-[6rem] h-[1px] bg-gradient-to-r from-transparent to-gold/60" />
                   <div className="mx-3 sm:mx-4 flex flex-col items-center gap-1">
                     <PeacockMotif variant="feather-crown" size="md" className="w-12 h-7 sm:w-16 sm:h-9 text-gold drop-shadow-sm" />
                     <span className="font-script text-3xl sm:text-4xl text-lotus-blush italic leading-none">
                       &amp;
                     </span>
                   </div>
-                  <div className="flex-1 max-w-[3rem] sm:max-w-[5rem] h-[1px] bg-gradient-to-l from-transparent to-gold/60" />
+                  <div className="flex-1 max-w-[3.5rem] sm:max-w-[6rem] h-[1px] bg-gradient-to-l from-transparent to-gold/60" />
                 </div>
 
-                <h1 className="font-display text-[2.6rem] sm:text-6xl md:text-7xl font-normal tracking-wide text-gold-foil drop-shadow-sm leading-none">
+                <h1 className="font-display text-[2.8rem] sm:text-6xl md:text-7xl font-normal tracking-wide text-gold-foil drop-shadow-sm leading-none">
                   Kishma
                 </h1>
               </div>
@@ -195,11 +232,11 @@ export function HeroSection() {
               </div>
 
               {/* ── Invitation Text ──────────────────────── */}
-              <div className="relative z-10 mt-3 space-y-2 hero-fade-up delay-1000">
-                <p className="font-script text-xl sm:text-2xl text-palace-green/90 leading-snug">
+              <div className="relative z-10 mt-4 space-y-2 hero-fade-up delay-1000">
+                <p className="font-script text-2xl sm:text-3xl text-palace-green/95 leading-snug">
                   With Immense Love and Gratitude
                 </p>
-                <p className="font-serif italic text-xs sm:text-sm text-palace-green/70 max-w-xs sm:max-w-sm mx-auto leading-relaxed">
+                <p className="font-serif italic text-sm sm:text-base text-palace-green/80 max-w-sm sm:max-w-md mx-auto leading-relaxed">
                   "{WEDDING_MESSAGES.leadQuote}"
                 </p>
               </div>

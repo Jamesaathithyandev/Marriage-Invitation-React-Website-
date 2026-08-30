@@ -69,14 +69,14 @@ export function CountdownSection() {
             <div className="h-[0.5px] w-8 sm:w-16 bg-gradient-to-l from-transparent to-gold" />
           </div>
 
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-palace-green font-normal tracking-wide">
-            Until We Say <span className="font-script text-3xl sm:text-4xl text-gold-deep">"I Do"</span>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-palace-green font-normal tracking-wide">
+            Until We Say <span className="font-script text-4xl sm:text-5xl text-gold-deep">"I Do"</span>
           </h2>
-          <p className="font-serif italic text-xs sm:text-sm text-palace-green/70 mt-1">
-            Sunday, 25th October 2026 · Bengaluru, India
+          <p className="font-serif italic text-sm sm:text-base text-palace-green/80 mt-2 font-medium">
+            24th &amp; 25th October 2026 · Bengaluru, India
           </p>
 
-          <div className="mt-3 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <OrnamentalDivider motif="lotus" lineStyle="dual" className="max-w-xs" />
           </div>
         </div>
@@ -99,36 +99,20 @@ export function CountdownSection() {
                       stroke="currentColor"
                       strokeWidth="1"
                     />
-                    <circle cx="50" cy="0" r="1.5" fill="#C6A66B" />
+                    <circle cx="50" cy="0" r="2" fill="#C6A66B" />
                   </svg>
                 </div>
 
-                {/* Kiosk Content Box */}
-                <div className="relative border-t-0 border border-gold/15 rounded-b-xl px-3 sm:px-4 py-4 sm:py-5 bg-ivory-light/95 overflow-hidden text-center">
-
-                  {/* Inner Hairline Margin */}
-                  <div className="absolute inset-1.5 border border-gold/15 rounded-lg pointer-events-none" />
-
-                  {/* Large Numerals */}
-                  <div className="relative z-10 py-1">
-                    <span className="font-display text-3xl sm:text-4xl md:text-5xl font-normal text-gold-foil tracking-tight block leading-none drop-shadow-sm">
-                      {unit.value}
-                    </span>
+                {/* Number & Unit Display */}
+                <div className="border-t-0 border border-gold/20 rounded-b-xl px-2 py-4 sm:py-5 bg-ivory-light/95">
+                  <div className="font-display text-4xl sm:text-5xl md:text-6xl text-gold-foil font-normal tracking-tight leading-none">
+                    {unit.value}
                   </div>
-
-                  {/* Unit Label */}
-                  <div className="relative z-10 mt-2 pt-1 border-t border-gold/20">
-                    <span className="font-caps text-[9px] sm:text-[10px] tracking-monumental text-palace-green font-semibold uppercase block">
-                      {unit.label}
-                    </span>
-                  </div>
-
-                  {/* Corner Lotus Bead */}
-                  <div className="mt-1 flex justify-center opacity-40">
-                    <div className="w-1 h-1 rounded-full bg-gold" />
-                  </div>
-
+                  <span className="font-caps text-xs sm:text-sm tracking-monumental text-palace-green/85 uppercase font-semibold block mt-2">
+                    {unit.label}
+                  </span>
                 </div>
+
               </div>
             </div>
           ))}

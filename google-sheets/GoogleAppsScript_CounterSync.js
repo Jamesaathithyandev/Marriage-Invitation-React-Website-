@@ -24,29 +24,46 @@ const COUNTER_CONFIG = {
   workspace: 'a-james-aathithyan-s-team-5304',
   slug: 'marriage-headcount',
   baseUrl: 'https://api.counterapi.dev/v2/a-james-aathithyan-s-team-5304/marriage-headcount',
+  spreadsheetId: '1X1ikj7PbyMTO0ksd8s-KGqb4OFo6ZAso5wQovs9gKaY',
+  spreadsheetUrl: 'https://docs.google.com/spreadsheets/d/1X1ikj7PbyMTO0ksd8s-KGqb4OFo6ZAso5wQovs9gKaY/edit',
   weddingCouple: 'Vinay & Kishma',
   weddingDate: '24th & 25th October 2026',
   venue: 'Tranquil Wedding Venue, Bannerghatta Road, Bangalore'
 };
 
+/**
+ * Get active spreadsheet or open by ID
+ */
+function getSpreadsheet() {
+  try {
+    return SpreadsheetApp.getActiveSpreadsheet() || SpreadsheetApp.openById(COUNTER_CONFIG.spreadsheetId);
+  } catch (e) {
+    return SpreadsheetApp.openById(COUNTER_CONFIG.spreadsheetId);
+  }
+}
+
 // ─── Custom UI Menu on Open ────────────────────────────────────────────────
 function onOpen() {
-  const ui = SpreadsheetApp.getUi();
-  ui.createMenu('👑 Wedding RSVP Tracker')
-    .addItem('🔄 Refresh Headcount Now', 'syncCounterToSheet')
-    .addSeparator()
-    .addItem('⏱️ Setup Auto-Sync (Every 5 Mins)', 'installAutoSyncTrigger')
-    .addItem('🛑 Disable Auto-Sync', 'removeAutoSyncTrigger')
-    .addSeparator()
-    .addItem('✨ Reset & Redesign Dashboard', 'setupFullDashboard')
-    .addToUi();
+  try {
+    const ui = SpreadsheetApp.getUi();
+    ui.createMenu('👑 Wedding RSVP Tracker')
+      .addItem('🔄 Refresh Headcount Now', 'syncCounterToSheet')
+      .addSeparator()
+      .addItem('⏱️ Setup Auto-Sync (Every 5 Mins)', 'installAutoSyncTrigger')
+      .addItem('🛑 Disable Auto-Sync', 'removeAutoSyncTrigger')
+      .addSeparator()
+      .addItem('✨ Reset & Redesign Dashboard', 'setupFullDashboard')
+      .addToUi();
+  } catch (e) {
+    // Menu cannot be created in non-UI context
+  }
 }
 
 /**
  * Main function: Fetches live headcount from CounterAPI and updates the Google Sheet
  */
 function syncCounterToSheet() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = getSpreadsheet();
   let dashSheet = ss.getSheetByName('👑 Wedding Dashboard');
   let logSheet = ss.getSheetByName('📊 Sync History');
 
@@ -113,7 +130,7 @@ function syncCounterToSheet() {
  * Sets up a clean, luxurious Royal Wedding dashboard format inside the sheet
  */
 function setupFullDashboard() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = getSpreadsheet();
 
   // ── 1. Create or Reset Dashboard Sheet ──
   let dashSheet = ss.getSheetByName('👑 Wedding Dashboard');

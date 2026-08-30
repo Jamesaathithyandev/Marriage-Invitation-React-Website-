@@ -129,23 +129,23 @@ export function App() {
 
           {/* ── Fixed Royal Header (Follows on scroll) ─────── */}
           <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-gold/45 bg-gradient-to-r from-ivory-light/95 via-ivory/95 to-ivory-light/95 backdrop-blur-md shadow-[0_4px_20px_rgba(198,166,107,0.15)]">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 h-15 sm:h-17 flex items-center justify-between">
               {/* Monogram Brand */}
-              <div className="flex items-center gap-2.5">
-                <LotusMotif variant="crest" size="sm" className="opacity-95" />
+              <div className="flex items-center gap-3">
+                <LotusMotif variant="crest" size="sm" className="opacity-95 w-7 h-7 sm:w-8 sm:h-8" />
                 <div>
-                  <span className="font-display text-sm sm:text-base font-bold tracking-wider text-emerald-deep block leading-tight">
+                  <span className="font-display text-base sm:text-lg font-bold tracking-wider text-emerald-deep block leading-tight">
                     Vinay <span className="text-gold font-normal">&amp;</span> Kishma
                   </span>
-                  <span className="font-caps text-[8px] sm:text-[9px] tracking-monumental text-gold-deep uppercase block font-semibold">
-                    24 · 25 · 10 · 2026
+                  <span className="font-caps text-[10px] sm:text-xs tracking-monumental text-gold-deep uppercase block font-semibold mt-0.5">
+                    24 &amp; 25 · 10 · 2026
                   </span>
                 </div>
               </div>
 
               {/* Elegant Navbar RSVP Prompt & CTA */}
-              <div className="flex items-center gap-2 sm:gap-3.5">
-                <span className="hidden md:inline font-serif italic text-xs text-palace-green/85">
+              <div className="flex items-center gap-2.5 sm:gap-4">
+                <span className="hidden md:inline font-serif italic text-sm text-palace-green/90 font-medium">
                   Will you be attending the occasion?
                 </span>
                 <button
@@ -156,7 +156,7 @@ export function App() {
                     }
                   }}
                   className="
-                    group relative inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl
+                    group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl
                     bg-gradient-to-r from-emerald-deep via-palace-green to-emerald-deep
                     border border-gold/70 hover:border-gold
                     shadow-gold-glow hover:shadow-[0_0_16px_rgba(198,166,107,0.4)]
@@ -166,7 +166,7 @@ export function App() {
                   aria-label="RSVP for Vinay and Kishma wedding"
                 >
                   <span className="text-gold text-xs">✦</span>
-                  <span className="font-caps text-[10px] sm:text-xs font-bold tracking-royal text-gold-champagne uppercase drop-shadow-sm whitespace-nowrap">
+                  <span className="font-caps text-xs sm:text-sm font-bold tracking-royal text-gold-champagne uppercase drop-shadow-sm whitespace-nowrap">
                     Count Me In
                   </span>
                   <span className="text-gold text-xs">✦</span>
@@ -176,27 +176,27 @@ export function App() {
           </header>
 
           {/* ── Main Sections Flow ───────────────────────────── */}
-          <main className="w-full flex flex-col items-center pt-14 sm:pt-16">
+          <main className="w-full flex flex-col items-center pt-15 sm:pt-18">
 
-            {/* 1 â€” Hero Invitation Card */}
+            {/* 1 — Hero Invitation Card */}
             <HeroSection />
 
-            {/* 2 â€” The Couple */}
+            {/* 2 — The Couple */}
             <RevealOnScroll className="w-full">
               <CoupleSection />
             </RevealOnScroll>
 
-            {/* 3 â€” Wedding Message */}
+            {/* 3 — Wedding Message */}
             <RevealOnScroll className="w-full">
               <WeddingMessageSection />
             </RevealOnScroll>
 
-            {/* 4 â€” Events Timeline */}
+            {/* 4 — Events Timeline */}
             <RevealOnScroll className="w-full">
               <EventsSection />
             </RevealOnScroll>
 
-            {/* 5 â€” Auspicious Countdown */}
+            {/* 5 — Auspicious Countdown */}
             <RevealOnScroll className="w-full">
               <CountdownSection />
             </RevealOnScroll>
@@ -223,25 +223,25 @@ export function App() {
 
           </main>
 
-          {/* â”€â”€ Royal Palace Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
-          <footer className="w-full border-t border-gold/30 bg-ivory-dark/60 py-12 px-4 text-center">
+          {/* ── Royal Palace Footer ─────────────────────────── */}
+          <footer className="w-full border-t border-gold/30 bg-ivory-dark/60 py-14 px-4 text-center">
             <div className="max-w-md mx-auto space-y-4">
               <LotusMotif variant="crest" size="lg" className="mx-auto opacity-90" />
-              <div className="space-y-1">
-                <h4 className="font-display text-lg sm:text-xl text-palace-green font-normal tracking-wider">
-                  Vinay <span className="font-script text-2xl text-gold-deep">&amp;</span> Kishma
+              <div className="space-y-1.5">
+                <h4 className="font-display text-xl sm:text-2xl text-palace-green font-normal tracking-wider">
+                  Vinay <span className="font-script text-3xl text-gold-deep">&amp;</span> Kishma
                 </h4>
-                <p className="font-caps text-[9px] sm:text-[10px] tracking-monumental text-gold-deep uppercase font-semibold">
-                  Sunday, 25th October 2026 Â· Bengaluru
+                <p className="font-caps text-xs sm:text-sm tracking-monumental text-gold-deep uppercase font-semibold">
+                  24th &amp; 25th October 2026 · Bengaluru
                 </p>
               </div>
               <div className="flex justify-center">
                 <OrnamentalDivider motif="lotus" lineStyle="dual" className="max-w-xs opacity-60" />
               </div>
-              <p className="font-serif italic text-xs text-palace-green/60 max-w-xs mx-auto">
+              <p className="font-serif italic text-sm text-palace-green/75 max-w-sm mx-auto leading-relaxed">
                 "Two Hearts. Two Traditions. One Beautiful Beginning."
               </p>
-              <span className="font-caps text-[8px] tracking-monumental text-palace-green/40 uppercase block pt-2">
+              <span className="font-caps text-[10px] sm:text-xs tracking-monumental text-palace-green/60 uppercase block pt-2">
                 With Immense Love and Gratitude
               </span>
             </div>

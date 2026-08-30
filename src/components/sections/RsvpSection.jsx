@@ -101,28 +101,28 @@ export function RsvpSection() {
         <div className="text-center mb-8 sm:mb-10">
           <div className="inline-flex items-center justify-center gap-3 mb-2">
             <div className="h-[0.5px] w-8 sm:w-14 bg-gradient-to-r from-transparent to-gold" />
-            <span className="font-caps text-[10px] sm:text-xs tracking-monumental text-gold-deep uppercase font-semibold">
+            <span className="font-caps text-xs sm:text-sm tracking-monumental text-gold-deep uppercase font-bold">
               Sacred Attendance
             </span>
             <div className="h-[0.5px] w-8 sm:w-14 bg-gradient-to-l from-transparent to-gold" />
           </div>
 
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-palace-green font-semibold tracking-wide">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-palace-green font-semibold tracking-wide">
             Are You Attending Our Wedding?
           </h2>
 
-          <p className="font-serif text-sm sm:text-base text-palace-green/85 mt-2 max-w-md mx-auto leading-relaxed">
+          <p className="font-serif text-base sm:text-lg text-palace-green/90 mt-2.5 max-w-lg mx-auto leading-relaxed">
             If you are joining us for the celebrations on <strong className="font-semibold text-palace-green">24th &amp; 25th October 2026</strong>, please click the button below to let us know — it only takes a second!
           </p>
 
-          <div className="mt-3 flex justify-center">
-            <div className="h-[0.5px] w-24 bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+          <div className="mt-4 flex justify-center">
+            <div className="h-[0.5px] w-28 bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
           </div>
         </div>
 
         {/* ── MAIN INTERACTIVE RSVP CARD ─────────────────────── */}
         <div className="w-full max-w-xl border border-gold/45 rounded-3xl p-1 bg-gradient-to-b from-gold/25 via-gold/10 to-gold/20 shadow-palace-elevation transition-all duration-500">
-          <div className="relative border border-gold/25 rounded-2xl px-5 sm:px-8 py-8 sm:py-10 bg-ivory-light/95 overflow-hidden">
+          <div className="relative border border-gold/25 rounded-2xl px-6 sm:px-9 py-9 sm:py-11 bg-ivory-light/95 overflow-hidden">
 
             {/* Inner Jali Subtle Pattern */}
             <div className="absolute inset-0 jali-dense opacity-[0.035] pointer-events-none" />
@@ -133,23 +133,23 @@ export function RsvpSection() {
             {!status && (
               <div className="space-y-6">
 
-                <div className="space-y-1">
-                  <h3 className="font-display text-xl sm:text-2xl text-palace-green font-normal">
+                <div className="space-y-1.5">
+                  <h3 className="font-display text-2xl sm:text-3xl text-palace-green font-normal">
                     Let Us Know You're Coming!
                   </h3>
-                  <p className="font-serif text-xs sm:text-sm text-palace-green/75 max-w-sm mx-auto">
+                  <p className="font-serif text-sm sm:text-base text-palace-green/80 max-w-sm mx-auto">
                     Hit the button below and we'll save your spot for the celebrations on <span className="font-semibold text-palace-green">24th &amp; 25th October 2026</span>.
                   </p>
                 </div>
 
                 {/* Action Buttons: Yes, Count Me In & Cannot Attend */}
-                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full">
+                <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full">
                   {/* Primary: Yes, Count Me In! */}
                   <button
                     onClick={handleAttending}
                     disabled={loading}
                     className="
-                      group relative w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl
+                      group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-4.5 rounded-xl
                       bg-gradient-to-r from-emerald-deep via-palace-green to-emerald-deep
                       border border-gold/80 shadow-gold-glow
                       hover:shadow-[0_0_24px_rgba(198,166,107,0.5)]
@@ -161,12 +161,12 @@ export function RsvpSection() {
                     {/* Golden Light Sweep Hover Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-champagne/25 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
 
-                    <div className="relative z-10 flex items-center justify-center gap-2.5">
-                      <span className="text-gold text-base">✦</span>
-                      <span className="font-caps text-xs sm:text-sm tracking-royal font-bold text-gold-champagne uppercase drop-shadow-sm whitespace-nowrap">
+                    <div className="relative z-10 flex items-center justify-center gap-3">
+                      <span className="text-gold text-lg">✦</span>
+                      <span className="font-caps text-sm sm:text-base tracking-royal font-bold text-gold-champagne uppercase drop-shadow-sm whitespace-nowrap">
                         {loading ? 'Registering...' : 'Yes, Count Me In!'}
                       </span>
-                      <span className="text-gold text-base">✦</span>
+                      <span className="text-gold text-lg">✦</span>
                     </div>
                   </button>
 
@@ -175,12 +175,12 @@ export function RsvpSection() {
                     onClick={handleDecline}
                     disabled={loading}
                     className="
-                      w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl
+                      w-full sm:w-auto px-6 sm:px-7 py-4 sm:py-4.5 rounded-xl
                       border border-gold/50 bg-ivory/80 hover:bg-gold/10
-                      text-palace-green/80 hover:text-palace-green
+                      text-palace-green/85 hover:text-palace-green
                       shadow-sm hover:border-gold/80 hover:scale-[1.01] active:scale-[0.98]
                       transition-all duration-300 cursor-pointer
-                      font-caps text-xs sm:text-sm tracking-wider font-semibold uppercase whitespace-nowrap
+                      font-caps text-sm sm:text-base tracking-wider font-bold uppercase whitespace-nowrap
                     "
                     aria-label="Decline with blessings from afar"
                   >
@@ -204,36 +204,36 @@ export function RsvpSection() {
                 )}
 
                 {/* Confirmed Pill */}
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-600/40 bg-emerald-deep/10 text-emerald-deep">
-                  <svg viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 text-emerald-600">
+                <div className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full border border-emerald-600/40 bg-emerald-deep/10 text-emerald-deep">
+                  <svg viewBox="0 0 16 16" fill="currentColor" className="w-4.5 h-4.5 text-emerald-600">
                     <path fillRule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="font-caps text-[10px] sm:text-xs tracking-monumental font-bold uppercase text-emerald-deep">
+                  <span className="font-caps text-xs sm:text-sm tracking-monumental font-bold uppercase text-emerald-deep">
                     Blessing Registered with Joy
                   </span>
                 </div>
 
                 {/* Heartfelt Welcoming Message */}
                 <div className="space-y-3">
-                  <h3 className="font-display text-2xl sm:text-3xl text-gold-foil font-semibold tracking-wide">
+                  <h3 className="font-display text-3xl sm:text-4xl text-gold-foil font-semibold tracking-wide">
                     Thank You For Your Gracious Blessings!
                   </h3>
 
-                  <p className="font-script text-xl sm:text-2xl text-palace-green leading-relaxed font-medium">
+                  <p className="font-script text-2xl sm:text-3xl text-palace-green leading-relaxed font-medium">
                     "Your presence will make our wedding day truly memorable and filled with love."
                   </p>
 
-                  <p className="font-serif text-xs sm:text-sm text-palace-green/80 max-w-md mx-auto leading-relaxed pt-1">
+                  <p className="font-serif text-sm sm:text-base text-palace-green/85 max-w-md mx-auto leading-relaxed pt-1.5 font-normal">
                     We eagerly await welcoming you with open hearts to celebrate our union in Bengaluru on <span className="font-semibold text-palace-green">24th &amp; 25th October 2026</span>.
                   </p>
                 </div>
 
                 {/* Couple Signature Sign-Off */}
                 <div className="pt-2">
-                  <p className="font-display text-lg sm:text-xl text-gold-deep font-medium">
-                    Vinay <span className="text-palace-green font-script text-xl">&amp;</span> Kishma
+                  <p className="font-display text-xl sm:text-2xl text-gold-deep font-semibold">
+                    Vinay <span className="text-palace-green font-script text-2xl">&amp;</span> Kishma
                   </p>
-                  <p className="font-caps text-[9px] tracking-monumental text-gold-deep uppercase font-semibold mt-0.5">
+                  <p className="font-caps text-[10px] sm:text-xs tracking-monumental text-gold-deep uppercase font-semibold mt-1">
                     Together with Both Families
                   </p>
                 </div>
@@ -243,7 +243,7 @@ export function RsvpSection() {
                   <button
                     onClick={handleReset}
                     disabled={loading}
-                    className="text-[11px] font-caps tracking-wider uppercase text-gold-deep hover:text-palace-green underline decoration-gold/40 hover:decoration-gold transition-colors duration-200 cursor-pointer"
+                    className="text-xs font-caps tracking-wider uppercase text-gold-deep hover:text-palace-green underline decoration-gold/40 hover:decoration-gold transition-colors duration-200 cursor-pointer font-semibold"
                   >
                     Change Response
                   </button>
