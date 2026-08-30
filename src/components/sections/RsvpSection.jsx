@@ -135,10 +135,10 @@ export function RsvpSection() {
 
                 <div className="space-y-1">
                   <h3 className="font-display text-xl sm:text-2xl text-palace-green font-normal">
-                    Kindly RSVP With A Single Click
+                    Let Us Know You're Coming!
                   </h3>
                   <p className="font-serif text-xs sm:text-sm text-palace-green/75 max-w-sm mx-auto">
-                    Please let us know if you will be joining our wedding festivities on <span className="font-semibold text-palace-green">24th &amp; 25th October 2026</span>.
+                    Hit the button below and we'll save your spot for the celebrations on <span className="font-semibold text-palace-green">24th &amp; 25th October 2026</span>.
                   </p>
                 </div>
 
