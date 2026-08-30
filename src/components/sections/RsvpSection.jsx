@@ -142,52 +142,50 @@ export function RsvpSection() {
                   </p>
                 </div>
 
-                {/* Big Royal 1-Click RSVP Button */}
-                <div className="pt-2 flex flex-col items-center gap-3">
+                {/* Action Buttons: Yes, Count Me In & Cannot Attend */}
+                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full">
+                  {/* Primary: Yes, Count Me In! */}
                   <button
                     onClick={handleAttending}
                     disabled={loading}
                     className="
-                      group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-4.5 rounded-2xl
+                      group relative w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 rounded-xl
                       bg-gradient-to-r from-emerald-deep via-palace-green to-emerald-deep
-                      border-2 border-gold/70 shadow-gold-glow
-                      hover:shadow-[0_0_30px_rgba(198,166,107,0.45)]
+                      border border-gold/80 shadow-gold-glow
+                      hover:shadow-[0_0_24px_rgba(198,166,107,0.5)]
                       hover:scale-[1.02] active:scale-[0.98]
                       transition-all duration-300 overflow-hidden cursor-pointer
                     "
                     aria-label="Confirm attendance for Vinay and Kishma wedding"
                   >
                     {/* Golden Light Sweep Hover Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-champagne/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-champagne/25 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
 
-                    <div className="relative z-10 flex items-center justify-center gap-3">
-                      <span className="text-gold text-xl">✦</span>
-                      <span className="font-caps text-base sm:text-lg tracking-royal font-bold text-gold-champagne uppercase drop-shadow-sm">
+                    <div className="relative z-10 flex items-center justify-center gap-2.5">
+                      <span className="text-gold text-base">✦</span>
+                      <span className="font-caps text-xs sm:text-sm tracking-royal font-bold text-gold-champagne uppercase drop-shadow-sm whitespace-nowrap">
                         {loading ? 'Registering...' : 'Yes, Count Me In!'}
                       </span>
-                      <span className="text-gold text-xl">✦</span>
+                      <span className="text-gold text-base">✦</span>
                     </div>
                   </button>
 
-                  {/* Alternative Decline Option */}
+                  {/* Secondary: Cannot Attend (Celebrate in Spirit) */}
                   <button
                     onClick={handleDecline}
-                    className="mt-2 text-[11px] sm:text-xs font-serif italic text-palace-green/60 hover:text-palace-green underline decoration-gold/40 hover:decoration-gold transition-colors duration-200 cursor-pointer"
+                    disabled={loading}
+                    className="
+                      w-full sm:w-auto px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl
+                      border border-gold/50 bg-ivory/80 hover:bg-gold/10
+                      text-palace-green/80 hover:text-palace-green
+                      shadow-sm hover:border-gold/80 hover:scale-[1.01] active:scale-[0.98]
+                      transition-all duration-300 cursor-pointer
+                      font-caps text-xs sm:text-sm tracking-wider font-semibold uppercase whitespace-nowrap
+                    "
+                    aria-label="Decline with blessings from afar"
                   >
-                    Will celebrate in spirit from afar (Cannot Attend)
+                    Cannot Attend
                   </button>
-                </div>
-
-                {/* Live Headcount Badge */}
-                <div className="pt-4 border-t border-gold/20 flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="font-caps text-[10px] sm:text-[11px] tracking-monumental text-gold-deep uppercase font-semibold">
-                    {headcount > 0 ? (
-                      <>✦ {headcount} {headcount === 1 ? 'Loved One Confirmed' : 'Loved Ones Confirmed'} ✦</>
-                    ) : (
-                      <>✦ Live Headcount Tracking ✦</>
-                    )}
-                  </span>
                 </div>
               </div>
             )}
@@ -240,25 +238,14 @@ export function RsvpSection() {
                   </p>
                 </div>
 
-                {/* Synchronized Headcount & Reset Link */}
-                <div className="pt-4 border-t border-gold/20 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-                  <div className="flex items-center gap-2 text-palace-green/75 font-serif">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                    <span>
-                      {headcount > 1 ? (
-                        <>You and <strong className="font-semibold text-palace-green">{headcount - 1}</strong> other {headcount - 1 === 1 ? 'guest' : 'guests'} have RSVP'd</>
-                      ) : (
-                        <>You have confirmed your sacred presence</>
-                      )}
-                    </span>
-                  </div>
-
+                {/* Reset / Change Response Option */}
+                <div className="pt-4 border-t border-gold/20 flex justify-center text-xs">
                   <button
                     onClick={handleReset}
                     disabled={loading}
                     className="text-[11px] font-caps tracking-wider uppercase text-gold-deep hover:text-palace-green underline decoration-gold/40 hover:decoration-gold transition-colors duration-200 cursor-pointer"
                   >
-                    Change RSVP
+                    Change Response
                   </button>
                 </div>
 

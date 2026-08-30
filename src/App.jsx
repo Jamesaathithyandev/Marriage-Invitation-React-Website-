@@ -127,35 +127,51 @@ export function App() {
             />
           )}
 
-          {/* â”€â”€ Sticky Royal Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
-          <header className="w-full border-b border-gold/30 bg-ivory/85 backdrop-blur-md sticky top-0 z-40">
+          {/* ── Sticky Royal Header with RSVP Action ────────── */}
+          <header className="w-full border-b border-gold/45 bg-gradient-to-r from-ivory-light/95 via-ivory/95 to-ivory-light/95 backdrop-blur-md sticky top-0 z-40 shadow-[0_4px_20px_rgba(198,166,107,0.12)]">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
               {/* Monogram Brand */}
               <div className="flex items-center gap-2.5">
-                <LotusMotif variant="crest" size="sm" className="opacity-90" />
+                <LotusMotif variant="crest" size="sm" className="opacity-95" />
                 <div>
                   <span className="font-display text-sm sm:text-base font-bold tracking-wider text-emerald-deep block leading-tight">
                     Vinay <span className="text-gold font-normal">&amp;</span> Kishma
                   </span>
-                  <span className="font-caps text-[8px] sm:text-[9px] tracking-monumental text-gold-deep uppercase block">
-                    25 Â· 10 Â· 2026
+                  <span className="font-caps text-[8px] sm:text-[9px] tracking-monumental text-gold-deep uppercase block font-semibold">
+                    24 · 25 · 10 · 2026
                   </span>
                 </div>
               </div>
 
-              {/* Replay Intro */}
-              {stage === 'main' && (
+              {/* Elegant Navbar RSVP Prompt & CTA */}
+              <div className="flex items-center gap-2 sm:gap-3.5">
+                <span className="hidden md:inline font-serif italic text-xs text-palace-green/85">
+                  Will you be attending the occasion?
+                </span>
                 <button
-                  onClick={handleReplayIntro}
-                  className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-gold/40 bg-transparent hover:bg-gold/10 text-palace-green hover:text-emerald-deep transition-all duration-300 text-[11px] sm:text-xs font-caps font-medium tracking-wider uppercase"
-                  aria-label="Replay the royal intro experience"
+                  onClick={() => {
+                    const rsvpEl = document.getElementById('rsvp');
+                    if (rsvpEl) {
+                      rsvpEl.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="
+                    group relative inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl
+                    bg-gradient-to-r from-emerald-deep via-palace-green to-emerald-deep
+                    border border-gold/70 hover:border-gold
+                    shadow-gold-glow hover:shadow-[0_0_16px_rgba(198,166,107,0.4)]
+                    hover:scale-[1.02] active:scale-[0.98]
+                    transition-all duration-300 cursor-pointer overflow-hidden
+                  "
+                  aria-label="RSVP for Vinay and Kishma wedding"
                 >
-                  <svg viewBox="0 0 16 16" fill="none" className="w-3 h-3 text-gold group-hover:rotate-180 transition-transform duration-500">
-                    <path d="M2 8 A6 6 0 1 1 8 14 M2 8 L4.5 5.5 M2 8 L4.5 10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <span className="hidden sm:inline">Replay Intro</span>
+                  <span className="text-gold text-xs">✦</span>
+                  <span className="font-caps text-[10px] sm:text-xs font-bold tracking-royal text-gold-champagne uppercase drop-shadow-sm whitespace-nowrap">
+                    Count Me In
+                  </span>
+                  <span className="text-gold text-xs">✦</span>
                 </button>
-              )}
+              </div>
             </div>
           </header>
 
