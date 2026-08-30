@@ -138,7 +138,11 @@ function setupFullDashboard() {
     dashSheet = ss.insertSheet('👑 Wedding Dashboard', 0);
   }
   dashSheet.clear();
-  dashSheet.setGridlines(false);
+  try {
+    dashSheet.setHideGridlines(true);
+  } catch (e) {
+    // Ignore if not supported in environment
+  }
 
   // Set column widths
   dashSheet.setColumnWidth(1, 40);
