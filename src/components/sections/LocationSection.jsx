@@ -55,28 +55,86 @@ export function LocationSection({ onExternalNavigate }) {
           </div>
         </div>
 
-        {/* ── PALACE DOORWAY VENUE ARCH ────────────────────── */}
+        {/* ── PALACE VENUE ORNAMENTAL HEADER ─────────────────── */}
         <div className="w-full max-w-lg mb-8">
-          <svg viewBox="0 0 320 60" fill="none" className="w-full h-auto text-gold" aria-hidden="true">
-            {/* Grand cusped entrance arch */}
-            <path
-              d="M10 58 C10 28 36 22 60 14 C78 8 94 12 108 6 C117 3 122 0 160 0 C198 0 203 3 212 6 C226 12 242 8 260 14 C284 22 310 28 310 58"
-              stroke="currentColor" strokeWidth="1.2" fill="none"
-            />
-            <path
-              d="M20 58 C20 34 42 28 64 21 C80 15 95 19 109 14 C118 11 123 7 160 7 C197 7 202 11 211 14 C225 19 240 15 256 21 C278 28 300 34 300 58"
-              stroke="currentColor" strokeWidth="0.7" strokeDasharray="3 2" fill="none" opacity="0.65"
-            />
-            {/* Keystone */}
-            <circle cx="160" cy="0" r="4" fill="#C6A66B"/>
-            <circle cx="160" cy="0" r="2" fill="#F3E4C8"/>
-            {/* Bead accents */}
-            {[[108,6],[212,6],[60,14],[260,14]].map(([cx,cy],i) => (
-              <circle key={i} cx={cx} cy={cy} r="1.8" fill="#C6A66B"/>
+          <svg viewBox="0 0 360 120" fill="none" className="w-full h-auto" aria-hidden="true">
+            <defs>
+              <radialGradient id="venueGlow" cx="50%" cy="60%" r="55%">
+                <stop offset="0%" stopColor="#C6A66B" stopOpacity="0.08"/>
+                <stop offset="100%" stopColor="#C6A66B" stopOpacity="0"/>
+              </radialGradient>
+            </defs>
+            <ellipse cx="180" cy="80" rx="160" ry="60" fill="url(#venueGlow)"/>
+
+            {/* Left pillar */}
+            <rect x="18" y="50" width="14" height="68" rx="2" fill="#C6A66B" fillOpacity="0.12" stroke="#C6A66B" strokeWidth="0.8" strokeOpacity="0.6"/>
+            <rect x="14" y="44" width="22" height="9" rx="1.5" fill="#C6A66B" fillOpacity="0.35"/>
+            <rect x="14" y="116" width="22" height="5" rx="1" fill="#C6A66B" fillOpacity="0.25"/>
+            {[22,26,30].map(x => <line key={x} x1={x} y1="55" x2={x} y2="116" stroke="#C6A66B" strokeWidth="0.4" strokeOpacity="0.3"/>)}
+
+            {/* Right pillar */}
+            <rect x="328" y="50" width="14" height="68" rx="2" fill="#C6A66B" fillOpacity="0.12" stroke="#C6A66B" strokeWidth="0.8" strokeOpacity="0.6"/>
+            <rect x="324" y="44" width="22" height="9" rx="1.5" fill="#C6A66B" fillOpacity="0.35"/>
+            <rect x="324" y="116" width="22" height="5" rx="1" fill="#C6A66B" fillOpacity="0.25"/>
+            {[330,334,338].map(x => <line key={x} x1={x} y1="55" x2={x} y2="116" stroke="#C6A66B" strokeWidth="0.4" strokeOpacity="0.3"/>)}
+
+            {/* Grand arch — full, closed shape from pillar top to pillar top */}
+            <path d="M32 116 L32 56 C32 24 80 6 180 6 C280 6 328 24 328 56 L328 116"
+              stroke="#C6A66B" strokeWidth="2" fill="none" strokeLinecap="round"/>
+            {/* Inner dashed arch */}
+            <path d="M42 116 L42 60 C42 32 86 14 180 14 C274 14 318 32 318 60 L318 116"
+              stroke="#C6A66B" strokeWidth="0.8" strokeDasharray="5 3" fill="none" opacity="0.6"/>
+            {/* Innermost hairline */}
+            <path d="M52 116 L52 65 C52 40 90 22 180 22 C270 22 308 40 308 65 L308 116"
+              stroke="#C6A66B" strokeWidth="0.4" fill="none" opacity="0.35"/>
+
+            {/* Keystone at apex */}
+            <circle cx="180" cy="6" r="10" fill="#C6A66B" fillOpacity="0.18" stroke="#C6A66B" strokeWidth="0.8"/>
+            <circle cx="180" cy="6" r="6" fill="#C6A66B" fillOpacity="0.35" stroke="#C6A66B" strokeWidth="1"/>
+            <circle cx="180" cy="6" r="3" fill="#DFC48E"/>
+            <circle cx="180" cy="6" r="1.2" fill="#C6A66B"/>
+            {Array.from({length:8},(_,i)=>{
+              const a=(i*45)*Math.PI/180;
+              return <line key={i} x1="180" y1="6" x2={180+Math.sin(a)*16} y2={6-Math.cos(a)*16}
+                stroke="#C6A66B" strokeWidth="0.5" strokeOpacity="0.4"/>;
+            })}
+            {/* Hanging ornament from keystone */}
+            <line x1="180" y1="16" x2="180" y2="28" stroke="#C6A66B" strokeWidth="0.8" strokeOpacity="0.6"/>
+            <circle cx="180" cy="30" r="3" fill="#C6A66B" stroke="#9E7E45" strokeWidth="0.5"/>
+            <circle cx="180" cy="30" r="1.5" fill="#F5E0A0"/>
+
+            {/* Arch bead accents */}
+            {[[90,14],[270,14],[52,48],[308,48],[34,78],[326,78]].map(([cx,cy],i)=>(
+              <circle key={i} cx={cx} cy={cy} r="2.5" fill="#C6A66B" stroke="#9E7E45" strokeWidth="0.5"/>
             ))}
-            {/* Spandrel foliage */}
-            <path d="M25 46 C32 34 44 30 52 36 C44 38 36 44 25 46 Z" fill="#174C3C" fillOpacity="0.2"/>
-            <path d="M295 46 C288 34 276 30 268 36 C276 38 284 44 295 46 Z" fill="#174C3C" fillOpacity="0.2"/>
+
+            {/* Left foliage spandrel */}
+            <g opacity="0.45">
+              <path d="M36 95 C52 78 68 72 80 76 C66 80 52 88 36 95 Z" fill="#174C3C"/>
+              <path d="M36 80 C50 62 65 56 78 60 C65 66 52 76 36 80 Z" fill="#174C3C" fillOpacity="0.65"/>
+            </g>
+            {/* Right foliage spandrel */}
+            <g opacity="0.45">
+              <path d="M324 95 C308 78 292 72 280 76 C294 80 308 88 324 95 Z" fill="#174C3C"/>
+              <path d="M324 80 C310 62 295 56 282 60 C295 66 308 76 324 80 Z" fill="#174C3C" fillOpacity="0.65"/>
+            </g>
+
+            {/* Lotus buds on arch curve */}
+            {[[90,14],[270,14]].map(([cx,cy],i)=>(
+              <g key={`lb-${i}`}>
+                <path d={`M${cx} ${cy+10} C${cx-5} ${cy+6} ${cx-4} ${cy} ${cx} ${cy-5} C${cx+4} ${cy} ${cx+5} ${cy+6} ${cx} ${cy+10} Z`}
+                  fill="#D99A9D" fillOpacity="0.8" stroke="#C6A66B" strokeWidth="0.8"/>
+                <path d={`M${cx} ${cy+10} C${cx-9} ${cy+7} ${cx-7} ${cy} ${cx-3} ${cy-2} C${cx-3} ${cy+4} ${cx-1} ${cy+8} ${cx} ${cy+10} Z`}
+                  fill="#ECC5C8" fillOpacity="0.7"/>
+                <path d={`M${cx} ${cy+10} C${cx+9} ${cy+7} ${cx+7} ${cy} ${cx+3} ${cy-2} C${cx+3} ${cy+4} ${cx+1} ${cy+8} ${cx} ${cy+10} Z`}
+                  fill="#ECC5C8" fillOpacity="0.7"/>
+              </g>
+            ))}
+
+            {/* Base ground beads */}
+            {Array.from({length:15},(_,i)=>22+i*22).map(x=>(
+              <circle key={x} cx={x} cy="118" r={x===22+7*22?2.5:1.2} fill="#C6A66B" fillOpacity={x===22+7*22?1:0.4}/>
+            ))}
           </svg>
         </div>
 

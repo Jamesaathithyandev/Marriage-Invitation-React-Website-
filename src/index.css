@@ -19,6 +19,9 @@
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     letter-spacing: 0.01em;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /* Custom luxury scrollbar */
@@ -112,6 +115,26 @@
   /* Shadow gold glow utility reuse */
   .shadow-gold-glow {
     box-shadow: 0 0 25px rgba(198, 166, 107, 0.3), 0 4px 20px -2px rgba(198, 166, 107, 0.25);
+  }
+
+  /* Radial gold vignette for closing section */
+  .bg-radial-gold {
+    background: radial-gradient(ellipse 70% 50% at 50% 30%, rgba(198,166,107,0.06) 0%, transparent 70%);
+  }
+
+  /* Stronger readable script & serif text */
+  .font-script {
+    font-weight: 500 !important;
+  }
+
+  /* Ensure serif text is never too thin */
+  .font-serif {
+    font-weight: 500;
+  }
+
+  /* Caps tracking labels — always medium weight */
+  .font-caps {
+    font-weight: 600;
   }
 }
 

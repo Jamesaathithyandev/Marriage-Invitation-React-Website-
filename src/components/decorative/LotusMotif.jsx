@@ -1,270 +1,246 @@
 import React from 'react';
 
 /**
- * Reusable Royal Lotus Motifs
- * Themes: Muted lotus pink (#D99A9D), Antique Gold (#C6A66B), Soft Emerald Foliage (#174C3C)
+ * Reusable Royal Lotus Motifs — Redesigned for bold, elegant, realistic appearance.
+ * All variants now feature thick strokes, rich fills, layered petals, and detailed stamens.
+ * No origami or flat geometric look — these should feel like hand-painted Indian botanical art.
  */
-export function LotusMotif({ variant = 'crest', className = '', size = 'md', color = 'gold' }) {
+export function LotusMotif({ variant = 'crest', className = '', size = 'md' }) {
   const sizeClasses = {
-    sm: 'w-8 h-8 sm:w-10 sm:h-10',
-    md: 'w-14 h-14 sm:w-16 sm:h-16',
-    lg: 'w-20 h-20 sm:w-24 sm:h-24',
-    xl: 'w-32 h-32 sm:w-40 sm:h-40',
+    sm:     'w-8 h-8 sm:w-10 sm:h-10',
+    md:     'w-14 h-14 sm:w-16 sm:h-16',
+    lg:     'w-20 h-20 sm:w-24 sm:h-24',
+    xl:     'w-32 h-32 sm:w-40 sm:h-40',
     custom: '',
   };
 
-  // Primary Crest Motif (Symmetrical blooming royal lotus)
+  /* ─────────────────────────────────────────────────────────────────
+     CREST  — Compact upright lotus crown used as section header icon
+     Fully filled, layered petals, bold strokes, golden stamen
+     ───────────────────────────────────────────────────────────────── */
   if (variant === 'crest') {
     return (
       <svg
-        viewBox="0 0 120 80"
+        viewBox="0 0 100 90"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={`${sizeClasses[size]} ${className}`}
+        aria-hidden="true"
       >
-        {/* Outer Background Glow / Base Leaves */}
-        <path
-          d="M60 72 C35 72 20 62 10 48 C28 50 48 60 60 72 Z"
-          fill="#174C3C"
-          fillOpacity="0.45"
-          stroke="#C6A66B"
-          strokeWidth="1.6"
-        />
-        <path
-          d="M60 72 C85 72 100 62 110 48 C92 50 72 60 60 72 Z"
-          fill="#174C3C"
-          fillOpacity="0.45"
-          stroke="#C6A66B"
-          strokeWidth="1.6"
-        />
+        {/* Lily-pad base leaves */}
+        <path d="M50 84 C20 84 6 70 12 55 C24 65 38 76 50 84 Z" fill="#174C3C" fillOpacity="0.55" stroke="#C6A66B" strokeWidth="1.2"/>
+        <path d="M50 84 C80 84 94 70 88 55 C76 65 62 76 50 84 Z" fill="#174C3C" fillOpacity="0.55" stroke="#C6A66B" strokeWidth="1.2"/>
+        {/* Base water ripple */}
+        <ellipse cx="50" cy="84" rx="28" ry="4" fill="#176B70" fillOpacity="0.12" stroke="#176B70" strokeWidth="0.5"/>
 
-        {/* Outer Lotus Petals (Lotus Blush) */}
-        <path
-          d="M60 70 C30 58 16 38 25 22 C32 38 48 56 60 70 Z"
-          fill="#D99A9D"
-          fillOpacity="0.9"
-          stroke="#C6A66B"
-          strokeWidth="1.4"
-        />
-        <path
-          d="M60 70 C90 58 104 38 95 22 C88 38 72 56 60 70 Z"
-          fill="#D99A9D"
-          fillOpacity="0.9"
-          stroke="#C6A66B"
-          strokeWidth="1.4"
-        />
+        {/* Outer back petals (wide, full) */}
+        <path d="M50 78 C18 62 8 36 20 14 C30 34 44 60 50 78 Z" fill="#C8898D" stroke="#A0666A" strokeWidth="1.3" fillOpacity="0.9"/>
+        <path d="M50 78 C82 62 92 36 80 14 C70 34 56 60 50 78 Z" fill="#C8898D" stroke="#A0666A" strokeWidth="1.3" fillOpacity="0.9"/>
 
-        {/* Secondary Petals */}
-        <path
-          d="M60 68 C40 52 32 32 40 14 C48 30 55 50 60 68 Z"
-          fill="#E8B6B9"
-          fillOpacity="0.85"
-          stroke="#C6A66B"
-          strokeWidth="1.4"
-        />
-        <path
-          d="M60 68 C80 52 88 32 80 14 C72 30 65 50 60 68 Z"
-          fill="#E8B6B9"
-          fillOpacity="0.85"
-          stroke="#C6A66B"
-          strokeWidth="1.4"
-        />
+        {/* Mid outer petals */}
+        <path d="M50 76 C30 58 24 34 34 10 C40 30 46 54 50 76 Z" fill="#DCA8AB" stroke="#C6A66B" strokeWidth="1.1" fillOpacity="0.95"/>
+        <path d="M50 76 C70 58 76 34 66 10 C60 30 54 54 50 76 Z" fill="#DCA8AB" stroke="#C6A66B" strokeWidth="1.1" fillOpacity="0.95"/>
 
-        {/* Center Royal Crown Petal */}
-        <path
-          d="M60 6 C52 22 45 42 60 68 C75 42 68 22 60 6 Z"
-          fill="#DFC48E"
-          stroke="#C6A66B"
-          strokeWidth="1.6"
-        />
+        {/* Inner flanking petals */}
+        <path d="M50 73 C38 54 36 30 44 8 C47 28 49 52 50 73 Z" fill="#ECC5C8" stroke="#C6A66B" strokeWidth="1" fillOpacity="0.98"/>
+        <path d="M50 73 C62 54 64 30 56 8 C53 28 51 52 50 73 Z" fill="#ECC5C8" stroke="#C6A66B" strokeWidth="1" fillOpacity="0.98"/>
 
-        {/* Center Stamen & Core Details */}
-        <path
-          d="M60 14 C57 26 55 38 60 52 C65 38 63 26 60 14 Z"
-          fill="#9E7E45"
-        />
-        <circle cx="60" cy="6" r="2" fill="#C6A66B" stroke="#8B6B34" strokeWidth="0.5" />
+        {/* Central crown petal — tallest, gold-tipped */}
+        <path d="M50 4 C44 20 41 42 50 73 C59 42 56 20 50 4 Z" fill="#DFC48E" stroke="#C6A66B" strokeWidth="1.4"/>
+        {/* Central petal inner vein */}
+        <path d="M50 10 C48 26 47 44 50 68" stroke="#B8933F" strokeWidth="0.7" strokeLinecap="round"/>
 
-        {/* Base Pedestal Beads */}
-        <circle cx="60" cy="72" r="2.5" fill="#C6A66B" />
-        <circle cx="52" cy="72" r="1.5" fill="#C6A66B" />
-        <circle cx="68" cy="72" r="1.5" fill="#C6A66B" />
-        <circle cx="44" cy="71" r="1" fill="#C6A66B" />
-        <circle cx="76" cy="71" r="1" fill="#C6A66B" />
+        {/* Stamen cluster */}
+        <ellipse cx="50" cy="55" rx="5" ry="3.5" fill="#C6A66B" fillOpacity="0.6"/>
+        {[[-4,0],[4,0],[0,-3],[-2.5,-2],[2.5,-2]].map(([dx,dy],i) => (
+          <circle key={i} cx={50+dx} cy={55+dy} r="1.2" fill="#DFC48E"/>
+        ))}
+
+        {/* Apex bead */}
+        <circle cx="50" cy="4" r="2.5" fill="#C6A66B" stroke="#8B6B34" strokeWidth="0.8"/>
+
+        {/* Base bead chain */}
+        {[50,42,58,34,66,26,74].map((x,i) => (
+          <circle key={i} cx={x} cy="84" r={x===50?2.8:x===42||x===58?1.8:1.2} fill="#C6A66B" fillOpacity={x===50?1:0.65}/>
+        ))}
       </svg>
     );
   }
 
-  // Horizontal Lotus Divider
+  /* ─────────────────────────────────────────────────────────────────
+     DIVIDER — Horizontal line with a bold centred lotus
+     ───────────────────────────────────────────────────────────────── */
   if (variant === 'divider') {
     return (
       <div className={`flex items-center justify-center gap-3 w-full my-4 ${className}`}>
-        <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/50 to-gold" />
-        <svg viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-12 h-6 flex-shrink-0">
-          <path d="M40 3 C36 10 32 18 40 28 C48 18 44 10 40 3 Z" fill="#C6A66B" stroke="#9E7E45" strokeWidth="1.6"/>
-          <path d="M40 28 C26 22 18 14 22 8 C26 14 34 22 40 28 Z" fill="#D99A9D" fillOpacity="0.8" stroke="#C6A66B" strokeWidth="1.6"/>
-          <path d="M40 28 C54 22 62 14 58 8 C54 14 46 22 40 28 Z" fill="#D99A9D" fillOpacity="0.8" stroke="#C6A66B" strokeWidth="1.6"/>
-          <circle cx="40" cy="2" r="1.5" fill="#C6A66B"/>
-          <circle cx="10" cy="20" r="1" fill="#C6A66B"/>
-          <circle cx="70" cy="20" r="1" fill="#C6A66B"/>
+        <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/40 to-gold/80" />
+        <svg viewBox="0 0 80 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-10 flex-shrink-0">
+          {/* Base leaves */}
+          <path d="M40 44 C22 44 14 36 18 26 C24 32 32 39 40 44 Z" fill="#174C3C" fillOpacity="0.5" stroke="#C6A66B" strokeWidth="0.9"/>
+          <path d="M40 44 C58 44 66 36 62 26 C56 32 48 39 40 44 Z" fill="#174C3C" fillOpacity="0.5" stroke="#C6A66B" strokeWidth="0.9"/>
+          {/* Outer petals */}
+          <path d="M40 42 C22 34 16 20 22 8 C28 20 36 33 40 42 Z" fill="#C8898D" stroke="#A0666A" strokeWidth="1" fillOpacity="0.85"/>
+          <path d="M40 42 C58 34 64 20 58 8 C52 20 44 33 40 42 Z" fill="#C8898D" stroke="#A0666A" strokeWidth="1" fillOpacity="0.85"/>
+          {/* Inner petals */}
+          <path d="M40 40 C30 30 28 16 34 4 C37 16 39 30 40 40 Z" fill="#DCA8AB" stroke="#C6A66B" strokeWidth="0.9" fillOpacity="0.95"/>
+          <path d="M40 40 C50 30 52 16 46 4 C43 16 41 30 40 40 Z" fill="#DCA8AB" stroke="#C6A66B" strokeWidth="0.9" fillOpacity="0.95"/>
+          {/* Centre petal */}
+          <path d="M40 3 C36 13 34 26 40 40 C46 26 44 13 40 3 Z" fill="#DFC48E" stroke="#C6A66B" strokeWidth="1.1"/>
+          {/* Stamen */}
+          <circle cx="40" cy="28" r="3" fill="#C6A66B" fillOpacity="0.7"/>
+          <circle cx="40" cy="4" r="2" fill="#C6A66B"/>
         </svg>
-        <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold/50 to-gold" />
+        <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-gold/40 to-gold/80" />
       </div>
     );
   }
 
-  // Corner Bracket Lotus
+  /* ─────────────────────────────────────────────────────────────────
+     CORNER — Corner bracket motif
+     ───────────────────────────────────────────────────────────────── */
   if (variant === 'corner') {
     return (
-      <svg
-        viewBox="0 0 50 50"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={`${sizeClasses[size]} ${className}`}
-      >
-        <path d="M0 0 L40 0 C30 0 20 10 20 20 L20 40 L0 40 L0 0 Z" fill="none" stroke="#C6A66B" strokeWidth="1.6" />
-        <path d="M4 4 L30 4 C24 4 16 12 16 20 L16 30 L4 30 Z" fill="none" stroke="#C6A66B" strokeWidth="0.5" strokeOpacity="0.6"/>
-        <path d="M12 12 C18 6 22 8 20 14 C16 16 14 16 12 12 Z" fill="#D99A9D" fillOpacity="0.7" stroke="#C6A66B" strokeWidth="0.5"/>
-        <circle cx="4" cy="4" r="1.5" fill="#C6A66B"/>
+      <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className={`${sizeClasses[size]} ${className}`} aria-hidden="true">
+        {/* L-frame */}
+        <path d="M2 2 L40 2 C28 2 18 12 18 24 L18 48 L2 48 Z" fill="none" stroke="#C6A66B" strokeWidth="1.5"/>
+        <path d="M5 5 L32 5 C23 5 16 13 16 22 L16 42 L5 42 Z" fill="none" stroke="#C6A66B" strokeWidth="0.6" strokeOpacity="0.55"/>
+        {/* Small lotus at corner joint */}
+        <path d="M14 14 C20 8 24 10 22 16 C18 18 16 18 14 14 Z" fill="#D99A9D" fillOpacity="0.85" stroke="#C6A66B" strokeWidth="0.8"/>
+        <path d="M14 14 C12 20 14 24 18 22 C16 18 14 16 14 14 Z" fill="#ECC5C8" fillOpacity="0.7" stroke="#C6A66B" strokeWidth="0.5"/>
+        <circle cx="4" cy="4" r="2" fill="#C6A66B"/>
+        <circle cx="18" cy="48" r="1.5" fill="#C6A66B" fillOpacity="0.7"/>
       </svg>
     );
   }
 
-  // Full Blooming Lotus with Water Reflection
+  /* ─────────────────────────────────────────────────────────────────
+     BLOOM — Full blooming lotus with water, used in closing section
+     Rich, layered, with detailed stamens and water reflection
+     ───────────────────────────────────────────────────────────────── */
   if (variant === 'bloom') {
     return (
-      <svg
-        viewBox="0 0 200 200"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={`${sizeClasses[size]} ${className}`}
-        aria-hidden="true"
-      >
-        {/* Water surface ripples */}
-        <ellipse cx="100" cy="170" rx="70" ry="10" stroke="#176B70" strokeWidth="0.6" fill="#176B70" fillOpacity="0.07"/>
-        <ellipse cx="100" cy="174" rx="55" ry="7" stroke="#176B70" strokeWidth="0.4" fill="none" opacity="0.4"/>
-        <ellipse cx="100" cy="177" rx="35" ry="4" stroke="#176B70" strokeWidth="0.3" fill="none" opacity="0.3"/>
+      <svg viewBox="0 0 200 210" fill="none" xmlns="http://www.w3.org/2000/svg"
+        className={`${sizeClasses[size]} ${className}`} aria-hidden="true">
+        {/* Stem */}
+        <path d="M100 140 C97 155 99 170 100 178" stroke="#174C3C" strokeWidth="2.5" strokeLinecap="round"/>
+        {/* Curved side stems */}
+        <path d="M100 160 C88 155 78 148 72 138" stroke="#174C3C" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M100 160 C112 155 122 148 128 138" stroke="#174C3C" strokeWidth="1.5" strokeLinecap="round"/>
 
-        {/* Water lily pad (emerald green) */}
-        <path d="M100 168 C60 168 44 152 50 138 C60 148 80 158 100 160 C120 158 140 148 150 138 C156 152 140 168 100 168 Z"
-          fill="#174C3C" fillOpacity="0.4" stroke="#174C3C" strokeWidth="0.6"
-        />
-        <path d="M100 160 L100 168" stroke="#174C3C" strokeWidth="0.5"/>
-        {/* Second lily pad */}
-        <path d="M62 162 C48 162 38 152 44 144 C50 150 58 156 65 158 Z"
-          fill="#174C3C" fillOpacity="0.3" stroke="#174C3C" strokeWidth="0.5"
-        />
-        <path d="M138 162 C152 162 162 152 156 144 C150 150 142 156 135 158 Z"
-          fill="#174C3C" fillOpacity="0.3" stroke="#174C3C" strokeWidth="0.5"
-        />
+        {/* Lily pad left */}
+        <path d="M72 138 C50 138 40 124 48 112 C56 120 66 130 74 138 C80 132 84 126 82 118 L72 138 Z"
+          fill="#174C3C" fillOpacity="0.5" stroke="#174C3C" strokeWidth="0.8"/>
+        {/* Lily pad right */}
+        <path d="M128 138 C150 138 160 124 152 112 C144 120 134 130 126 138 C120 132 116 126 118 118 L128 138 Z"
+          fill="#174C3C" fillOpacity="0.5" stroke="#174C3C" strokeWidth="0.8"/>
+        {/* Main lily pad */}
+        <path d="M100 178 C62 178 44 160 52 142 C66 156 84 168 100 174 C116 168 134 156 148 142 C156 160 138 178 100 178 Z"
+          fill="#174C3C" fillOpacity="0.45" stroke="#174C3C" strokeWidth="1"/>
+        <path d="M100 174 L100 178" stroke="#174C3C" strokeWidth="0.8"/>
+        {/* Water ripples */}
+        <ellipse cx="100" cy="182" rx="48" ry="8" stroke="#176B70" strokeWidth="0.8" fill="#176B70" fillOpacity="0.08"/>
+        <ellipse cx="100" cy="186" rx="34" ry="5" stroke="#176B70" strokeWidth="0.5" fill="none" opacity="0.35"/>
+        <ellipse cx="100" cy="190" rx="20" ry="3" stroke="#176B70" strokeWidth="0.4" fill="none" opacity="0.25"/>
 
-        {/* Outer petals — row 1 */}
-        {[
-          [100,55, 70,85], [100,55, 130,85],
-          [100,55, 58,105], [100,55, 142,105],
-          [100,55, 60,130], [100,55, 140,130],
-        ].map(([cx,cy,tx,ty],i) => (
-          <path key={i}
-            d={`M${cx} ${cy} C${(cx+tx)/2-12} ${(cy+ty)/2-20} ${(cx+tx)/2+12} ${(cy+ty)/2+10} ${tx} ${ty} C${(cx+tx)/2} ${ty-15} ${cx} ${(cy+ty)/2} ${cx} ${cy} Z`}
-            fill="#D99A9D" fillOpacity="0.65" stroke="#C6A66B" strokeWidth="0.7"
-          />
-        ))}
-        {/* Outer petals — row 2 (slightly inner) */}
-        {[
-          [100,65, 76,95], [100,65, 124,95],
-          [100,65, 68,118], [100,65, 132,118],
-        ].map(([cx,cy,tx,ty],i) => (
-          <path key={i+6}
-            d={`M${cx} ${cy} C${(cx+tx)/2-8} ${(cy+ty)/2-15} ${(cx+tx)/2+8} ${(cy+ty)/2+8} ${tx} ${ty} C${(cx+tx)/2} ${ty-12} ${cx} ${(cy+ty)/2} ${cx} ${cy} Z`}
-            fill="#E8B6B9" fillOpacity="0.8" stroke="#C6A66B" strokeWidth="0.6"
-          />
-        ))}
-        {/* Inner petals */}
-        {[
-          [100,75, 86,105], [100,75, 114,105],
-          [100,75, 82,122], [100,75, 118,122],
-          [100,75, 100,128],
-        ].map(([cx,cy,tx,ty],i) => (
-          <path key={i+12}
-            d={`M${cx} ${cy} C${(cx+tx)/2-5} ${(cy+ty)/2-10} ${(cx+tx)/2+5} ${(cy+ty)/2+5} ${tx} ${ty} C${(cx+tx)/2} ${ty-8} ${cx} ${(cy+ty)/2} ${cx} ${cy} Z`}
-            fill="#DFC48E" fillOpacity="0.9" stroke="#C6A66B" strokeWidth="0.8"
-          />
-        ))}
-        {/* Centre stamen cluster */}
-        {[[100,90],[96,86],[104,86],[98,82],[102,82],[100,78]].map(([cx,cy],i) => (
-          <circle key={i} cx={cx} cy={cy} r={i===0?4:i<4?2.5:1.5}
-            fill={i===0?"#C6A66B":"#9E7E45"}
-          />
+        {/* === BACK ROW — outermost, wide petals === */}
+        {/* Far left back */}
+        <path d="M100 130 C72 118 54 92 58 62 C70 86 88 114 100 130 Z" fill="#B87A7D" stroke="#9A6063" strokeWidth="1.2" fillOpacity="0.85"/>
+        {/* Far right back */}
+        <path d="M100 130 C128 118 146 92 142 62 C130 86 112 114 100 130 Z" fill="#B87A7D" stroke="#9A6063" strokeWidth="1.2" fillOpacity="0.85"/>
+        {/* Far left outer */}
+        <path d="M100 132 C68 125 46 102 46 70 C62 92 82 120 100 132 Z" fill="#C8898D" stroke="#A0666A" strokeWidth="1.1" fillOpacity="0.9"/>
+        {/* Far right outer */}
+        <path d="M100 132 C132 125 154 102 154 70 C138 92 118 120 100 132 Z" fill="#C8898D" stroke="#A0666A" strokeWidth="1.1" fillOpacity="0.9"/>
+
+        {/* === MID ROW — medium, cupped petals === */}
+        <path d="M100 128 C76 116 62 90 68 58 C76 80 90 108 100 128 Z" fill="#DCA8AB" stroke="#C6A66B" strokeWidth="1.2" fillOpacity="0.95"/>
+        <path d="M100 128 C124 116 138 90 132 58 C124 80 110 108 100 128 Z" fill="#DCA8AB" stroke="#C6A66B" strokeWidth="1.2" fillOpacity="0.95"/>
+        <path d="M100 126 C82 112 74 86 80 52 C86 74 94 104 100 126 Z" fill="#E3BBBE" stroke="#C6A66B" strokeWidth="1" fillOpacity="0.98"/>
+        <path d="M100 126 C118 112 126 86 120 52 C114 74 106 104 100 126 Z" fill="#E3BBBE" stroke="#C6A66B" strokeWidth="1" fillOpacity="0.98"/>
+
+        {/* === INNER ROW — upright, tall petals === */}
+        <path d="M100 124 C88 106 86 78 92 44 C95 68 98 98 100 124 Z" fill="#ECC5C8" stroke="#C6A66B" strokeWidth="1" fillOpacity="1"/>
+        <path d="M100 124 C112 106 114 78 108 44 C105 68 102 98 100 124 Z" fill="#ECC5C8" stroke="#C6A66B" strokeWidth="1" fillOpacity="1"/>
+
+        {/* === CENTRE CROWN PETAL — golden, tallest === */}
+        <path d="M100 28 C94 46 90 72 100 120 C110 72 106 46 100 28 Z" fill="#DFC48E" stroke="#C6A66B" strokeWidth="1.6"/>
+        {/* Centre vein */}
+        <path d="M100 34 C98 52 97 72 100 110" stroke="#B8933F" strokeWidth="0.9" strokeLinecap="round"/>
+
+        {/* === STAMEN CLUSTER === */}
+        <ellipse cx="100" cy="100" rx="10" ry="7" fill="#C6A66B" fillOpacity="0.55"/>
+        {[[-7,0],[7,0],[0,-5],[-4.5,-3.5],[4.5,-3.5],[-6,-1],[6,-1],[0,2]].map(([dx,dy],i) => (
+          <circle key={i} cx={100+dx} cy={100+dy} r="2" fill="#DFC48E" stroke="#B8933F" strokeWidth="0.5"/>
         ))}
         {/* Stamen tips */}
-        {[[97,76],[100,74],[103,76],[95,80],[105,80]].map(([cx,cy],i) => (
-          <circle key={i} cx={cx} cy={cy} r="1" fill="#DFC48E"/>
+        {[[-8,-4],[8,-4],[0,-8],[-5,-6],[5,-6]].map(([dx,dy],i) => (
+          <circle key={i} cx={100+dx} cy={100+dy} r="1.2" fill="#F5E0A0"/>
         ))}
+        {/* Pollen centre */}
+        <circle cx="100" cy="96" r="4.5" fill="#C6A66B" stroke="#9E7E45" strokeWidth="1"/>
+        <circle cx="100" cy="96" r="2" fill="#F5E0A0"/>
 
-        {/* Stem */}
-        <path d="M100 130 C98 145 100 155 100 162" stroke="#174C3C" strokeWidth="1.6" strokeLinecap="round"/>
-
-        {/* Water reflection (mirrored, faint, below) */}
-        <g transform="translate(0 340) scale(1 -1)" opacity="0.12">
-          <path d="M100 55 C70 85 58 105 60 130 C80 118 120 118 140 130 C142 105 130 85 100 55 Z" fill="#D99A9D"/>
-        </g>
+        {/* Apex tip bead */}
+        <circle cx="100" cy="28" r="3" fill="#C6A66B" stroke="#8B6B34" strokeWidth="1"/>
       </svg>
     );
   }
 
-  // Horizontal Lotus Border Garland
+  /* ─────────────────────────────────────────────────────────────────
+     BORDER-GARLAND — Full-width repeating lotus vine
+     ───────────────────────────────────────────────────────────────── */
   if (variant === 'border-garland') {
     return (
-      <svg
-        viewBox="0 0 600 60"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid meet"
-        className={`w-full h-auto ${className}`}
-        aria-hidden="true"
-      >
-        {/* Connecting vine / garland line */}
-        <path d="M0 35 Q50 20 100 35 Q150 50 200 35 Q250 20 300 35 Q350 50 400 35 Q450 20 500 35 Q550 50 600 35"
-          stroke="#174C3C" strokeWidth="0.8" fill="none" opacity="0.5"
-        />
-        {/* Repeating lotus blooms at each peak */}
+      <svg viewBox="0 0 600 70" fill="none" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet" className={`w-full h-auto ${className}`} aria-hidden="true">
+        {/* Undulating vine */}
+        <path d="M0 40 Q50 22 100 40 Q150 58 200 40 Q250 22 300 40 Q350 58 400 40 Q450 22 500 40 Q550 58 600 40"
+          stroke="#174C3C" strokeWidth="1.2" fill="none" opacity="0.55"/>
+        {/* Main lotus blooms */}
         {[100, 300, 500].map(x => (
           <g key={x}>
-            <path d={`M${x} 35 C${x-3} 27 ${x-2} 19 ${x} 14 C${x+2} 19 ${x+3} 27 ${x} 35 Z`} fill="#C6A66B" stroke="#9E7E45" strokeWidth="0.5"/>
-            <path d={`M${x} 35 C${x-10} 31 ${x-8} 22 ${x-4} 18 C${x-5} 25 ${x-3} 31 ${x} 35 Z`} fill="#D99A9D" fillOpacity="0.85"/>
-            <path d={`M${x} 35 C${x+10} 31 ${x+8} 22 ${x+4} 18 C${x+5} 25 ${x+3} 31 ${x} 35 Z`} fill="#D99A9D" fillOpacity="0.85"/>
-            <path d={`M${x} 35 C${x-15} 32 ${x-14} 24 ${x-8} 20 C${x-10} 27 ${x-6} 33 ${x} 35 Z`} fill="#E8B6B9" fillOpacity="0.7"/>
-            <path d={`M${x} 35 C${x+15} 32 ${x+14} 24 ${x+8} 20 C${x+10} 27 ${x+6} 33 ${x} 35 Z`} fill="#E8B6B9" fillOpacity="0.7"/>
-            <circle cx={x} cy={14} r="2" fill="#C6A66B"/>
-            {/* Mini leaf pair */}
-            <path d={`M${x-16} 32 C${x-22} 28 ${x-24} 22 ${x-18} 20 C${x-18} 25 ${x-16} 29 ${x-16} 32 Z`} fill="#174C3C" fillOpacity="0.5"/>
-            <path d={`M${x+16} 32 C${x+22} 28 ${x+24} 22 ${x+18} 20 C${x+18} 25 ${x+16} 29 ${x+16} 32 Z`} fill="#174C3C" fillOpacity="0.5"/>
+            {/* Outer petals */}
+            <path d={`M${x} 40 C${x-12} 34 ${x-10} 22 ${x-4} 16 C${x-5} 26 ${x-3} 34 ${x} 40 Z`} fill="#C8898D" stroke="#A0666A" strokeWidth="0.9" fillOpacity="0.85"/>
+            <path d={`M${x} 40 C${x+12} 34 ${x+10} 22 ${x+4} 16 C${x+5} 26 ${x+3} 34 ${x} 40 Z`} fill="#C8898D" stroke="#A0666A" strokeWidth="0.9" fillOpacity="0.85"/>
+            <path d={`M${x} 40 C${x-18} 36 ${x-16} 24 ${x-8} 18 C${x-10} 29 ${x-6} 36 ${x} 40 Z`} fill="#DCA8AB" fillOpacity="0.75" stroke="#C6A66B" strokeWidth="0.7"/>
+            <path d={`M${x} 40 C${x+18} 36 ${x+16} 24 ${x+8} 18 C${x+10} 29 ${x+6} 36 ${x} 40 Z`} fill="#DCA8AB" fillOpacity="0.75" stroke="#C6A66B" strokeWidth="0.7"/>
+            {/* Centre petal */}
+            <path d={`M${x} 12 C${x-3} 22 ${x-2} 32 ${x} 40 C${x+2} 32 ${x+3} 22 ${x} 12 Z`} fill="#DFC48E" stroke="#C6A66B" strokeWidth="1"/>
+            {/* Stamen */}
+            <circle cx={x} cy={32} r="2.5" fill="#C6A66B" fillOpacity="0.7"/>
+            <circle cx={x} cy={12} r="2" fill="#C6A66B"/>
+            {/* Flanking leaves */}
+            <path d={`M${x-20} 36 C${x-28} 28 ${x-30} 18 ${x-22} 14 C${x-22} 22 ${x-20} 30 ${x-20} 36 Z`} fill="#174C3C" fillOpacity="0.55"/>
+            <path d={`M${x+20} 36 C${x+28} 28 ${x+30} 18 ${x+22} 14 C${x+22} 22 ${x+20} 30 ${x+20} 36 Z`} fill="#174C3C" fillOpacity="0.55"/>
           </g>
         ))}
-        {/* Small bud at troughs */}
+        {/* Small buds at troughs */}
         {[0, 200, 400, 600].map(x => (
           <g key={`bud-${x}`}>
-            <path d={`M${x} 35 C${x-2} 39 ${x-1} 43 ${x} 46 C${x+1} 43 ${x+2} 39 ${x} 35 Z`} fill="#D99A9D" fillOpacity="0.6"/>
-            <circle cx={x} cy={47} r="1.5" fill="#C6A66B" opacity="0.7"/>
+            <path d={`M${x} 40 C${x-2} 46 ${x-1} 52 ${x} 56 C${x+1} 52 ${x+2} 46 ${x} 40 Z`} fill="#D99A9D" fillOpacity="0.65" stroke="#C6A66B" strokeWidth="0.6"/>
+            <circle cx={x} cy={57} r="1.8" fill="#C6A66B" fillOpacity="0.7"/>
           </g>
         ))}
-        {/* Leaf pairs along the vine */}
+        {/* Leaves mid-vine */}
         {[50, 150, 250, 350, 450, 550].map(x => (
-          <g key={`leaf-${x}`} opacity="0.45">
-            <path d={`M${x} 30 C${x-8} 24 ${x-6} 16 ${x} 14 C${x} 20 ${x} 26 ${x} 30 Z`} fill="#174C3C"/>
-            <path d={`M${x} 30 C${x+8} 24 ${x+6} 16 ${x} 14 C${x} 20 ${x} 26 ${x} 30 Z`} fill="#174C3C" fillOpacity="0.7"/>
+          <g key={`leaf-${x}`} opacity="0.5">
+            <path d={`M${x} 35 C${x-7} 28 ${x-5} 18 ${x} 15 C${x} 22 ${x} 30 ${x} 35 Z`} fill="#174C3C"/>
+            <path d={`M${x} 35 C${x+7} 28 ${x+5} 18 ${x} 15 C${x} 22 ${x} 30 ${x} 35 Z`} fill="#174C3C" fillOpacity="0.7"/>
           </g>
         ))}
       </svg>
     );
   }
 
-  // Minimal Single Petal Icon
+  // Minimal fallback
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={`${sizeClasses[size]} ${className}`}>
-      <path d="M12 2 C9 7 8 13 12 21 C16 13 15 7 12 2 Z" fill="#C6A66B" stroke="#9E7E45" strokeWidth="1.6"/>
-      <path d="M12 21 C6 17 3 12 5 8 C7 12 10 17 12 21 Z" fill="#D99A9D" fillOpacity="0.9" stroke="#C6A66B" strokeWidth="0.5"/>
-      <path d="M12 21 C18 17 21 12 19 8 C17 12 14 17 12 21 Z" fill="#D99A9D" fillOpacity="0.9" stroke="#C6A66B" strokeWidth="0.5"/>
+    <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={`${sizeClasses[size]} ${className}`} aria-hidden="true">
+      <path d="M20 2 C14 12 11 26 20 44 C29 26 26 12 20 2 Z" fill="#DFC48E" stroke="#C6A66B" strokeWidth="1.5"/>
+      <path d="M20 44 C8 36 4 22 10 12 C12 22 16 34 20 44 Z" fill="#C8898D" fillOpacity="0.9" stroke="#C6A66B" strokeWidth="1"/>
+      <path d="M20 44 C32 36 36 22 30 12 C28 22 24 34 20 44 Z" fill="#C8898D" fillOpacity="0.9" stroke="#C6A66B" strokeWidth="1"/>
+      <path d="M20 42 C14 32 12 18 16 6 C18 18 19 32 20 42 Z" fill="#DCA8AB" fillOpacity="0.95" stroke="#C6A66B" strokeWidth="0.9"/>
+      <path d="M20 42 C26 32 28 18 24 6 C22 18 21 32 20 42 Z" fill="#DCA8AB" fillOpacity="0.95" stroke="#C6A66B" strokeWidth="0.9"/>
+      <circle cx="20" cy="2" r="2.2" fill="#C6A66B"/>
     </svg>
   );
 }
