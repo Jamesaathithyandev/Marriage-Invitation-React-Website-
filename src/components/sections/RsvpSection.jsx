@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { LotusMotif } from '../decorative/LotusMotif';
 import { PeacockMotif } from '../decorative/PeacockMotif';
-import { OrnamentalDivider } from '../decorative/OrnamentalDivider';
 import {
   getHeadcount,
   incrementRsvp,
@@ -118,7 +116,7 @@ export function RsvpSection() {
           </p>
 
           <div className="mt-3 flex justify-center">
-            <OrnamentalDivider motif="lotus" lineStyle="dual" className="max-w-xs" />
+            <div className="h-[0.5px] w-24 bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
           </div>
         </div>
 
@@ -129,28 +127,11 @@ export function RsvpSection() {
             {/* Inner Jali Subtle Pattern */}
             <div className="absolute inset-0 jali-dense opacity-[0.035] pointer-events-none" />
 
-            {/* Corner Decorative Lotus Accents */}
-            <div className="absolute top-2 left-2 opacity-40">
-              <LotusMotif variant="corner" size="sm" className="w-6 h-6" />
-            </div>
-            <div className="absolute top-2 right-2 opacity-40 -scale-x-100">
-              <LotusMotif variant="corner" size="sm" className="w-6 h-6" />
-            </div>
-            <div className="absolute bottom-2 left-2 opacity-40 -scale-y-100">
-              <LotusMotif variant="corner" size="sm" className="w-6 h-6" />
-            </div>
-            <div className="absolute bottom-2 right-2 opacity-40 scale-x-[-1] scale-y-[-1]">
-              <LotusMotif variant="corner" size="sm" className="w-6 h-6" />
-            </div>
-
             {/* ══════════════════════════════════════════════════════
                 STATE 1: NOT YET RSVP'D (Action Prompt)
                ══════════════════════════════════════════════════════ */}
             {!status && (
               <div className="space-y-6">
-                <div className="flex justify-center">
-                  <LotusMotif variant="crest" size="lg" className="w-16 h-16 opacity-95 animate-float-subtle" />
-                </div>
 
                 <div className="space-y-1">
                   <h3 className="font-display text-xl sm:text-2xl text-palace-green font-normal">
@@ -217,17 +198,12 @@ export function RsvpSection() {
             {status === 'attending' && (
               <div className="space-y-6 animate-fadeIn">
 
-                {/* Golden Sparkle Celebration Banner */}
-                <div className="relative">
-                  <div className="flex justify-center">
-                    <LotusMotif variant="bloom" size="lg" className="w-20 h-20 sm:w-24 sm:h-24 opacity-95" />
+                {/* Golden Celebration Sparkle Ring */}
+                {showSparkles && (
+                  <div className="flex items-center justify-center pointer-events-none">
+                    <div className="w-16 h-16 rounded-full bg-gold/25 animate-ping opacity-75" />
                   </div>
-                  {showSparkles && (
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                      <div className="w-28 h-28 rounded-full bg-gold/20 animate-ping opacity-75" />
-                    </div>
-                  )}
-                </div>
+                )}
 
                 {/* Confirmed Pill */}
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-600/40 bg-emerald-deep/10 text-emerald-deep">
@@ -294,7 +270,6 @@ export function RsvpSection() {
                ══════════════════════════════════════════════════════ */}
             {status === 'declined' && (
               <div className="space-y-5 animate-fadeIn">
-                <LotusMotif variant="crest" size="md" className="mx-auto opacity-70" />
 
                 <div className="space-y-2">
                   <h3 className="font-display text-xl sm:text-2xl text-palace-green font-normal">
