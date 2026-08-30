@@ -1,4 +1,4 @@
-﻿import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 
 import { Intro } from './components/intro/Intro';
 import { LoadingScreen } from './components/intro/LoadingScreen';
@@ -9,6 +9,7 @@ import { WeddingMessageSection } from './components/sections/WeddingMessageSecti
 import { EventsSection } from './components/sections/EventsSection';
 import { CountdownSection } from './components/sections/CountdownSection';
 import { CalendarSection } from './components/sections/CalendarSection';
+import { RsvpSection } from './components/sections/RsvpSection';
 import { LocationSection } from './components/sections/LocationSection';
 import { ClosingSection } from './components/sections/ClosingSection';
 import { RevealOnScroll } from './components/common/RevealOnScroll';
@@ -184,17 +185,22 @@ export function App() {
               <CountdownSection />
             </RevealOnScroll>
 
-            {/* 6 â€” Venue & Satellite Map */}
+            {/* 6 — Venue & Satellite Map */}
             <RevealOnScroll className="w-full">
               <LocationSection onExternalNavigate={handleExternalNavigate} />
             </RevealOnScroll>
 
-            {/* 7 â€” Add to Calendar */}
+            {/* 7 — Add to Calendar */}
             <RevealOnScroll className="w-full">
               <CalendarSection onExternalNavigate={handleExternalNavigate} />
             </RevealOnScroll>
 
-            {/* 8 â€” Grand Closing */}
+            {/* 8 — Sacred RSVP & Live Headcount */}
+            <RevealOnScroll className="w-full">
+              <RsvpSection />
+            </RevealOnScroll>
+
+            {/* 9 — Grand Closing */}
             <RevealOnScroll className="w-full">
               <ClosingSection />
             </RevealOnScroll>
