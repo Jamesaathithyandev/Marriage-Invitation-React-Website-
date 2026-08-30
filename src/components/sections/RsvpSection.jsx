@@ -109,12 +109,12 @@ export function RsvpSection() {
             <div className="h-[0.5px] w-8 sm:w-14 bg-gradient-to-l from-transparent to-gold" />
           </div>
 
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-palace-green font-normal tracking-wide">
-            Will You Grace Us With Your Presence?
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-palace-green font-semibold tracking-wide">
+            Are You Attending Our Wedding?
           </h2>
 
-          <p className="font-serif italic text-xs sm:text-sm text-palace-green/75 mt-2 max-w-md mx-auto leading-relaxed">
-            "Your presence and heartfelt blessings will illuminate our wedding celebrations."
+          <p className="font-serif text-sm sm:text-base text-palace-green/85 mt-2 max-w-md mx-auto leading-relaxed">
+            If you are joining us for the celebrations on <strong className="font-semibold text-palace-green">24th &amp; 25th October 2026</strong>, please click the button below to let us know — it only takes a second!
           </p>
 
           <div className="mt-3 flex justify-center">
@@ -180,11 +180,11 @@ export function RsvpSection() {
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-champagne/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
 
                     <div className="relative z-10 flex items-center justify-center gap-3">
-                      <span className="text-gold text-lg">✦</span>
-                      <span className="font-caps text-sm sm:text-base tracking-royal font-bold text-gold-champagne uppercase drop-shadow-sm">
-                        {loading ? 'Registering Blessing...' : 'Joyfully Attending · Count Me In'}
+                      <span className="text-gold text-xl">✦</span>
+                      <span className="font-caps text-base sm:text-lg tracking-royal font-bold text-gold-champagne uppercase drop-shadow-sm">
+                        {loading ? 'Registering...' : 'Yes, Count Me In!'}
                       </span>
-                      <span className="text-gold text-lg">✦</span>
+                      <span className="text-gold text-xl">✦</span>
                     </div>
                   </button>
 
