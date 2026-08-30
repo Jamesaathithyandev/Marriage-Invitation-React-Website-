@@ -127,8 +127,8 @@ export function App() {
             />
           )}
 
-          {/* ── Sticky Royal Header with RSVP Action ────────── */}
-          <header className="w-full border-b border-gold/45 bg-gradient-to-r from-ivory-light/95 via-ivory/95 to-ivory-light/95 backdrop-blur-md sticky top-0 z-40 shadow-[0_4px_20px_rgba(198,166,107,0.12)]">
+          {/* ── Fixed Royal Header (Follows on scroll) ─────── */}
+          <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-gold/45 bg-gradient-to-r from-ivory-light/95 via-ivory/95 to-ivory-light/95 backdrop-blur-md shadow-[0_4px_20px_rgba(198,166,107,0.15)]">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
               {/* Monogram Brand */}
               <div className="flex items-center gap-2.5">
@@ -175,8 +175,8 @@ export function App() {
             </div>
           </header>
 
-          {/* â”€â”€ Main Sections Flow â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
-          <main className="w-full flex flex-col items-center">
+          {/* ── Main Sections Flow ───────────────────────────── */}
+          <main className="w-full flex flex-col items-center pt-14 sm:pt-16">
 
             {/* 1 â€” Hero Invitation Card */}
             <HeroSection />

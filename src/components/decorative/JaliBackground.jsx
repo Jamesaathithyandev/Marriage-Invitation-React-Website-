@@ -12,7 +12,7 @@ export function JaliBackground({ children, opacity = 'subtle', showPalaceVignett
   }[opacity] || 'opacity-[0.35]';
 
   return (
-    <div className="relative min-h-screen w-full bg-ivory paper-grain overflow-hidden flex flex-col">
+    <div className="relative min-h-screen w-full bg-ivory paper-grain overflow-x-clip flex flex-col">
       {/* Ambient Royal Palace Radial Vignette Glow */}
       {showPalaceVignette && (
         <div className="fixed inset-0 pointer-events-none z-0">
