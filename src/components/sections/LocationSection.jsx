@@ -210,25 +210,25 @@ export function LocationSection({ onExternalNavigate }) {
         <button
           onClick={handleGetDirections}
           className="
-            group relative mt-7 flex items-center justify-center gap-3
-            w-full max-w-xs px-7 py-4.5 rounded-xl
-            border border-gold/60 bg-gradient-to-b from-ivory to-ivory-dark
-            hover:from-emerald-deep hover:to-palace-green
-            shadow-gold-subtle hover:shadow-palace-elevation
-            text-palace-green hover:text-gold-champagne
-            transition-all duration-400
+            group relative mt-7 inline-flex items-center justify-center gap-3
+            w-auto px-8 py-3.5 sm:py-4 rounded-xl
+            border border-gold/70 bg-gradient-to-r from-emerald-deep via-palace-green to-emerald-deep
+            hover:border-gold shadow-gold-glow hover:shadow-[0_0_24px_rgba(198,166,107,0.5)]
+            hover:scale-[1.02] active:scale-[0.98]
+            text-gold-champagne
+            transition-all duration-300 cursor-pointer overflow-hidden
           "
           aria-label="Open Google Maps directions to Tranquil Wedding Venue"
         >
           {/* Navigation Arrow Icon */}
-          <svg viewBox="0 0 20 20" fill="none" className="w-4.5 h-4.5 text-gold group-hover:text-gold-champagne flex-shrink-0 transition-colors duration-300" aria-hidden="true">
-            <path d="M10 2 L18 10 L10 18 L10 13 C5.58 13 2 14.58 2 18 C2 10 5.58 7 10 7 Z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+          <svg viewBox="0 0 20 20" fill="none" className="w-5 h-5 text-gold group-hover:text-gold-champagne flex-shrink-0 transition-colors duration-300" aria-hidden="true">
+            <path d="M10 2 L18 10 L10 18 L10 13 C5.58 13 2 14.58 2 18 C2 10 5.58 7 10 7 Z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          <span className="font-caps text-sm sm:text-base tracking-royal font-bold uppercase">
+          <span className="font-caps text-sm sm:text-base tracking-royal font-bold uppercase whitespace-nowrap">
             Get Directions
           </span>
-          {/* Hover shimmer */}
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+          {/* Golden sweep hover effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-champagne/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
         </button>
 
         {/* Decorative bottom pillar pair */}

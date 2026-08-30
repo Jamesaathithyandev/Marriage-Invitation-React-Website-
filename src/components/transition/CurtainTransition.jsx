@@ -133,15 +133,15 @@ export function CurtainTransition({
         <div className="absolute inset-0 z-20 pointer-events-none flex items-center justify-center">
           <div className="curtain-medallion relative flex flex-col items-center justify-center text-center">
             {/* Outer glow ring */}
-            <div className="absolute w-44 h-44 sm:w-52 sm:h-52 rounded-full border border-gold/35 animate-ping-slow opacity-40" />
+            <div className="absolute w-56 h-56 sm:w-64 sm:h-64 rounded-full border border-gold/35 animate-ping-slow opacity-40" />
             {/* Inner seal */}
-            <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full border-2 border-gold bg-palace-deep/95 backdrop-blur-md shadow-[0_0_45px_rgba(198,166,107,0.7),inset_0_0_20px_rgba(198,166,107,0.15)] flex flex-col items-center justify-center px-4 py-3 text-center">
-              <LotusMotif variant="crest" size="sm" className="opacity-95 w-7 h-7 sm:w-8 sm:h-8 -mt-0.5 text-gold" />
-              <span className="font-display text-base sm:text-lg font-bold text-gold-foil tracking-widest mt-1 leading-none whitespace-nowrap">
+            <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full border-2 border-gold bg-palace-deep/95 backdrop-blur-md shadow-[0_0_45px_rgba(198,166,107,0.7),inset_0_0_20px_rgba(198,166,107,0.15)] flex flex-col items-center justify-center px-5 py-4 text-center">
+              <LotusMotif variant="crest" size="md" className="opacity-95 w-9 h-9 sm:w-11 sm:h-11 -mt-1 text-gold" />
+              <span className="font-display text-xl sm:text-2xl font-bold text-gold-foil tracking-widest mt-1.5 leading-none whitespace-nowrap">
                 V &amp; K
               </span>
-              <div className="w-14 h-[0.5px] bg-gradient-to-r from-transparent via-gold to-transparent my-1.5" />
-              <span className="font-caps text-[8.5px] sm:text-[9.5px] tracking-royal text-gold-champagne uppercase font-semibold whitespace-nowrap leading-none block text-center">
+              <div className="w-20 h-[0.5px] bg-gradient-to-r from-transparent via-gold to-transparent my-2" />
+              <span className="font-caps text-[9px] sm:text-[10.5px] tracking-wider text-gold-champagne uppercase font-bold whitespace-nowrap leading-none block text-center">
                 24 &amp; 25 · 10 · 2026
               </span>
             </div>
