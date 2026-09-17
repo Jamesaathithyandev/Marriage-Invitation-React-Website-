@@ -166,26 +166,6 @@ export function EventsSection() {
                           </div>
                         )}
 
-                        {/* Custom Event Palette Tag with Swatches */}
-                        {event.palette && (
-                          <div className="mb-3">
-                            <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border shadow-2xs backdrop-blur-xs ${theme.tagBg}`}>
-                              <div className="flex items-center -space-x-1">
-                                {event.palette.swatches.map((sw, sIdx) => (
-                                  <span
-                                    key={sIdx}
-                                    title={sw.name}
-                                    className="w-3.5 h-3.5 rounded-full border border-white/90 shadow-2xs inline-block transition-transform hover:scale-125"
-                                    style={{ backgroundColor: sw.color }}
-                                  />
-                                ))}
-                              </div>
-                              <span className="font-caps text-[9px] sm:text-[10px] tracking-wider font-bold uppercase">
-                                {event.themeLabel}
-                              </span>
-                            </div>
-                          </div>
-                        )}
 
                         {/* Day & Date Line */}
                         <div className="space-y-0.5 mb-2">
@@ -216,17 +196,6 @@ export function EventsSection() {
                           "{event.description}"
                         </p>
 
-                        {/* Palette Swatch Legend */}
-                        {event.palette && (
-                          <div className="mt-4 pt-3 border-t border-gold/15 flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5">
-                            {event.palette.swatches.map((sw, i) => (
-                              <span key={i} className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-serif text-palace-green/75">
-                                <span className="w-2.5 h-2.5 rounded-full inline-block border border-black/10 shadow-2xs" style={{ backgroundColor: sw.color }} />
-                                <span>{sw.name}</span>
-                              </span>
-                            ))}
-                          </div>
-                        )}
 
                         {/* Bottom Motif Accent */}
                         <div className="mt-3 flex items-center justify-center opacity-60">
