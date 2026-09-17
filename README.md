@@ -180,22 +180,6 @@ To run this project on your local machine:
 
 ---
 
-## 📊 Google Sheets RSVP Integration Setup
-
-If you wish to deploy the RSVP form to your own Google Sheet:
-
-1. Create a new Google Sheet.
-2. Open **Extensions > Apps Script**.
-3. Copy and paste the script from [`google-sheets/GoogleAppsScript_RsvpForm.js`](google-sheets/GoogleAppsScript_RsvpForm.js).
-4. Update `SPREADSHEET_ID` with your Sheet ID.
-5. Click **Deploy > New Deployment**:
-   * Select type: **Web app**
-   * Execute as: **Me**
-   * Who has access: **Anyone**
-6. Copy the resulting Web App URL and paste it into `src/components/sections/RsvpSection.jsx` as `APPS_SCRIPT_URL`.
-
----
-
 <p align="center">
   <b>॥ वरवधूभ्यां नमः ॥</b><br/>
   <i>Wishing Vinay & Kishma a lifetime of love, laughter, and togetherness.</i>
