@@ -209,9 +209,20 @@ export function CalendarSection({ onExternalNavigate }) {
                       Saturday
                     </span>
                   </div>
-                  <p className="font-serif italic text-xs sm:text-sm text-palace-green/80 mt-0.5">
-                    Mehendi (11:00 AM) · Haldi (3:00 PM) · Sangeet (7:00 PM onwards)
-                  </p>
+                  <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-[#2D6A4F]/30 bg-[#2D6A4F]/10 text-[10px] sm:text-[11px] font-serif font-medium text-[#1B4332]">
+                      <span className="w-2 h-2 rounded-full bg-[#2D6A4F]" />
+                      Mehendi · 11:00 AM
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-[#D97706]/30 bg-[#FEF08A]/35 text-[10px] sm:text-[11px] font-serif font-medium text-[#92400E]">
+                      <span className="w-2 h-2 rounded-full bg-[#D97706]" />
+                      Haldi · 3:00 PM
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-[#3730A3]/30 bg-[#3730A3]/10 text-[10px] sm:text-[11px] font-serif font-medium text-[#312E81]">
+                      <span className="w-2 h-2 rounded-full bg-[#C026D3]" />
+                      Sangeet · 7:00 PM
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -230,9 +241,16 @@ export function CalendarSection({ onExternalNavigate }) {
                       Sunday
                     </span>
                   </div>
-                  <p className="font-serif italic text-xs sm:text-sm text-palace-green/80 mt-0.5">
-                    Muhurtham (10:00 AM – 11:00 AM) · Reception (6:30 PM onwards)
-                  </p>
+                  <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-gold/40 bg-gold/10 text-[10px] sm:text-[11px] font-serif font-medium text-palace-green">
+                      <span className="w-2 h-2 rounded-full bg-gold" />
+                      Muhurtham · 10:00 AM
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full border border-gold/40 bg-gold/10 text-[10px] sm:text-[11px] font-serif font-medium text-palace-green">
+                      <span className="w-2 h-2 rounded-full bg-gold-deep" />
+                      Reception · 6:30 PM
+                    </span>
+                  </div>
                 </div>
               </div>
 

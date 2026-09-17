@@ -39,7 +39,20 @@ export const WEDDING_EVENTS = [
     time: '11:00 AM onwards',
     description: 'An auspicious morning of intricate henna, folk melodies, and celebration.',
     motif: 'lotus',
-    accentColor: '#6B21A8', // Royal Violet
+    accentColor: '#2D6A4F', // Emerald Green
+    themeLabel: 'Shades of Green',
+    palette: {
+      primary: '#1B4332',
+      secondary: '#2D6A4F',
+      accent: '#84A98C',
+      subtle: '#588157',
+      swatches: [
+        { name: 'Forest green', color: '#1B4332' },
+        { name: 'Emerald green', color: '#2D6A4F' },
+        { name: 'Sage green', color: '#84A98C' },
+        { name: 'Olive green', color: '#588157' },
+      ],
+    },
   },
   {
     id: 'haldi',
@@ -49,7 +62,20 @@ export const WEDDING_EVENTS = [
     time: '3:00 PM onwards',
     description: 'A vibrant ritual of sacred turmeric, love, laughter, and family blessings.',
     motif: 'sun-bloom',
-    accentColor: '#C6A66B', // Antique Gold
+    accentColor: '#D97706', // Marigold
+    themeLabel: 'Shades of Yellow & White',
+    palette: {
+      primary: '#D97706',
+      secondary: '#FACC15',
+      accent: '#FEF08A',
+      subtle: '#FFFBEB',
+      swatches: [
+        { name: 'Sunshine yellow', color: '#FACC15' },
+        { name: 'Marigold', color: '#D97706' },
+        { name: 'Creamy', color: '#FEF08A' },
+        { name: 'Soft ivory', color: '#FFFBEB' },
+      ],
+    },
   },
   {
     id: 'sangeet',
@@ -59,7 +85,20 @@ export const WEDDING_EVENTS = [
     time: '7:00 PM onwards',
     description: 'A magical royal evening of music, dance, laughter, and celebratory performances.',
     motif: 'peacock',
-    accentColor: '#315A78', // Muted Royal Blue
+    accentColor: '#3730A3', // Indigo Blue
+    themeLabel: 'Groovy Blues & Fun Purples',
+    palette: {
+      primary: '#0D9488',
+      secondary: '#3730A3',
+      accent: '#C026D3',
+      subtle: '#E2E8F0',
+      swatches: [
+        { name: 'Teal blue', color: '#0D9488' },
+        { name: 'Indigo blue', color: '#3730A3' },
+        { name: 'Magenta', color: '#C026D3' },
+        { name: 'Shimmer gold/silver', color: '#E2E8F0' },
+      ],
+    },
   },
   {
     id: 'muhurtham',

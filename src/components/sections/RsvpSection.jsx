@@ -12,11 +12,11 @@ const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkscVuG12rTIiI
 // ────────────────────────────────────────────────────────────────────────────
 
 const EVENTS = [
-  { id: 'mehendi',  label: 'Mehendi',           date: 'Sat, 24th Oct · 11:00 AM' },
-  { id: 'haldi',   label: 'Haldi',              date: 'Sat, 24th Oct · 3:00 PM'  },
-  { id: 'sangeet', label: 'Sangeet',            date: 'Sat, 24th Oct · 7:00 PM'  },
-  { id: 'wedding', label: 'Wedding Muhurtham',  date: 'Sun, 25th Oct · 10:00 AM' },
-  { id: 'reception', label: 'Reception',        date: 'Sun, 25th Oct · 6:30 PM'  },
+  { id: 'mehendi',  label: 'Mehendi',           date: 'Sat, 24th Oct · 11:00 AM', dot: '#2D6A4F', tag: 'Shades of Green' },
+  { id: 'haldi',   label: 'Haldi',              date: 'Sat, 24th Oct · 3:00 PM',  dot: '#D97706', tag: 'Yellow & White' },
+  { id: 'sangeet', label: 'Sangeet',            date: 'Sat, 24th Oct · 7:00 PM',  dot: '#C026D3', tag: 'Blues & Purples' },
+  { id: 'wedding', label: 'Wedding Muhurtham',  date: 'Sun, 25th Oct · 10:00 AM', dot: '#C6A66B', tag: 'Sacred Ceremony' },
+  { id: 'reception', label: 'Reception',        date: 'Sun, 25th Oct · 6:30 PM',  dot: '#9E7E45', tag: 'Celebration' },
 ];
 
 const initialForm = {
@@ -227,9 +227,17 @@ export function RsvpSection() {
                             )}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <p className={`font-caps text-xs tracking-wider font-bold uppercase ${checked ? 'text-palace-green' : 'text-palace-green/70'}`}>
-                              {ev.label}
-                            </p>
+                            <div className="flex flex-wrap items-center gap-2">
+                              <p className={`font-caps text-xs tracking-wider font-bold uppercase ${checked ? 'text-palace-green' : 'text-palace-green/70'}`}>
+                                {ev.label}
+                              </p>
+                              {ev.tag && (
+                                <span className="inline-flex items-center gap-1 text-[9px] font-caps font-semibold px-2 py-0.5 rounded-full border border-black/5 bg-white/80 text-palace-green/75 shadow-2xs">
+                                  <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ backgroundColor: ev.dot }} />
+                                  {ev.tag}
+                                </span>
+                              )}
+                            </div>
                             <p className="font-serif text-[11px] text-palace-green/55 mt-0.5">
                               {ev.date}
                             </p>

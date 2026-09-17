@@ -13,6 +13,45 @@ import { OrnamentalDivider } from '../decorative/OrnamentalDivider';
  * - Palace-inspired arched frames (avoiding generic rectangular boxes)
  * - Muhurtham Ceremony visually highlighted as the primary sacred union
  */
+const EVENT_THEMES = {
+  mehendi: {
+    border: 'border-[#2D6A4F]/45 hover:border-[#2D6A4F]/70',
+    outerBg: 'bg-gradient-to-b from-[#1B4332]/22 via-[#2D6A4F]/12 to-[#84A98C]/10',
+    shadow: 'shadow-[0_4px_24px_rgba(45,106,79,0.16)]',
+    cornerGlow: 'from-[#2D6A4F]/14 via-[#84A98C]/10 to-transparent',
+    markerRing: 'border-[#2D6A4F] text-[#2D6A4F] ring-2 ring-[#2D6A4F]/30 bg-emerald-50/80',
+    titleColor: 'text-[#1B4332]',
+    dayColor: 'text-[#2D6A4F]',
+    timePill: 'border-[#2D6A4F]/40 bg-[#2D6A4F]/8 text-[#1B4332]',
+    timeIcon: 'text-[#2D6A4F]',
+    tagBg: 'border-[#2D6A4F]/30 bg-[#1B4332]/5 text-[#1B4332]',
+  },
+  haldi: {
+    border: 'border-[#D97706]/45 hover:border-[#D97706]/70',
+    outerBg: 'bg-gradient-to-b from-[#D97706]/22 via-[#FACC15]/14 to-[#FEF08A]/10',
+    shadow: 'shadow-[0_4px_24px_rgba(217,119,6,0.16)]',
+    cornerGlow: 'from-[#FACC15]/18 via-[#D97706]/10 to-transparent',
+    markerRing: 'border-[#D97706] text-[#D97706] ring-2 ring-[#D97706]/30 bg-amber-50/80',
+    titleColor: 'text-[#92400E]',
+    dayColor: 'text-[#D97706]',
+    timePill: 'border-[#D97706]/40 bg-[#FEF08A]/35 text-[#92400E]',
+    timeIcon: 'text-[#D97706]',
+    tagBg: 'border-[#D97706]/30 bg-[#D97706]/5 text-[#92400E]',
+  },
+  sangeet: {
+    border: 'border-[#3730A3]/45 hover:border-[#C026D3]/70',
+    outerBg: 'bg-gradient-to-b from-[#0D9488]/22 via-[#3730A3]/18 to-[#C026D3]/12',
+    shadow: 'shadow-[0_4px_24px_rgba(55,48,163,0.16)]',
+    cornerGlow: 'from-[#0D9488]/14 via-[#C026D3]/10 to-transparent',
+    markerRing: 'border-[#3730A3] text-[#3730A3] ring-2 ring-[#3730A3]/30 bg-indigo-50/80',
+    titleColor: 'bg-gradient-to-r from-[#0D9488] via-[#3730A3] to-[#C026D3] bg-clip-text text-transparent',
+    dayColor: 'text-[#3730A3]',
+    timePill: 'border-[#3730A3]/40 bg-[#3730A3]/8 text-[#312E81]',
+    timeIcon: 'text-[#0D9488]',
+    tagBg: 'border-[#3730A3]/30 bg-[#3730A3]/5 text-[#312E81]',
+  },
+};
+
 export function EventsSection() {
   return (
     <section
@@ -64,6 +103,22 @@ export function EventsSection() {
             {WEDDING_EVENTS.map((event, index) => {
               const isEven = index % 2 === 0;
               const isMain = Boolean(event.isMain);
+              const theme = EVENT_THEMES[event.id] || {
+                border: isMain ? 'border-gold' : 'border-gold/40',
+                outerBg: isMain
+                  ? 'bg-gradient-to-b from-gold/30 via-gold/10 to-gold/20'
+                  : 'bg-gradient-to-b from-gold/15 via-transparent to-gold/5',
+                shadow: isMain ? 'shadow-gold-glow' : 'shadow-palace-elevation',
+                cornerGlow: 'from-gold/10 to-transparent',
+                markerRing: isMain
+                  ? 'border-gold ring-4 ring-gold/30 bg-ivory-light text-gold-deep shadow-gold-glow'
+                  : 'border-gold bg-ivory text-gold shadow-gold-glow',
+                titleColor: 'text-gold-foil',
+                dayColor: 'text-gold-deep',
+                timePill: 'border-gold/50 bg-ivory-dark/60 text-palace-green',
+                timeIcon: 'text-gold-deep',
+                tagBg: 'border-gold/30 bg-gold/5 text-gold-deep',
+              };
 
               return (
                 <div
@@ -75,9 +130,7 @@ export function EventsSection() {
                   {/* ── 1. TIMELINE LOTUS MARKER ────────────── */}
                   <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
                     <div
-                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gold bg-ivory flex items-center justify-center shadow-gold-glow transition-transform duration-300 hover:scale-110 ${
-                        isMain ? 'ring-4 ring-gold/30 bg-ivory-light' : ''
-                      }`}
+                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 flex items-center justify-center transition-transform duration-300 hover:scale-110 ${theme.markerRing}`}
                     >
                       <LotusMotif variant="crest" size="md" className="w-7 h-7 sm:w-9 sm:h-9" />
                     </div>
@@ -90,14 +143,13 @@ export function EventsSection() {
                     }`}
                   >
                     <div
-                      className={`relative border rounded-b-2xl rounded-t-lg p-0.5 shadow-palace-elevation transition-all duration-300 hover:-translate-y-1 ${
-                        isMain
-                          ? 'border-gold bg-gradient-to-b from-gold/30 via-gold/10 to-gold/20 shadow-gold-glow'
-                          : 'border-gold/40 bg-gradient-to-b from-gold/15 via-transparent to-gold/5'
-                      }`}
+                      className={`relative border rounded-2xl p-0.5 transition-all duration-300 hover:-translate-y-1 ${theme.border} ${theme.outerBg} ${theme.shadow}`}
                     >
                       {/* Card Content Container */}
                       <div className="relative border border-gold/15 rounded-xl px-5 sm:px-7 py-6 bg-ivory-light/95 overflow-hidden">
+
+                        {/* Corner ambient color wash */}
+                        <div className={`absolute -top-16 -right-16 w-48 h-48 bg-gradient-to-br ${theme.cornerGlow} rounded-full blur-2xl pointer-events-none`} />
 
                         {/* Subtle Jali Background in Card */}
                         <div className="absolute inset-0 jali-dense opacity-[0.04] pointer-events-none" />
@@ -114,9 +166,30 @@ export function EventsSection() {
                           </div>
                         )}
 
+                        {/* Custom Event Palette Tag with Swatches */}
+                        {event.palette && (
+                          <div className="mb-3">
+                            <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border shadow-2xs backdrop-blur-xs ${theme.tagBg}`}>
+                              <div className="flex items-center -space-x-1">
+                                {event.palette.swatches.map((sw, sIdx) => (
+                                  <span
+                                    key={sIdx}
+                                    title={sw.name}
+                                    className="w-3.5 h-3.5 rounded-full border border-white/90 shadow-2xs inline-block transition-transform hover:scale-125"
+                                    style={{ backgroundColor: sw.color }}
+                                  />
+                                ))}
+                              </div>
+                              <span className="font-caps text-[9px] sm:text-[10px] tracking-wider font-bold uppercase">
+                                {event.themeLabel}
+                              </span>
+                            </div>
+                          </div>
+                        )}
+
                         {/* Day & Date Line */}
                         <div className="space-y-0.5 mb-2">
-                          <span className="font-caps text-xs sm:text-sm tracking-monumental text-gold-deep uppercase font-bold block">
+                          <span className={`font-caps text-xs sm:text-sm tracking-monumental uppercase font-bold block ${theme.dayColor}`}>
                             {event.day}
                           </span>
                           <p className="font-serif font-semibold text-sm sm:text-base text-palace-green">
@@ -125,13 +198,13 @@ export function EventsSection() {
                         </div>
 
                         {/* Event Title */}
-                        <h3 className="font-caps text-2xl sm:text-3xl md:text-4xl text-gold-foil font-semibold tracking-wider leading-tight my-2">
+                        <h3 className={`font-caps text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wider leading-tight my-2 ${theme.titleColor}`}>
                           {event.title}
                         </h3>
 
                         {/* Time Pill Badge */}
-                        <div className="my-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/50 bg-ivory-dark/60 text-palace-green text-sm font-serif font-medium">
-                          <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4 text-gold-deep" aria-hidden="true">
+                        <div className={`my-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-sm font-serif font-medium ${theme.timePill}`}>
+                          <svg viewBox="0 0 16 16" fill="none" className={`w-4 h-4 ${theme.timeIcon}`} aria-hidden="true">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.2" />
                             <path d="M8 4.5 V8 L10.5 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
                           </svg>
@@ -142,6 +215,18 @@ export function EventsSection() {
                         <p className="font-serif italic text-sm sm:text-base text-palace-green/80 leading-relaxed mt-2">
                           "{event.description}"
                         </p>
+
+                        {/* Palette Swatch Legend */}
+                        {event.palette && (
+                          <div className="mt-4 pt-3 border-t border-gold/15 flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5">
+                            {event.palette.swatches.map((sw, i) => (
+                              <span key={i} className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-serif text-palace-green/75">
+                                <span className="w-2.5 h-2.5 rounded-full inline-block border border-black/10 shadow-2xs" style={{ backgroundColor: sw.color }} />
+                                <span>{sw.name}</span>
+                              </span>
+                            ))}
+                          </div>
+                        )}
 
                         {/* Bottom Motif Accent */}
                         <div className="mt-3 flex items-center justify-center opacity-60">
