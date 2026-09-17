@@ -116,22 +116,22 @@ export function App() {
 
           {/* ── Fixed Royal Header (Follows on scroll) ─────── */}
           <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-gold/45 bg-gradient-to-r from-ivory-light/95 via-ivory/95 to-ivory-light/95 backdrop-blur-md shadow-[0_4px_24px_rgba(198,166,107,0.18)]">
-            <div className="max-w-6xl mx-auto px-4 sm:px-8 py-3.5 sm:py-4.5 flex items-center justify-between">
+            <div className="max-w-6xl mx-auto px-3 sm:px-8 py-2 sm:py-3.5 flex items-center justify-between gap-2">
               {/* Monogram Brand */}
-              <div className="flex items-center gap-3 sm:gap-4">
-                <LotusMotif variant="crest" size="sm" className="opacity-95 w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0 drop-shadow-sm" />
-                <div className="flex flex-col justify-center">
-                  <span className="font-display text-base sm:text-xl font-bold tracking-wider text-emerald-deep block leading-tight">
+              <div className="flex items-center gap-2 sm:gap-3.5 min-w-0">
+                <LotusMotif variant="crest" size="sm" className="opacity-95 w-7 h-7 sm:w-10 sm:h-10 flex-shrink-0 drop-shadow-sm" />
+                <div className="flex flex-col justify-center min-w-0">
+                  <span className="font-display text-sm sm:text-xl font-bold tracking-wide sm:tracking-wider text-emerald-deep block leading-tight whitespace-nowrap">
                     Vinay <span className="text-gold font-normal">&amp;</span> Kishma
                   </span>
-                  <span className="font-caps text-[10px] sm:text-xs tracking-monumental text-gold-deep uppercase block font-semibold mt-0.5">
+                  <span className="font-caps text-[9px] sm:text-xs tracking-wider sm:tracking-monumental text-gold-deep uppercase block font-semibold whitespace-nowrap mt-0.5">
                     24 &amp; 25 · 10 · 2026
                   </span>
                 </div>
               </div>
 
               {/* Elegant Navbar RSVP Prompt & CTA */}
-              <div className="flex items-center gap-3 sm:gap-5">
+              <div className="flex items-center gap-2 sm:gap-5 flex-shrink-0">
                 <span className="hidden lg:inline font-serif italic text-sm sm:text-base text-palace-green/90 font-medium">
                   Will you be attending the occasion?
                 </span>
@@ -143,20 +143,20 @@ export function App() {
                     }
                   }}
                   className="
-                    group relative inline-flex items-center gap-2 sm:gap-2.5 px-4.5 sm:px-6 py-2.5 sm:py-3 rounded-xl
+                    group relative inline-flex items-center gap-1.5 sm:gap-2.5 px-3.5 sm:px-6 py-1.5 sm:py-2.5 rounded-full
                     bg-gradient-to-r from-emerald-deep via-palace-green to-emerald-deep
                     border border-gold/70 hover:border-gold
                     shadow-gold-glow hover:shadow-[0_0_20px_rgba(198,166,107,0.45)]
                     hover:scale-[1.02] active:scale-[0.98]
-                    transition-all duration-300 cursor-pointer overflow-hidden
+                    transition-all duration-300 cursor-pointer overflow-hidden flex-shrink-0
                   "
                   aria-label="RSVP for Vinay and Kishma wedding"
                 >
-                  <span className="text-gold text-xs sm:text-sm">✦</span>
-                  <span className="font-caps text-xs sm:text-sm font-bold tracking-royal text-gold-champagne uppercase drop-shadow-sm whitespace-nowrap">
+                  <span className="text-gold text-[10px] sm:text-sm">✦</span>
+                  <span className="font-caps text-[10px] sm:text-sm font-bold tracking-wider sm:tracking-royal text-gold-champagne uppercase drop-shadow-sm whitespace-nowrap">
                     Count Me In
                   </span>
-                  <span className="text-gold text-xs sm:text-sm">✦</span>
+                  <span className="text-gold text-[10px] sm:text-sm">✦</span>
                 </button>
               </div>
             </div>

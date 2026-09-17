@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef, useState, useImperativeHandle, forwardRef } from 'react';
+import React, { useEffect, useRef, useState, useImperativeHandle, forwardRef } from 'react';
 
 /**
  * BackgroundMusic.jsx
@@ -109,7 +109,7 @@ export const BackgroundMusic = forwardRef(function BackgroundMusic(
   };
 
   const pillClass = [
-    'fixed bottom-5 left-1/2 -translate-x-1/2 z-[200] transition-all duration-700',
+    'fixed bottom-3.5 right-3.5 sm:bottom-6 sm:right-6 z-[200] transition-all duration-700',
     visible && fadeIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4',
   ].join(' ');
 
@@ -130,7 +130,7 @@ export const BackgroundMusic = forwardRef(function BackgroundMusic(
         <div className={pillClass}>
           <button
             onClick={toggle}
-            className="group flex items-center gap-2 px-4 py-2 rounded-full border border-gold/55 bg-palace-dark/85 backdrop-blur-md shadow-[0_0_18px_rgba(198,166,107,0.3)] hover:shadow-[0_0_28px_rgba(198,166,107,0.65)] hover:border-gold/90 transition-all duration-300 cursor-pointer active:scale-95 select-none"
+            className="group flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-gold/55 bg-palace-dark/90 backdrop-blur-md shadow-[0_0_18px_rgba(198,166,107,0.3)] hover:shadow-[0_0_28px_rgba(198,166,107,0.65)] hover:border-gold/90 transition-all duration-300 cursor-pointer active:scale-95 select-none"
             aria-label={playing ? 'Pause music' : 'Play music'}
           >
             <div className="flex items-end gap-[3px] h-4 w-5 flex-shrink-0">

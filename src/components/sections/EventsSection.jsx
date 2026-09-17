@@ -159,9 +159,11 @@ export function EventsSection() {
 
                         {/* Main Event Highlight Badge */}
                         {isMain && (
-                          <div className="mb-2.5">
-                            <span className="inline-block px-3.5 py-1 rounded-full border border-gold/60 bg-emerald-deep/90 text-gold-light text-xs font-caps tracking-monumental uppercase font-bold shadow-sm">
-                              ★ Main Auspicious Ceremony ★
+                          <div className="mb-2.5 flex items-center">
+                            <span className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1 rounded-full border border-gold/60 bg-gradient-to-r from-emerald-deep via-[#32114E] to-emerald-deep text-gold-champagne text-[9.5px] sm:text-xs font-caps tracking-wider sm:tracking-royal uppercase font-bold shadow-sm whitespace-nowrap">
+                              <span className="text-gold text-[8px] sm:text-[10px]">★</span>
+                              <span>Main Auspicious Ceremony</span>
+                              <span className="text-gold text-[8px] sm:text-[10px]">★</span>
                             </span>
                           </div>
                         )}
@@ -170,17 +172,17 @@ export function EventsSection() {
                         {/* Event Dress Code Tag */}
                         {event.dressCode && (
                           <div className="mb-3">
-                            <div className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border shadow-2xs backdrop-blur-xs ${theme.tagBg}`}>
-                              <span className="font-caps text-[9px] sm:text-[10px] tracking-wider font-bold uppercase">
+                            <div className={`inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1 rounded-xl sm:rounded-full border shadow-2xs backdrop-blur-xs max-w-full text-center ${theme.tagBg}`}>
+                              <span className="font-caps text-[8.5px] sm:text-[10px] tracking-wide sm:tracking-wider font-bold uppercase leading-snug">
                                 Dress Code: {event.dressCode}
                               </span>
                               {event.palette && (
-                                <div className="flex items-center -space-x-1">
+                                <div className="flex items-center -space-x-1 flex-shrink-0">
                                   {event.palette.swatches.map((sw, sIdx) => (
                                     <span
                                       key={sIdx}
                                       title={sw.name}
-                                      className="w-3 h-3 rounded-full border border-white/90 shadow-2xs inline-block"
+                                      className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full border border-white/90 shadow-2xs inline-block"
                                       style={{ backgroundColor: sw.color }}
                                     />
                                   ))}
@@ -206,8 +208,8 @@ export function EventsSection() {
                         </h3>
 
                         {/* Time Pill Badge */}
-                        <div className={`my-3 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-sm font-serif font-medium ${theme.timePill}`}>
-                          <svg viewBox="0 0 16 16" fill="none" className={`w-4 h-4 ${theme.timeIcon}`} aria-hidden="true">
+                        <div className={`my-2.5 sm:my-3 inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full border text-xs sm:text-sm font-serif font-medium whitespace-nowrap ${theme.timePill}`}>
+                          <svg viewBox="0 0 16 16" fill="none" className={`w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0 ${theme.timeIcon}`} aria-hidden="true">
                             <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1.2" />
                             <path d="M8 4.5 V8 L10.5 10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
                           </svg>
@@ -231,16 +233,6 @@ export function EventsSection() {
                                 <span>{sw.name}</span>
                               </span>
                             ))}
-                          </div>
-                        )}
-                        {event.attireDetails && (
-                          <div className="mt-3.5 pt-2.5 border-t border-gold/20 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
-                            <span className="font-caps text-[9px] font-bold tracking-wider uppercase text-gold-deep">
-                              Dress Code:
-                            </span>
-                            <span className="font-serif italic text-xs sm:text-sm text-palace-green font-medium">
-                              {event.attireDetails}
-                            </span>
                           </div>
                         )}
 
