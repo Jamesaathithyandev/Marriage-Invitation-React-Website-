@@ -57,11 +57,11 @@ export function ClosingSection() {
             {/* ═══ LUSH FOLIAGE — LEFT SIDE ═══ */}
             {/* Main left branch trunk */}
             <path d="M30 310 C45 270 52 230 55 185 C62 195 65 215 58 240 C68 228 72 208 68 185 C78 198 80 220 74 248 C84 232 88 210 82 185 C95 200 96 225 88 255"
-              stroke="#174C3C" strokeWidth="2" fill="none" opacity="0.7"/>
+              stroke="#32114E" strokeWidth="2" fill="none" opacity="0.7"/>
             {/* Secondary left branches */}
-            <path d="M55 185 C44 172 40 158 46 148 C48 158 52 170 55 185 Z" fill="#174C3C" fillOpacity="0.55" stroke="#174C3C" strokeWidth="0.8"/>
-            <path d="M68 185 C55 165 54 148 62 138 C62 152 65 168 68 185 Z" fill="#174C3C" fillOpacity="0.5"/>
-            <path d="M82 185 C68 162 67 142 78 130 C77 148 80 166 82 185 Z" fill="#174C3C" fillOpacity="0.5"/>
+            <path d="M55 185 C44 172 40 158 46 148 C48 158 52 170 55 185 Z" fill="#32114E" fillOpacity="0.55" stroke="#32114E" strokeWidth="0.8"/>
+            <path d="M68 185 C55 165 54 148 62 138 C62 152 65 168 68 185 Z" fill="#32114E" fillOpacity="0.5"/>
+            <path d="M82 185 C68 162 67 142 78 130 C77 148 80 166 82 185 Z" fill="#32114E" fillOpacity="0.5"/>
             {/* Left palm/foliage leaves */}
             {[
               [55,185, -18,-8], [68,185,-20,-10], [82,185,-22,-12],
@@ -69,7 +69,7 @@ export function ClosingSection() {
             ].map(([x,y,dx,dy],i) => (
               <ellipse key={i} cx={x+dx} cy={y+dy} rx="14" ry="6"
                 transform={`rotate(${-35+i*8} ${x+dx} ${y+dy})`}
-                fill="#174C3C" fillOpacity="0.38" stroke="#174C3C" strokeWidth="0.5"/>
+                fill="#32114E" fillOpacity="0.38" stroke="#32114E" strokeWidth="0.5"/>
             ))}
             {/* Left decorative hanging flowers (lotus buds) */}
             {[[52,155],[66,138],[80,128]].map(([cx,cy],i) => (
@@ -81,23 +81,23 @@ export function ClosingSection() {
                 <path d={`M${cx} ${cy+12} C${cx+11} ${cy+8} ${cx+8} ${cy} ${cx+3} ${cy-3} C${cx+3} ${cy+4} ${cx+1} ${cy+9} ${cx} ${cy+12} Z`}
                   fill="#DCA8AB" fillOpacity="0.7"/>
                 <circle cx={cx} cy={cy-6} r="2" fill="#C6A66B"/>
-                <line x1={cx} y1={cy+12} x2={cx} y2={cy+18} stroke="#174C3C" strokeWidth="1"/>
+                <line x1={cx} y1={cy+12} x2={cx} y2={cy+18} stroke="#32114E" strokeWidth="1"/>
               </g>
             ))}
 
             {/* ═══ LUSH FOLIAGE — RIGHT SIDE (mirrored) ═══ */}
             <path d="M450 310 C435 270 428 230 425 185 C418 195 415 215 422 240 C412 228 408 208 412 185 C402 198 400 220 406 248 C396 232 392 210 398 185 C385 200 384 225 392 255"
-              stroke="#174C3C" strokeWidth="2" fill="none" opacity="0.7"/>
-            <path d="M425 185 C436 172 440 158 434 148 C432 158 428 170 425 185 Z" fill="#174C3C" fillOpacity="0.55" stroke="#174C3C" strokeWidth="0.8"/>
-            <path d="M412 185 C425 165 426 148 418 138 C418 152 415 168 412 185 Z" fill="#174C3C" fillOpacity="0.5"/>
-            <path d="M398 185 C412 162 413 142 402 130 C403 148 400 166 398 185 Z" fill="#174C3C" fillOpacity="0.5"/>
+              stroke="#32114E" strokeWidth="2" fill="none" opacity="0.7"/>
+            <path d="M425 185 C436 172 440 158 434 148 C432 158 428 170 425 185 Z" fill="#32114E" fillOpacity="0.55" stroke="#32114E" strokeWidth="0.8"/>
+            <path d="M412 185 C425 165 426 148 418 138 C418 152 415 168 412 185 Z" fill="#32114E" fillOpacity="0.5"/>
+            <path d="M398 185 C412 162 413 142 402 130 C403 148 400 166 398 185 Z" fill="#32114E" fillOpacity="0.5"/>
             {[
               [425,185,18,-8],[412,185,20,-10],[398,185,22,-12],
               [422,240,16,-6],[406,248,14,-5],[392,255,12,-4],
             ].map(([x,y,dx,dy],i) => (
               <ellipse key={i} cx={x+dx} cy={y+dy} rx="14" ry="6"
                 transform={`rotate(${35-i*8} ${x+dx} ${y+dy})`}
-                fill="#174C3C" fillOpacity="0.38" stroke="#174C3C" strokeWidth="0.5"/>
+                fill="#32114E" fillOpacity="0.38" stroke="#32114E" strokeWidth="0.5"/>
             ))}
             {[[428,155],[414,138],[400,128]].map(([cx,cy],i) => (
               <g key={`rbud-${i}`}>
@@ -108,7 +108,7 @@ export function ClosingSection() {
                 <path d={`M${cx} ${cy+12} C${cx+11} ${cy+8} ${cx+8} ${cy} ${cx+3} ${cy-3} C${cx+3} ${cy+4} ${cx+1} ${cy+9} ${cx} ${cy+12} Z`}
                   fill="#DCA8AB" fillOpacity="0.7"/>
                 <circle cx={cx} cy={cy-6} r="2" fill="#C6A66B"/>
-                <line x1={cx} y1={cy+12} x2={cx} y2={cy+18} stroke="#174C3C" strokeWidth="1"/>
+                <line x1={cx} y1={cy+12} x2={cx} y2={cy+18} stroke="#32114E" strokeWidth="1"/>
               </g>
             ))}
 
@@ -170,17 +170,17 @@ export function ClosingSection() {
             {/* ═══ ARCH SPANDREL FOLIAGE (fills the side spaces) ═══ */}
             {/* Left spandrel dense foliage */}
             <g opacity="0.55">
-              <path d="M90 280 C112 260 132 248 148 252 C132 258 112 268 90 280 Z" fill="#174C3C"/>
-              <path d="M90 262 C108 240 128 228 145 232 C128 240 110 254 90 262 Z" fill="#174C3C" fillOpacity="0.7"/>
-              <path d="M92 245 C110 222 128 210 145 214 C128 224 112 238 92 245 Z" fill="#174C3C" fillOpacity="0.5"/>
-              <path d="M98 228 C115 205 132 194 148 198 C132 210 116 224 98 228 Z" fill="#174C3C" fillOpacity="0.4"/>
+              <path d="M90 280 C112 260 132 248 148 252 C132 258 112 268 90 280 Z" fill="#32114E"/>
+              <path d="M90 262 C108 240 128 228 145 232 C128 240 110 254 90 262 Z" fill="#32114E" fillOpacity="0.7"/>
+              <path d="M92 245 C110 222 128 210 145 214 C128 224 112 238 92 245 Z" fill="#32114E" fillOpacity="0.5"/>
+              <path d="M98 228 C115 205 132 194 148 198 C132 210 116 224 98 228 Z" fill="#32114E" fillOpacity="0.4"/>
             </g>
             {/* Right spandrel */}
             <g opacity="0.55">
-              <path d="M390 280 C368 260 348 248 332 252 C348 258 368 268 390 280 Z" fill="#174C3C"/>
-              <path d="M390 262 C372 240 352 228 335 232 C352 240 370 254 390 262 Z" fill="#174C3C" fillOpacity="0.7"/>
-              <path d="M388 245 C370 222 352 210 335 214 C352 224 368 238 388 245 Z" fill="#174C3C" fillOpacity="0.5"/>
-              <path d="M382 228 C365 205 348 194 332 198 C348 210 364 224 382 228 Z" fill="#174C3C" fillOpacity="0.4"/>
+              <path d="M390 280 C368 260 348 248 332 252 C348 258 368 268 390 280 Z" fill="#32114E"/>
+              <path d="M390 262 C372 240 352 228 335 232 C352 240 370 254 390 262 Z" fill="#32114E" fillOpacity="0.7"/>
+              <path d="M388 245 C370 222 352 210 335 214 C352 224 368 238 388 245 Z" fill="#32114E" fillOpacity="0.5"/>
+              <path d="M382 228 C365 205 348 194 332 198 C348 210 364 224 382 228 Z" fill="#32114E" fillOpacity="0.4"/>
             </g>
 
             {/* ═══ PEACOCK FEATHER FANS inside arch ═══ */}
@@ -194,7 +194,7 @@ export function ClosingSection() {
                   <ellipse cx={x} cy={y} rx="10" ry="16" fill="#176B70" fillOpacity="0.7"/>
                   <ellipse cx={x} cy={y+2} rx="6" ry="10" fill="#315A78"/>
                   <circle cx={x} cy={y} r="3" fill="#DFC48E"/>
-                  <circle cx={x} cy={y} r="1.2" fill="#174C3C"/>
+                  <circle cx={x} cy={y} r="1.2" fill="#32114E"/>
                 </g>
               ))}
             </g>
@@ -208,7 +208,7 @@ export function ClosingSection() {
                   <ellipse cx={x} cy={y} rx="10" ry="16" fill="#176B70" fillOpacity="0.7"/>
                   <ellipse cx={x} cy={y+2} rx="6" ry="10" fill="#315A78"/>
                   <circle cx={x} cy={y} r="3" fill="#DFC48E"/>
-                  <circle cx={x} cy={y} r="1.2" fill="#174C3C"/>
+                  <circle cx={x} cy={y} r="1.2" fill="#32114E"/>
                 </g>
               ))}
             </g>
@@ -221,7 +221,7 @@ export function ClosingSection() {
             {[110, 168, 240, 312, 370].map(x => (
               <g key={x} opacity="0.85">
                 {/* Stem */}
-                <line x1={x} y1="315" x2={x} y2="295" stroke="#174C3C" strokeWidth="1.5"/>
+                <line x1={x} y1="315" x2={x} y2="295" stroke="#32114E" strokeWidth="1.5"/>
                 {/* Outer petals */}
                 <path d={`M${x} 295 C${x-9} 288 ${x-8} 278 ${x-3} 272 C${x-4} 280 ${x-2} 289 ${x} 295 Z`} fill="#C8898D" stroke="#A0666A" strokeWidth="0.9" fillOpacity="0.9"/>
                 <path d={`M${x} 295 C${x+9} 288 ${x+8} 278 ${x+3} 272 C${x+4} 280 ${x+2} 289 ${x} 295 Z`} fill="#C8898D" stroke="#A0666A" strokeWidth="0.9" fillOpacity="0.9"/>
@@ -233,8 +233,8 @@ export function ClosingSection() {
                 <circle cx={x} cy={286} r="2.5" fill="#C6A66B" fillOpacity="0.7"/>
                 <circle cx={x} cy={268} r="2" fill="#C6A66B"/>
                 {/* Base leaf pair */}
-                <path d={`M${x} 310 C${x-8} 305 ${x-12} 295 ${x-6} 290 C${x-6} 298 ${x-3} 306 ${x} 310 Z`} fill="#174C3C" fillOpacity="0.5"/>
-                <path d={`M${x} 310 C${x+8} 305 ${x+12} 295 ${x+6} 290 C${x+6} 298 ${x+3} 306 ${x} 310 Z`} fill="#174C3C" fillOpacity="0.5"/>
+                <path d={`M${x} 310 C${x-8} 305 ${x-12} 295 ${x-6} 290 C${x-6} 298 ${x-3} 306 ${x} 310 Z`} fill="#32114E" fillOpacity="0.5"/>
+                <path d={`M${x} 310 C${x+8} 305 ${x+12} 295 ${x+6} 290 C${x+6} 298 ${x+3} 306 ${x} 310 Z`} fill="#32114E" fillOpacity="0.5"/>
               </g>
             ))}
 
@@ -294,15 +294,15 @@ export function ClosingSection() {
           <div className="flex justify-center gap-4 sm:gap-6 items-end pt-2">
             {/* Left emerald leaf */}
             <svg viewBox="0 0 30 48" fill="none" className="w-6 h-10 sm:w-8 sm:h-12 opacity-65">
-              <path d="M15 46 C15 46 2 34 4 16 C8 22 11 32 15 46 Z" fill="#174C3C" stroke="#174C3C" strokeWidth="0.5"/>
-              <path d="M15 46 C15 46 0 26 5 8 C9 16 12 30 15 46 Z" fill="#174C3C" fillOpacity="0.55"/>
+              <path d="M15 46 C15 46 2 34 4 16 C8 22 11 32 15 46 Z" fill="#32114E" stroke="#32114E" strokeWidth="0.5"/>
+              <path d="M15 46 C15 46 0 26 5 8 C9 16 12 30 15 46 Z" fill="#32114E" fillOpacity="0.55"/>
               <path d="M15 46 C8 36 6 20 10 6" stroke="#C6A66B" strokeWidth="0.7" strokeLinecap="round"/>
             </svg>
             <LotusMotif variant="bloom" size="lg" className="opacity-95 w-28 h-28 sm:w-36 sm:h-36" />
             {/* Right emerald leaf */}
             <svg viewBox="0 0 30 48" fill="none" className="w-6 h-10 sm:w-8 sm:h-12 opacity-65 -scale-x-100">
-              <path d="M15 46 C15 46 2 34 4 16 C8 22 11 32 15 46 Z" fill="#174C3C" stroke="#174C3C" strokeWidth="0.5"/>
-              <path d="M15 46 C15 46 0 26 5 8 C9 16 12 30 15 46 Z" fill="#174C3C" fillOpacity="0.55"/>
+              <path d="M15 46 C15 46 2 34 4 16 C8 22 11 32 15 46 Z" fill="#32114E" stroke="#32114E" strokeWidth="0.5"/>
+              <path d="M15 46 C15 46 0 26 5 8 C9 16 12 30 15 46 Z" fill="#32114E" fillOpacity="0.55"/>
               <path d="M15 46 C8 36 6 20 10 6" stroke="#C6A66B" strokeWidth="0.7" strokeLinecap="round"/>
             </svg>
           </div>

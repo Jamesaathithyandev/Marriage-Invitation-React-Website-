@@ -110,13 +110,13 @@ export function LocationSection({ onExternalNavigate }) {
 
             {/* Left foliage spandrel */}
             <g opacity="0.45">
-              <path d="M36 95 C52 78 68 72 80 76 C66 80 52 88 36 95 Z" fill="#174C3C"/>
-              <path d="M36 80 C50 62 65 56 78 60 C65 66 52 76 36 80 Z" fill="#174C3C" fillOpacity="0.65"/>
+              <path d="M36 95 C52 78 68 72 80 76 C66 80 52 88 36 95 Z" fill="#32114E"/>
+              <path d="M36 80 C50 62 65 56 78 60 C65 66 52 76 36 80 Z" fill="#32114E" fillOpacity="0.65"/>
             </g>
             {/* Right foliage spandrel */}
             <g opacity="0.45">
-              <path d="M324 95 C308 78 292 72 280 76 C294 80 308 88 324 95 Z" fill="#174C3C"/>
-              <path d="M324 80 C310 62 295 56 282 60 C295 66 308 76 324 80 Z" fill="#174C3C" fillOpacity="0.65"/>
+              <path d="M324 95 C308 78 292 72 280 76 C294 80 308 88 324 95 Z" fill="#32114E"/>
+              <path d="M324 80 C310 62 295 56 282 60 C295 66 308 76 324 80 Z" fill="#32114E" fillOpacity="0.65"/>
             </g>
 
             {/* Lotus buds on arch curve */}

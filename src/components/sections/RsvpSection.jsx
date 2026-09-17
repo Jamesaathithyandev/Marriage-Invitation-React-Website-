@@ -204,8 +204,8 @@ export function RsvpSection() {
                 )}
 
                 {/* Confirmed Pill */}
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-600/40 bg-emerald-deep/10 text-emerald-deep shadow-sm">
-                  <svg viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 text-emerald-600 flex-shrink-0" aria-hidden="true">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold/60 bg-emerald-deep/10 text-emerald-deep shadow-sm">
+                  <svg viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 text-gold-deep flex-shrink-0" aria-hidden="true">
                     <path fillRule="evenodd" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z" clipRule="evenodd" />
                   </svg>
                   <span className="font-caps text-xs tracking-monumental font-bold uppercase text-emerald-deep">

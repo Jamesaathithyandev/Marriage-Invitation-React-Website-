@@ -107,8 +107,8 @@ export function HeroSection() {
               <circle key={i} cx={cx} cy={cy} r="2" fill="#C6A66B" />
             ))}
             {/* Spandrel Foliage Fills */}
-            <path d="M42 70 C50 54 66 50 76 56 C66 58 56 66 42 70 Z" fill="#174C3C" fillOpacity="0.18" />
-            <path d="M318 70 C310 54 294 50 284 56 C294 58 304 66 318 70 Z" fill="#174C3C" fillOpacity="0.18" />
+            <path d="M42 70 C50 54 66 50 76 56 C66 58 56 66 42 70 Z" fill="#32114E" fillOpacity="0.18" />
+            <path d="M318 70 C310 54 294 50 284 56 C294 58 304 66 318 70 Z" fill="#32114E" fillOpacity="0.18" />
             {/* Pillar Capitals */}
             <rect x="10" y="88" width="18" height="8" rx="1" fill="#C6A66B" fillOpacity="0.4" />
             <rect x="332" y="88" width="18" height="8" rx="1" fill="#C6A66B" fillOpacity="0.4" />
@@ -250,15 +250,15 @@ export function HeroSection() {
               <div className="mt-3 sm:mt-4 flex justify-center gap-4 sm:gap-6 items-end hero-fade-in delay-1400">
                 {/* Left Emerald Leaf */}
                 <svg viewBox="0 0 40 50" fill="none" className="w-7 h-9 sm:w-9 sm:h-12 opacity-60">
-                  <path d="M20 48 C20 48 4 36 6 18 C10 24 14 34 20 48 Z" fill="#174C3C" />
-                  <path d="M20 48 C20 48 2 28 8 10 C12 18 16 32 20 48 Z" fill="#174C3C" fillOpacity="0.6" />
+                  <path d="M20 48 C20 48 4 36 6 18 C10 24 14 34 20 48 Z" fill="#32114E" />
+                  <path d="M20 48 C20 48 2 28 8 10 C12 18 16 32 20 48 Z" fill="#32114E" fillOpacity="0.6" />
                   <path d="M20 48 C10 38 8 22 12 8" stroke="#C6A66B" strokeWidth="0.6" strokeLinecap="round" />
                 </svg>
                 <LotusMotif variant="crest" size="lg" className="opacity-95 drop-shadow-md" />
                 {/* Right Emerald Leaf */}
                 <svg viewBox="0 0 40 50" fill="none" className="w-7 h-9 sm:w-9 sm:h-12 opacity-60 -scale-x-100">
-                  <path d="M20 48 C20 48 4 36 6 18 C10 24 14 34 20 48 Z" fill="#174C3C" />
-                  <path d="M20 48 C20 48 2 28 8 10 C12 18 16 32 20 48 Z" fill="#174C3C" fillOpacity="0.6" />
+                  <path d="M20 48 C20 48 4 36 6 18 C10 24 14 34 20 48 Z" fill="#32114E" />
+                  <path d="M20 48 C20 48 2 28 8 10 C12 18 16 32 20 48 Z" fill="#32114E" fillOpacity="0.6" />
                   <path d="M20 48 C10 38 8 22 12 8" stroke="#C6A66B" strokeWidth="0.6" strokeLinecap="round" />
                 </svg>
               </div>

@@ -69,7 +69,7 @@ export const WEDDING_EVENTS = [
     time: '10:00 AM – 11:00 AM',
     description: 'The sacred union of two souls amidst Vedic hymns, holy fire, and timeless traditions.',
     motif: 'palace-crest',
-    accentColor: '#174C3C', // Deep Emerald
+    accentColor: '#32114E', // Imperial Royal Purple
     isMain: true,
   },
   {

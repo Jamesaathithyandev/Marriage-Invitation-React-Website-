@@ -40,9 +40,9 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
                 stroke="#C6A66B" strokeWidth="1.1" strokeLinecap="round"/>
               {/* Feather fronds */}
               <path d={`M${bx + dx*0.35} ${by + dy*0.38} C${bx + dx*0.25} ${by + dy*0.25} ${bx + dx*0.15} ${by + dy*0.28} ${bx + dx*0.08} ${by + dy*0.32}`}
-                stroke="#174C3C" strokeWidth="0.6" strokeLinecap="round" opacity="0.55"/>
+                stroke="#32114E" strokeWidth="0.6" strokeLinecap="round" opacity="0.55"/>
               <path d={`M${bx + dx*0.35} ${by + dy*0.38} C${bx + dx*0.45} ${by + dy*0.25} ${bx + dx*0.55} ${by + dy*0.28} ${bx + dx*0.62} ${by + dy*0.32}`}
-                stroke="#174C3C" strokeWidth="0.6" strokeLinecap="round" opacity="0.55"/>
+                stroke="#32114E" strokeWidth="0.6" strokeLinecap="round" opacity="0.55"/>
               {/* Feather eye — outer teal */}
               <g transform={`rotate(${rot} ${tx} ${ty})`}>
                 <ellipse cx={tx} cy={ty} rx="8" ry="12" fill="#176B70" stroke="#C6A66B" strokeWidth="1"/>
@@ -75,8 +75,8 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         {/* Quill */}
         <path d="M25 88 Q26 52 25 5" stroke="#C6A66B" strokeWidth="1.5" strokeLinecap="round"/>
         {/* Fronds */}
-        <path d="M25 48 C15 36 10 24 16 13 C21 26 24 38 25 48 Z" fill="#174C3C" fillOpacity="0.65" stroke="#C6A66B" strokeWidth="0.5"/>
-        <path d="M25 48 C35 36 40 24 34 13 C29 26 26 38 25 48 Z" fill="#174C3C" fillOpacity="0.65" stroke="#C6A66B" strokeWidth="0.5"/>
+        <path d="M25 48 C15 36 10 24 16 13 C21 26 24 38 25 48 Z" fill="#32114E" fillOpacity="0.65" stroke="#C6A66B" strokeWidth="0.5"/>
+        <path d="M25 48 C35 36 40 24 34 13 C29 26 26 38 25 48 Z" fill="#32114E" fillOpacity="0.65" stroke="#C6A66B" strokeWidth="0.5"/>
         {/* Eye outer */}
         <ellipse cx="25" cy="18" rx="10" ry="14" fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Inner teardrop */}
@@ -225,7 +225,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         <path d="M72 148 C70 140 68 128 70 118 C72 110 76 106 80 104 C84 106 88 110 90 118 C92 128 90 140 88 148 Z"
           fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Body */}
-        <ellipse cx="80" cy="162" rx="18" ry="22" fill="#174C3C" stroke="#C6A66B" strokeWidth="1.2"/>
+        <ellipse cx="80" cy="162" rx="18" ry="22" fill="#32114E" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Wing highlights */}
         <path d="M64 155 C60 162 62 172 68 178 C70 170 68 162 64 155 Z" fill="#176B70" fillOpacity="0.5"/>
         <path d="M96 155 C100 162 98 172 92 178 C90 170 92 162 96 155 Z" fill="#176B70" fillOpacity="0.5"/>
@@ -241,7 +241,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         ))}
         {/* Eye */}
         <circle cx="85" cy="98" r="3" fill="#F3E4C8"/>
-        <circle cx="86" cy="98" r="1.5" fill="#174C3C"/>
+        <circle cx="86" cy="98" r="1.5" fill="#32114E"/>
         <circle cx="86.5" cy="97.5" r="0.5" fill="white"/>
         {/* Beak */}
         <path d="M91 101 L98 104 L91 106 Z" fill="#C6A66B"/>
@@ -250,7 +250,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         <line x1="86" y1="183" x2="88" y2="210" stroke="#C6A66B" strokeWidth="1.5" strokeLinecap="round"/>
         <path d="M72 210 L66 214 M72 210 L72 215 M72 210 L78 213" stroke="#C6A66B" strokeWidth="1.2" strokeLinecap="round"/>
         <path d="M88 210 L94 214 M88 210 L88 215 M88 210 L82 213" stroke="#C6A66B" strokeWidth="1.2" strokeLinecap="round"/>
-        <ellipse cx="80" cy="216" rx="20" ry="3" fill="#174C3C" fillOpacity="0.15"/>
+        <ellipse cx="80" cy="216" rx="20" ry="3" fill="#32114E" fillOpacity="0.15"/>
       </svg>
     );
   }
