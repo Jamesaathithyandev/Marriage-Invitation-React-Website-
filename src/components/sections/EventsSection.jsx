@@ -167,6 +167,27 @@ export function EventsSection() {
                         )}
 
 
+                        {/* Event Attire Theme Tag */}
+                        {event.palette && (
+                          <div className="mb-3">
+                            <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border shadow-2xs backdrop-blur-xs ${theme.tagBg}`}>
+                              <span className="font-caps text-[9px] sm:text-[10px] tracking-wider font-bold uppercase">
+                                Attire Theme: {event.themeLabel}
+                              </span>
+                              <div className="flex items-center -space-x-1">
+                                {event.palette.swatches.map((sw, sIdx) => (
+                                  <span
+                                    key={sIdx}
+                                    title={sw.name}
+                                    className="w-3 h-3 rounded-full border border-white/90 shadow-2xs inline-block"
+                                    style={{ backgroundColor: sw.color }}
+                                  />
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+
                         {/* Day & Date Line */}
                         <div className="space-y-0.5 mb-2">
                           <span className={`font-caps text-xs sm:text-sm tracking-monumental uppercase font-bold block ${theme.dayColor}`}>
@@ -195,6 +216,21 @@ export function EventsSection() {
                         <p className="font-serif italic text-sm sm:text-base text-palace-green/80 leading-relaxed mt-2">
                           "{event.description}"
                         </p>
+
+                        {/* Suggested Attire Colors */}
+                        {event.palette && (
+                          <div className="mt-3.5 pt-2.5 border-t border-gold/20 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+                            <span className="font-caps text-[9px] font-bold tracking-wider uppercase text-palace-green/60">
+                              Suggested Colors:
+                            </span>
+                            {event.palette.swatches.map((sw, i) => (
+                              <span key={i} className="inline-flex items-center gap-1.5 text-[11px] font-serif text-palace-green/85">
+                                <span className="w-2 h-2 rounded-full inline-block border border-black/10 shadow-2xs" style={{ backgroundColor: sw.color }} />
+                                <span>{sw.name}</span>
+                              </span>
+                            ))}
+                          </div>
+                        )}
 
 
                         {/* Bottom Motif Accent */}
