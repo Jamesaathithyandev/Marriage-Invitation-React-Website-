@@ -27,18 +27,19 @@ export function CurtainTransition({
   onComplete,
   holdMs,
   navMode = false,
+  startClosed = false,
 }) {
   // Timing constants (all in ms from isActive=true)
-  const CLOSE_DURATION = 1200;
-  const HOLD_DURATION  = holdMs ?? (navMode ? 1500 : 3500);
+  const CLOSE_DURATION = startClosed ? 0 : 1200;
+  const HOLD_DURATION  = holdMs ?? (navMode ? 1500 : 2500);
   const OPEN_DURATION  = 1500;
 
-  const HOLD_START     = CLOSE_DURATION;          // 1200
-  const OPEN_START     = HOLD_START + HOLD_DURATION; // 4700 (intro) or 2700 (nav)
-  const TOTAL_DURATION = OPEN_START + OPEN_DURATION; // 6200 (intro) or 4200 (nav)
+  const HOLD_START     = CLOSE_DURATION;
+  const OPEN_START     = HOLD_START + HOLD_DURATION;
+  const TOTAL_DURATION = OPEN_START + OPEN_DURATION;
 
   // 'idle' | 'closing' | 'holding' | 'opening' | 'done'
-  const [phase, setPhase] = useState('idle');
+  const [phase, setPhase] = useState(startClosed ? 'holding' : 'idle');
 
   useEffect(() => {
     if (!isActive) {
@@ -46,13 +47,20 @@ export function CurtainTransition({
       return;
     }
 
-    setPhase('closing');
-
-    // Drapes fully closed → fire midpoint immediately so page can swap underneath
-    const closeTimer = setTimeout(() => {
+    if (startClosed) {
       setPhase('holding');
       if (onMidpoint) onMidpoint();
-    }, HOLD_START);
+    } else {
+      setPhase('closing');
+    }
+
+    // Drapes fully closed → fire midpoint immediately so page can swap underneath
+    const closeTimer = !startClosed
+      ? setTimeout(() => {
+          setPhase('holding');
+          if (onMidpoint) onMidpoint();
+        }, HOLD_START)
+      : null;
 
     // Hold expires → start opening
     const openTimer = setTimeout(() => {
@@ -66,11 +74,11 @@ export function CurtainTransition({
     }, TOTAL_DURATION);
 
     return () => {
-      clearTimeout(closeTimer);
+      if (closeTimer) clearTimeout(closeTimer);
       clearTimeout(openTimer);
       clearTimeout(completeTimer);
     };
-  }, [isActive]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isActive, startClosed]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (phase === 'idle' || phase === 'done') return null;
 

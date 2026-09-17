@@ -1,11 +1,11 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export function LoadingScreen({ onComplete }) {
   const [progress, setProgress] = useState(0);
   const [done, setDone] = useState(false);       // progress reached 100%
   const [showBtn, setShowBtn] = useState(false);  // button faded in
   const [fadeOut, setFadeOut] = useState(false);
-  const DURATION_MS = 3500;
+  const DURATION_MS = 2800;
 
   useEffect(() => {
     const startTime = Date.now();
@@ -100,7 +100,7 @@ export function LoadingScreen({ onComplete }) {
             Vinay &amp; Kishma
           </h1>
           <p className="font-caps text-[10px] sm:text-xs tracking-[0.2em] text-gold/60 uppercase mt-1">
-            Wedding Invitation &bull; 25 October 2026
+            Wedding Invitation &bull; 24th &amp; 25th October 2026
           </p>
         </div>
 

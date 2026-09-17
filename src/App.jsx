@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
 
-import { Intro } from './components/intro/Intro';
 import { LoadingScreen } from './components/intro/LoadingScreen';
 import { CurtainTransition } from './components/transition/CurtainTransition';
 import { HeroSection } from './components/hero/HeroSection';
@@ -19,37 +18,30 @@ import { OrnamentalDivider } from './components/decorative/OrnamentalDivider';
 import { BackgroundMusic } from './components/common/BackgroundMusic';
 
 /**
- * App â€” Royal Wedding Invitation State Machine
+ * App — Royal Wedding Invitation Flow
  *
- * Two curtain layers:
+ * 1. LOADING SCREEN (stage: 'loading')
+ *    Sacred invocation, animated lotus mandala, "Open Invitation" CTA.
  *
- * 1. INTRO CURTAIN (stage: 'intro' â†’ 'transition' â†’ 'main')
- *    Theatrical drape opening from the cinematic intro into the wedding invitation.
+ * 2. ROYAL CURTAIN TRANSITION (stage: 'transition')
+ *    Emerald velvet drapes with the glowing royal seal medallion (V & K 24 & 25 · 10 · 2026).
+ *    Curtains part majestically to reveal the main wedding invitation.
  *
- * 2. NAVIGATION CURTAIN (navCurtainActive)
- *    Royal drape triggered when the user clicks "Get Directions" or "Add to Google Calendar".
- *    - Curtains close â†’ pause (external URL opens in new tab) â†’ curtains reopen.
- *    - Keeps the user's immersion in the palace experience.
+ * 3. MAIN EXPERIENCE (stage: 'main')
+ *    Full wedding invitation experience with royal navigation curtains for external actions.
  */
 export function App() {
-  // â”€â”€ Intro State Machine â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  const [stage, setStage] = useState('loading'); // 'loading' | 'intro' | 'transition' | 'main'
+  // ── Flow State Machine ──────────────────────────────────
+  const [stage, setStage] = useState('loading'); // 'loading' | 'transition' | 'main'
   const [revealedMain, setRevealedMain] = useState(false);
 
-  const handleStartTransition = useCallback(() => setStage('transition'), []);
   const handleCurtainMidpoint = useCallback(() => setRevealedMain(true), []);
   const handleCurtainComplete = useCallback(() => setStage('main'), []);
-  const handleReplayIntro = useCallback(() => {
-    setRevealedMain(false);
-    setStage('intro');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
 
-  // â”€â”€ Navigation Curtain State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  // Loading screen completes -> go to intro
+  // Loading screen completes -> go directly to royal curtain reveal
   const handleLoadingComplete = useCallback(() => {
     if (musicRef.current) musicRef.current.start();
-    setStage('intro');
+    setStage('transition');
   }, []);
 
   const [navCurtainActive, setNavCurtainActive] = useState(false);
@@ -60,7 +52,7 @@ export function App() {
    * Triggered by LocationSection / CalendarSection when user clicks
    * "Get Directions" or "Add to Google Calendar".
    * Closes the velvet drapes, opens the external URL during the pause,
-   * then reopens the drapes â€” preserving the cinematic palace atmosphere.
+   * then reopens the drapes — preserving the cinematic palace atmosphere.
    */
   const handleExternalNavigate = useCallback((url) => {
     if (navCurtainActive) return; // Debounce: prevent double-trigger
@@ -70,7 +62,7 @@ export function App() {
 
   /**
    * Called when the navigation curtain is fully CLOSED (midpoint).
-   * We open the external URL here â€” during the regal pause while drapes are shut.
+   * We open the external URL here — during the regal pause while drapes are shut.
    */
   const handleNavCurtainMidpoint = useCallback(() => {
     if (pendingNavUrl.current) {
@@ -89,31 +81,26 @@ export function App() {
 
   return (
     <>
-      {/* Music plays across ALL stages - loading, intro, main */}
+      {/* Music plays across all stages */}
       <BackgroundMusic ref={musicRef} />
-      {/* â”€â”€ 1. CINEMATIC INTRO SCREEN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+
       {/* 0. LOADING SCREEN */}
       {stage === 'loading' && (
         <LoadingScreen onComplete={handleLoadingComplete} />
       )}
 
-      {(stage === 'intro' || (stage === 'transition' && !revealedMain)) && (
-        <Intro
-          onComplete={handleStartTransition}
-          videoSrc={'/assets/wedding-intro.mp4'}
-        />
-      )}
-
-      {/* â”€â”€ 2. INTRO CURTAIN (Close â†’ Hold â†’ Open) â”€â”€â”€ */}
+      {/* 1. ROYAL CURTAIN ENTRANCE TRANSITION */}
       {stage === 'transition' && (
         <CurtainTransition
           isActive={true}
+          startClosed={true}
+          holdMs={2200}
           onMidpoint={handleCurtainMidpoint}
           onComplete={handleCurtainComplete}
         />
       )}
 
-      {/* â”€â”€ 3. MAIN WEDDING INVITATION EXPERIENCE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* 2. MAIN WEDDING INVITATION EXPERIENCE */}
       {(stage === 'main' || (stage === 'transition' && revealedMain)) && (
         <JaliBackground opacity="subtle" showPalaceVignette>
 
