@@ -151,35 +151,6 @@ vinay-kishma-wedding/
 
 ---
 
-## 🚀 Local Development Setup
-
-To run this project on your local machine:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Jamesaathithyandev/Marriage-Invitation-React-Website-.git
-   cd Marriage-Invitation-React-Website-
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5173/` in your browser.
-
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
-   The production-ready assets will be compiled into the `dist/` directory.
-
----
-
 <p align="center">
   <b>॥ वरवधूभ्यां नमः ॥</b><br/>
   <i>Wishing Vinay & Kishma a lifetime of love, laughter, and togetherness.</i>
