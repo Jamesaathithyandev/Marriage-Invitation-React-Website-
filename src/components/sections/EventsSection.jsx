@@ -96,52 +96,8 @@ export function EventsSection() {
                           : 'border-gold/40 bg-gradient-to-b from-gold/15 via-transparent to-gold/5'
                       }`}
                     >
-                      {/* Ornamental Card Header — complete arch crown with gold beads */}
-                      <div className="w-full bg-ivory-light/95 rounded-t-md px-5 sm:px-6 pt-3 pb-1 flex flex-col items-center gap-1.5">
-                        <svg viewBox="0 0 200 50" fill="none" className="w-40 sm:w-52 h-auto" aria-hidden="true">
-                          {/* Left base line */}
-                          <line x1="0" y1="48" x2="60" y2="48" stroke="#C6A66B" strokeWidth="0.8" strokeOpacity="0.55"/>
-                          {/* Right base line */}
-                          <line x1="140" y1="48" x2="200" y2="48" stroke="#C6A66B" strokeWidth="0.8" strokeOpacity="0.55"/>
-
-                          {/* Complete arch — rises from base, comes back down */}
-                          <path d="M55 48 C55 28 72 12 100 8 C128 12 145 28 145 48"
-                            stroke="#C6A66B" strokeWidth="1.4" fill="none" strokeLinecap="round"/>
-                          {/* Inner dashed arch */}
-                          <path d="M64 48 C64 32 78 18 100 14 C122 18 136 32 136 48"
-                            stroke="#C6A66B" strokeWidth="0.6" strokeDasharray="3 2" fill="none" opacity="0.55"/>
-
-                          {/* Keystone */}
-                          <circle cx="100" cy="8" r="5.5" fill="#C6A66B" fillOpacity="0.2" stroke="#C6A66B" strokeWidth="0.8"/>
-                          <circle cx="100" cy="8" r="3" fill="#DFC48E" stroke="#C6A66B" strokeWidth="0.6"/>
-                          <circle cx="100" cy="8" r="1.2" fill="#C6A66B"/>
-
-                          {/* Bead accents on arch */}
-                          {[[72,12],[128,12],[58,34],[142,34]].map(([cx,cy],i)=>(
-                            <circle key={i} cx={cx} cy={cy} r="2" fill="#C6A66B"/>
-                          ))}
-
-                          {/* Side lotus buds */}
-                          {[[20,45],[180,45]].map(([cx,cy],i)=>(
-                            <g key={i}>
-                              <path d={`M${cx} ${cy} C${cx-3} ${cy-6} ${cx-2} ${cy-11} ${cx} ${cy-14} C${cx+2} ${cy-11} ${cx+3} ${cy-6} ${cx} ${cy} Z`}
-                                fill="#DFC48E" stroke="#C6A66B" strokeWidth="0.7"/>
-                              <path d={`M${cx} ${cy} C${cx-6} ${cy-4} ${cx-5} ${cy-10} ${cx-1} ${cy-12} C${cx-2} ${cy-7} ${cx-1} ${cy-3} ${cx} ${cy} Z`}
-                                fill="#DCA8AB" fillOpacity="0.85"/>
-                              <path d={`M${cx} ${cy} C${cx+6} ${cy-4} ${cx+5} ${cy-10} ${cx+1} ${cy-12} C${cx+2} ${cy-7} ${cx+1} ${cy-3} ${cx} ${cy} Z`}
-                                fill="#DCA8AB" fillOpacity="0.85"/>
-                              <circle cx={cx} cy={cy-14} r="1.5" fill="#C6A66B"/>
-                            </g>
-                          ))}
-
-                          {/* Hanging drop from keystone */}
-                          <line x1="100" y1="13.5" x2="100" y2="22" stroke="#C6A66B" strokeWidth="0.7" strokeOpacity="0.6"/>
-                          <circle cx="100" cy="23" r="2" fill="#C6A66B" fillOpacity="0.6"/>
-                        </svg>
-                      </div>
-
                       {/* Card Content Container */}
-                      <div className="relative border-t-0 border border-gold/15 rounded-b-xl px-5 sm:px-7 pb-6 pt-1 bg-ivory-light/95 overflow-hidden">
+                      <div className="relative border border-gold/15 rounded-xl px-5 sm:px-7 py-6 bg-ivory-light/95 overflow-hidden">
 
                         {/* Subtle Jali Background in Card */}
                         <div className="absolute inset-0 jali-dense opacity-[0.04] pointer-events-none" />

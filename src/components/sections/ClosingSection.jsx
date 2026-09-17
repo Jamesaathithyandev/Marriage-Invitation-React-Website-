@@ -1,6 +1,5 @@
 import React from 'react';
 import { LotusMotif } from '../decorative/LotusMotif';
-import { PeacockMotif } from '../decorative/PeacockMotif';
 
 /**
  * ClosingSection — Grand Final Emotional Curtain Call
@@ -307,10 +306,6 @@ export function ClosingSection() {
             </svg>
           </div>
 
-          {/* Flanking peacocks — more visible */}
-          <div className="flex justify-center opacity-55 pt-1">
-            <PeacockMotif variant="flanking-peacocks" className="max-w-[220px] sm:max-w-[280px]" />
-          </div>
 
           {/* Sacred sign-off */}
           <p className="font-serif text-sm sm:text-base tracking-royal text-gold font-semibold">

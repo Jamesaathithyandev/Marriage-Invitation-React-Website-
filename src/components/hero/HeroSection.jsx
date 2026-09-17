@@ -213,7 +213,6 @@ export function HeroSection() {
                 <div className="flex items-center justify-center my-3.5 sm:my-4.5">
                   <div className="flex-1 max-w-[3.5rem] sm:max-w-[6rem] h-[1px] bg-gradient-to-r from-transparent to-gold/60" />
                   <div className="mx-3 sm:mx-4 flex flex-col items-center gap-1">
-                    <PeacockMotif variant="feather-crown" size="md" className="w-12 h-7 sm:w-16 sm:h-9 text-gold drop-shadow-sm" />
                     <span className="font-script text-3xl sm:text-4xl text-lotus-blush italic leading-none">
                       &amp;
                     </span>
@@ -241,10 +240,7 @@ export function HeroSection() {
                 </p>
               </div>
 
-              {/* ── Flanking Peacocks Bottom Ornament ────── */}
-              <div className="mt-5 sm:mt-7 flex justify-center hero-fade-in delay-1200">
-                <PeacockMotif variant="flanking-peacocks" className="max-w-[220px] sm:max-w-[280px] opacity-95 drop-shadow-sm" />
-              </div>
+
 
               {/* ── Bottom Foliage & Lotus Bloom ─────────── */}
               <div className="mt-3 sm:mt-4 flex justify-center gap-4 sm:gap-6 items-end hero-fade-in delay-1400">

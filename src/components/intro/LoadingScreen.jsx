@@ -57,7 +57,7 @@ export function LoadingScreen({ onComplete }) {
       <div className="relative z-10 flex flex-col items-center gap-6 sm:gap-8 px-6 text-center">
 
         {/* Animated Lotus SVG */}
-        <div className="relative flex items-center justify-center">
+        <div className="relative w-36 h-36 sm:w-44 sm:h-44 flex items-center justify-center mb-2 sm:mb-3">
           <svg className="absolute w-32 h-32 sm:w-40 sm:h-40 animate-spin" style={{ animationDuration: '12s' }} viewBox="0 0 160 160" fill="none">
             <circle cx="80" cy="80" r="74" stroke="url(#loadRingGrad)" strokeWidth="1" strokeDasharray="6 8" />
             <defs>

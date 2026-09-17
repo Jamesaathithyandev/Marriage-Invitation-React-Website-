@@ -144,7 +144,7 @@ export function CalendarSection({ onExternalNavigate }) {
                       className={`relative h-13 sm:h-15 md:h-17 w-full flex flex-col items-center justify-between py-1 px-0.5 rounded-xl transition-all duration-300 transform hover:scale-105 text-center overflow-hidden ${
                         isMain
                           ? 'bg-gradient-to-b from-emerald-deep via-palace-green to-emerald-night text-gold-light border-2 border-gold shadow-[0_0_16px_rgba(198,166,107,0.55)] z-10'
-                          : 'bg-gradient-to-b from-peacock-teal to-peacock-dark text-white border-2 border-gold/80 shadow-[0_0_12px_rgba(23,107,112,0.45)] z-10'
+                          : 'bg-gradient-to-b from-peacock-teal to-peacock-dark text-white border-2 border-gold/80 shadow-[0_0_12px_rgba(107,33,168,0.45)] z-10'
                       }`}
                     >
                       {/* Top Motif Icon */}
