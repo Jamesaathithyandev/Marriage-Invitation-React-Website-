@@ -167,23 +167,25 @@ export function EventsSection() {
                         )}
 
 
-                        {/* Event Attire Theme Tag */}
-                        {event.palette && (
+                        {/* Event Dress Code Tag */}
+                        {event.dressCode && (
                           <div className="mb-3">
-                            <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border shadow-2xs backdrop-blur-xs ${theme.tagBg}`}>
+                            <div className={`inline-flex items-center gap-2 px-3.5 py-1 rounded-full border shadow-2xs backdrop-blur-xs ${theme.tagBg}`}>
                               <span className="font-caps text-[9px] sm:text-[10px] tracking-wider font-bold uppercase">
-                                Attire Theme: {event.themeLabel}
+                                Dress Code: {event.dressCode}
                               </span>
-                              <div className="flex items-center -space-x-1">
-                                {event.palette.swatches.map((sw, sIdx) => (
-                                  <span
-                                    key={sIdx}
-                                    title={sw.name}
-                                    className="w-3 h-3 rounded-full border border-white/90 shadow-2xs inline-block"
-                                    style={{ backgroundColor: sw.color }}
-                                  />
-                                ))}
-                              </div>
+                              {event.palette && (
+                                <div className="flex items-center -space-x-1">
+                                  {event.palette.swatches.map((sw, sIdx) => (
+                                    <span
+                                      key={sIdx}
+                                      title={sw.name}
+                                      className="w-3 h-3 rounded-full border border-white/90 shadow-2xs inline-block"
+                                      style={{ backgroundColor: sw.color }}
+                                    />
+                                  ))}
+                                </div>
+                              )}
                             </div>
                           </div>
                         )}
@@ -229,6 +231,16 @@ export function EventsSection() {
                                 <span>{sw.name}</span>
                               </span>
                             ))}
+                          </div>
+                        )}
+                        {event.attireDetails && (
+                          <div className="mt-3.5 pt-2.5 border-t border-gold/20 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center">
+                            <span className="font-caps text-[9px] font-bold tracking-wider uppercase text-gold-deep">
+                              Dress Code:
+                            </span>
+                            <span className="font-serif italic text-xs sm:text-sm text-palace-green font-medium">
+                              {event.attireDetails}
+                            </span>
                           </div>
                         )}
 

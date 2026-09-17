@@ -62,18 +62,19 @@ The design language reimagines centuries-old Mughal and Rajasthani palace statio
 Every event is uniquely styled in its own distinctive ceremony color palette without distracting textual announcements:
 
 * **Mehendi (Sat, 24th Oct · 11:00 AM onwards):**
-  * *Theme:* **Shades of Green** (Forest Green `#1B4332`, Emerald Green `#2D6A4F`, Sage Green `#84A98C`, Olive Green `#588157`).
+  * **Dress Code:** **Shades of Green** (Forest Green `#1B4332`, Emerald Green `#2D6A4F`, Sage Green `#84A98C`, Olive Green `#588157`).
   * Styled with emerald-and-forest glowing borders, sage green halo washes, and an emerald timeline lotus ring.
 * **Haldi (Sat, 24th Oct · 3:00 PM onwards):**
-  * *Theme:* **Shades of Yellow & White** (Sunshine Yellow `#FACC15`, Marigold `#D97706`, Creamy `#FEF08A`, Soft Ivory `#FFFBEB`).
+  * **Dress Code:** **Shades of Yellow & White** (Sunshine Yellow `#FACC15`, Marigold `#D97706`, Creamy `#FEF08A`, Soft Ivory `#FFFBEB`).
   * Styled with warm golden marigold borders, sunshine yellow aura washes, and an amber timeline lotus ring.
 * **Sangeet (Sat, 24th Oct · 7:00 PM onwards):**
-  * *Theme:* **Groovy Blues & Fun Purples** (Teal Blue `#0D9488`, Indigo Blue `#3730A3`, Magenta `#C026D3`, Shimmer Gold/Silver `#E2E8F0`).
+  * **Dress Code:** **Groovy Blues & Fun Purples** (Teal Blue `#0D9488`, Indigo Blue `#3730A3`, Magenta `#C026D3`, Shimmer Gold/Silver `#E2E8F0`).
   * Styled with a groovy multi-tone gradient border, indigo lotus ring, and celebratory teal-indigo-magenta typography.
 * **Muhurtham Ceremony (Sun, 25th Oct · 10:00 AM – 11:00 AM):**
-  * *Theme:* **Sacred Imperial Purple & Antique Gold** (Highlighted as the primary sacred union).
+  * **Dress Code:** **North Indian attire or South Indian attire** (Celebrating rich cross-cultural Indian wedding heritage).
+  * Highlighted as the primary sacred union in imperial royal purple & antique gold.
 * **Reception (Sun, 25th Oct · 6:30 PM onwards):**
-  * *Theme:* **Regal Champagne Gold & Ivory Banquet**.
+  * **Dress Code:** **Regal Celebration Banquet Attire** in champagne gold and royal ivory.
 
 ### 6. 📅 Interactive Calendar & Sync (`CalendarSection`)
 * Custom-rendered royal October 2026 calendar highlighting **24th** and **25th**.

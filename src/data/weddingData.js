@@ -40,6 +40,7 @@ export const WEDDING_EVENTS = [
     description: 'An auspicious morning of intricate henna, folk melodies, and celebration.',
     motif: 'lotus',
     accentColor: '#2D6A4F', // Emerald Green
+    dressCode: 'Shades of Green',
     themeLabel: 'Shades of Green',
     palette: {
       primary: '#1B4332',
@@ -63,6 +64,7 @@ export const WEDDING_EVENTS = [
     description: 'A vibrant ritual of sacred turmeric, love, laughter, and family blessings.',
     motif: 'sun-bloom',
     accentColor: '#D97706', // Marigold
+    dressCode: 'Shades of Yellow & White',
     themeLabel: 'Shades of Yellow & White',
     palette: {
       primary: '#D97706',
@@ -86,6 +88,7 @@ export const WEDDING_EVENTS = [
     description: 'A magical royal evening of music, dance, laughter, and celebratory performances.',
     motif: 'peacock',
     accentColor: '#3730A3', // Indigo Blue
+    dressCode: 'Groovy Blues & Fun Purples',
     themeLabel: 'Groovy Blues & Fun Purples',
     palette: {
       primary: '#0D9488',
@@ -110,6 +113,8 @@ export const WEDDING_EVENTS = [
     motif: 'palace-crest',
     accentColor: '#32114E', // Imperial Royal Purple
     isMain: true,
+    dressCode: 'North Indian attire or South Indian attire',
+    attireDetails: 'North Indian attire or South Indian attire',
   },
   {
     id: 'reception',
