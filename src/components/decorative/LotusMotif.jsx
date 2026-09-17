@@ -28,10 +28,10 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md' }) {
         aria-hidden="true"
       >
         {/* Lily-pad base leaves */}
-        <path d="M50 84 C20 84 6 70 12 55 C24 65 38 76 50 84 Z" fill="#174C3C" fillOpacity="0.55" stroke="#C6A66B" strokeWidth="1.2"/>
-        <path d="M50 84 C80 84 94 70 88 55 C76 65 62 76 50 84 Z" fill="#174C3C" fillOpacity="0.55" stroke="#C6A66B" strokeWidth="1.2"/>
+        <path d="M50 84 C20 84 6 70 12 55 C24 65 38 76 50 84 Z" fill="#3B0764" fillOpacity="0.55" stroke="#C6A66B" strokeWidth="1.2"/>
+        <path d="M50 84 C80 84 94 70 88 55 C76 65 62 76 50 84 Z" fill="#3B0764" fillOpacity="0.55" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Base water ripple */}
-        <ellipse cx="50" cy="84" rx="28" ry="4" fill="#176B70" fillOpacity="0.12" stroke="#176B70" strokeWidth="0.5"/>
+        <ellipse cx="50" cy="84" rx="28" ry="4" fill="#581C87" fillOpacity="0.12" stroke="#581C87" strokeWidth="0.5"/>
 
         {/* Outer back petals (wide, full) */}
         <path d="M50 78 C18 62 8 36 20 14 C30 34 44 60 50 78 Z" fill="#C8898D" stroke="#A0666A" strokeWidth="1.3" fillOpacity="0.9"/>
@@ -76,8 +76,8 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md' }) {
         <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-gold/40 to-gold/80" />
         <svg viewBox="0 0 80 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-10 flex-shrink-0">
           {/* Base leaves */}
-          <path d="M40 44 C22 44 14 36 18 26 C24 32 32 39 40 44 Z" fill="#174C3C" fillOpacity="0.5" stroke="#C6A66B" strokeWidth="0.9"/>
-          <path d="M40 44 C58 44 66 36 62 26 C56 32 48 39 40 44 Z" fill="#174C3C" fillOpacity="0.5" stroke="#C6A66B" strokeWidth="0.9"/>
+          <path d="M40 44 C22 44 14 36 18 26 C24 32 32 39 40 44 Z" fill="#3B0764" fillOpacity="0.5" stroke="#C6A66B" strokeWidth="0.9"/>
+          <path d="M40 44 C58 44 66 36 62 26 C56 32 48 39 40 44 Z" fill="#3B0764" fillOpacity="0.5" stroke="#C6A66B" strokeWidth="0.9"/>
           {/* Outer petals */}
           <path d="M40 42 C22 34 16 20 22 8 C28 20 36 33 40 42 Z" fill="#C8898D" stroke="#A0666A" strokeWidth="1" fillOpacity="0.85"/>
           <path d="M40 42 C58 34 64 20 58 8 C52 20 44 33 40 42 Z" fill="#C8898D" stroke="#A0666A" strokeWidth="1" fillOpacity="0.85"/>
@@ -122,25 +122,25 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md' }) {
       <svg viewBox="0 0 200 210" fill="none" xmlns="http://www.w3.org/2000/svg"
         className={`${sizeClasses[size]} ${className}`} aria-hidden="true">
         {/* Stem */}
-        <path d="M100 140 C97 155 99 170 100 178" stroke="#174C3C" strokeWidth="2.5" strokeLinecap="round"/>
+        <path d="M100 140 C97 155 99 170 100 178" stroke="#3B0764" strokeWidth="2.5" strokeLinecap="round"/>
         {/* Curved side stems */}
-        <path d="M100 160 C88 155 78 148 72 138" stroke="#174C3C" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M100 160 C112 155 122 148 128 138" stroke="#174C3C" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M100 160 C88 155 78 148 72 138" stroke="#3B0764" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M100 160 C112 155 122 148 128 138" stroke="#3B0764" strokeWidth="1.5" strokeLinecap="round"/>
 
         {/* Lily pad left */}
         <path d="M72 138 C50 138 40 124 48 112 C56 120 66 130 74 138 C80 132 84 126 82 118 L72 138 Z"
-          fill="#174C3C" fillOpacity="0.5" stroke="#174C3C" strokeWidth="0.8"/>
+          fill="#3B0764" fillOpacity="0.5" stroke="#3B0764" strokeWidth="0.8"/>
         {/* Lily pad right */}
         <path d="M128 138 C150 138 160 124 152 112 C144 120 134 130 126 138 C120 132 116 126 118 118 L128 138 Z"
-          fill="#174C3C" fillOpacity="0.5" stroke="#174C3C" strokeWidth="0.8"/>
+          fill="#3B0764" fillOpacity="0.5" stroke="#3B0764" strokeWidth="0.8"/>
         {/* Main lily pad */}
         <path d="M100 178 C62 178 44 160 52 142 C66 156 84 168 100 174 C116 168 134 156 148 142 C156 160 138 178 100 178 Z"
-          fill="#174C3C" fillOpacity="0.45" stroke="#174C3C" strokeWidth="1"/>
-        <path d="M100 174 L100 178" stroke="#174C3C" strokeWidth="0.8"/>
+          fill="#3B0764" fillOpacity="0.45" stroke="#3B0764" strokeWidth="1"/>
+        <path d="M100 174 L100 178" stroke="#3B0764" strokeWidth="0.8"/>
         {/* Water ripples */}
-        <ellipse cx="100" cy="182" rx="48" ry="8" stroke="#176B70" strokeWidth="0.8" fill="#176B70" fillOpacity="0.08"/>
-        <ellipse cx="100" cy="186" rx="34" ry="5" stroke="#176B70" strokeWidth="0.5" fill="none" opacity="0.35"/>
-        <ellipse cx="100" cy="190" rx="20" ry="3" stroke="#176B70" strokeWidth="0.4" fill="none" opacity="0.25"/>
+        <ellipse cx="100" cy="182" rx="48" ry="8" stroke="#581C87" strokeWidth="0.8" fill="#581C87" fillOpacity="0.08"/>
+        <ellipse cx="100" cy="186" rx="34" ry="5" stroke="#581C87" strokeWidth="0.5" fill="none" opacity="0.35"/>
+        <ellipse cx="100" cy="190" rx="20" ry="3" stroke="#581C87" strokeWidth="0.4" fill="none" opacity="0.25"/>
 
         {/* === BACK ROW — outermost, wide petals === */}
         {/* Far left back */}
@@ -195,7 +195,7 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md' }) {
         preserveAspectRatio="xMidYMid meet" className={`w-full h-auto ${className}`} aria-hidden="true">
         {/* Undulating vine */}
         <path d="M0 40 Q50 22 100 40 Q150 58 200 40 Q250 22 300 40 Q350 58 400 40 Q450 22 500 40 Q550 58 600 40"
-          stroke="#174C3C" strokeWidth="1.2" fill="none" opacity="0.55"/>
+          stroke="#3B0764" strokeWidth="1.2" fill="none" opacity="0.55"/>
         {/* Main lotus blooms */}
         {[100, 300, 500].map(x => (
           <g key={x}>
@@ -210,8 +210,8 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md' }) {
             <circle cx={x} cy={32} r="2.5" fill="#C6A66B" fillOpacity="0.7"/>
             <circle cx={x} cy={12} r="2" fill="#C6A66B"/>
             {/* Flanking leaves */}
-            <path d={`M${x-20} 36 C${x-28} 28 ${x-30} 18 ${x-22} 14 C${x-22} 22 ${x-20} 30 ${x-20} 36 Z`} fill="#174C3C" fillOpacity="0.55"/>
-            <path d={`M${x+20} 36 C${x+28} 28 ${x+30} 18 ${x+22} 14 C${x+22} 22 ${x+20} 30 ${x+20} 36 Z`} fill="#174C3C" fillOpacity="0.55"/>
+            <path d={`M${x-20} 36 C${x-28} 28 ${x-30} 18 ${x-22} 14 C${x-22} 22 ${x-20} 30 ${x-20} 36 Z`} fill="#3B0764" fillOpacity="0.55"/>
+            <path d={`M${x+20} 36 C${x+28} 28 ${x+30} 18 ${x+22} 14 C${x+22} 22 ${x+20} 30 ${x+20} 36 Z`} fill="#3B0764" fillOpacity="0.55"/>
           </g>
         ))}
         {/* Small buds at troughs */}
@@ -224,8 +224,8 @@ export function LotusMotif({ variant = 'crest', className = '', size = 'md' }) {
         {/* Leaves mid-vine */}
         {[50, 150, 250, 350, 450, 550].map(x => (
           <g key={`leaf-${x}`} opacity="0.5">
-            <path d={`M${x} 35 C${x-7} 28 ${x-5} 18 ${x} 15 C${x} 22 ${x} 30 ${x} 35 Z`} fill="#174C3C"/>
-            <path d={`M${x} 35 C${x+7} 28 ${x+5} 18 ${x} 15 C${x} 22 ${x} 30 ${x} 35 Z`} fill="#174C3C" fillOpacity="0.7"/>
+            <path d={`M${x} 35 C${x-7} 28 ${x-5} 18 ${x} 15 C${x} 22 ${x} 30 ${x} 35 Z`} fill="#3B0764"/>
+            <path d={`M${x} 35 C${x+7} 28 ${x+5} 18 ${x} 15 C${x} 22 ${x} 30 ${x} 35 Z`} fill="#3B0764" fillOpacity="0.7"/>
           </g>
         ))}
       </svg>

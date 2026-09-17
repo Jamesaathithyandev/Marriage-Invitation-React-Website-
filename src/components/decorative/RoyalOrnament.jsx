@@ -40,7 +40,7 @@ export function RoyalOrnament({ variant = 'border-strip', className = '' }) {
         <line x1="84" y1="116" x2="116" y2="84" stroke="#C6A66B" strokeWidth="0.5" opacity="0.4"/>
         {/* Centre diamond flower */}
         <path d="M60 40 L80 60 L60 80 L40 60 Z" stroke="#C6A66B" strokeWidth="0.8" fill="none"/>
-        <path d="M60 48 L72 60 L60 72 L48 60 Z" stroke="#176B70" strokeWidth="0.6" fill="#176B70" fillOpacity="0.15"/>
+        <path d="M60 48 L72 60 L60 72 L48 60 Z" stroke="#6B21A8" strokeWidth="0.6" fill="#6B21A8" fillOpacity="0.15"/>
         {/* Inner petal cross */}
         <line x1="60" y1="40" x2="60" y2="80" stroke="#C6A66B" strokeWidth="0.4" opacity="0.5"/>
         <line x1="40" y1="60" x2="80" y2="60" stroke="#C6A66B" strokeWidth="0.4" opacity="0.5"/>

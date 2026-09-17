@@ -67,7 +67,7 @@ export function PalaceArch({
               <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8">
                 <path d="M20 2 L25 14 L20 22 L15 14 Z" fill="#C6A66B" stroke="#9E7E45" strokeWidth="1.1" />
                 <circle cx="20" cy="24" r="3" fill="#C6A66B" />
-                <circle cx="20" cy="32" r="1.5" fill="#174C3C" />
+                <circle cx="20" cy="32" r="1.5" fill="#4A0E4E" />
               </svg>
             )}
           </div>

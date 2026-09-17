@@ -15,26 +15,26 @@ export default {
           dark: '#EFE6D2',
           muted: '#E5DAC0',
         },
-        // Royal Purples & Regal Plums (matching Royal Theme)
+        // Royal Purples & Regal Plums (Vibrant Royal Theme)
         emerald: {
-          deep: '#32114E', // Imperial Royal Purple
-          dark: '#220937', // Deep Velvet Plum
-          night: '#140522', // Midnight Royal Purple
-          DEFAULT: '#32114E',
-          light: '#582186', // Amethyst Accent
+          deep: '#4A0E4E', // Vivid Imperial Royal Purple
+          dark: '#3B0764', // Deep Royal Velvet Purple
+          night: '#240046', // Midnight Royal Purple
+          DEFAULT: '#4A0E4E',
+          light: '#7E22CE', // Amethyst Accent
         },
         palace: {
-          green: '#280B3E', // Palace Regal Plum / Deep Aubergine
-          dark: '#190528', // Palace Dark Purple
-          deep: '#0E0217', // Deepest Royal Night
+          green: '#3B0764', // Palace Royal Velvet Purple (High contrast text & buttons)
+          dark: '#240046', // Palace Dark Velvet Purple
+          deep: '#140026', // Deepest Royal Night
         },
         // Regal Violets & Amethyst
         peacock: {
-          teal: '#531D78', // Jewel Violet
-          dark: '#3D125A', // Deep Jewel Plum
-          deep: '#250739',
-          light: '#772EAA',
-          DEFAULT: '#531D78',
+          teal: '#6B21A8', // Jewel Violet
+          dark: '#581C87', // Deep Jewel Plum
+          deep: '#3B0764',
+          light: '#A855F7',
+          DEFAULT: '#6B21A8',
         },
         royal: {
           blue: '#315A78', // Muted Royal Blue
@@ -74,15 +74,15 @@ export default {
       backgroundImage: {
         'gold-gradient': 'linear-gradient(135deg, #DFC48E 0%, #C6A66B 50%, #9E7E45 100%)',
         'gold-foil': 'linear-gradient(105deg, #EEDBB5 0%, #C6A66B 30%, #DFC48E 50%, #A48248 85%, #EEDBB5 100%)',
-        'emerald-gradient': 'linear-gradient(145deg, #32114E 0%, #280B3E 60%, #190528 100%)',
-        'peacock-gradient': 'linear-gradient(145deg, #531D78 0%, #32114E 50%, #280B3E 100%)',
+        'emerald-gradient': 'linear-gradient(145deg, #4A0E4E 0%, #3B0764 60%, #240046 100%)',
+        'peacock-gradient': 'linear-gradient(145deg, #6B21A8 0%, #4A0E4E 50%, #3B0764 100%)',
         'royal-vignette': 'radial-gradient(ellipse at center, rgba(247, 241, 227, 0.95) 0%, rgba(239, 230, 210, 0.85) 70%, rgba(229, 218, 192, 0.95) 100%)',
       },
       boxShadow: {
-        'royal-card': '0 20px 45px -15px rgba(40, 11, 62, 0.15), 0 0 0 1px rgba(198, 166, 107, 0.35)',
+        'royal-card': '0 20px 45px -15px rgba(59, 7, 100, 0.15), 0 0 0 1px rgba(198, 166, 107, 0.35)',
         'gold-glow': '0 0 25px rgba(198, 166, 107, 0.3)',
         'gold-subtle': '0 4px 20px -2px rgba(198, 166, 107, 0.25)',
-        'palace-elevation': '0 30px 60px -12px rgba(25, 5, 40, 0.22), 0 18px 36px -18px rgba(25, 5, 40, 0.15)',
+        'palace-elevation': '0 30px 60px -12px rgba(36, 0, 70, 0.22), 0 18px 36px -18px rgba(36, 0, 70, 0.15)',
       },
       keyframes: {
         'music-bar': {

@@ -191,7 +191,7 @@ export function ClosingSection() {
               ].map(({x,y,rot},i) => (
                 <g key={i} transform={`rotate(${rot} ${x} ${y})`}>
                   <line x1="110" y1="295" x2={x} y2={y} stroke="#C6A66B" strokeWidth="0.8"/>
-                  <ellipse cx={x} cy={y} rx="10" ry="16" fill="#176B70" fillOpacity="0.7"/>
+                  <ellipse cx={x} cy={y} rx="10" ry="16" fill="#6B21A8" fillOpacity="0.7"/>
                   <ellipse cx={x} cy={y+2} rx="6" ry="10" fill="#315A78"/>
                   <circle cx={x} cy={y} r="3" fill="#DFC48E"/>
                   <circle cx={x} cy={y} r="1.2" fill="#32114E"/>
@@ -205,7 +205,7 @@ export function ClosingSection() {
               ].map(({x,y,rot},i) => (
                 <g key={i} transform={`rotate(${rot} ${x} ${y})`}>
                   <line x1="370" y1="295" x2={x} y2={y} stroke="#C6A66B" strokeWidth="0.8"/>
-                  <ellipse cx={x} cy={y} rx="10" ry="16" fill="#176B70" fillOpacity="0.7"/>
+                  <ellipse cx={x} cy={y} rx="10" ry="16" fill="#6B21A8" fillOpacity="0.7"/>
                   <ellipse cx={x} cy={y+2} rx="6" ry="10" fill="#315A78"/>
                   <circle cx={x} cy={y} r="3" fill="#DFC48E"/>
                   <circle cx={x} cy={y} r="1.2" fill="#32114E"/>

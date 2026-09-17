@@ -39,7 +39,7 @@ export const WEDDING_EVENTS = [
     time: '11:00 AM onwards',
     description: 'An auspicious morning of intricate henna, folk melodies, and celebration.',
     motif: 'lotus',
-    accentColor: '#176B70', // Peacock Teal
+    accentColor: '#6B21A8', // Royal Violet
   },
   {
     id: 'haldi',

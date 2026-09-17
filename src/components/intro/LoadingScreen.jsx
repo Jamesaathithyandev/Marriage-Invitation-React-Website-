@@ -42,7 +42,7 @@ export function LoadingScreen({ onComplete }) {
       aria-label="Loading Wedding Invitation"
     >
       {/* Deep palace ambient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-palace-deep via-[#071510] to-palace-dark" />
+      <div className="absolute inset-0 bg-gradient-to-b from-palace-deep via-[#240046] to-palace-dark" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold/6 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-emerald-deep/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute inset-0 jali-watermark opacity-[0.08] pointer-events-none" />

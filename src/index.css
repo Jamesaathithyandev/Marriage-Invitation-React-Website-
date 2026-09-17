@@ -5,17 +5,17 @@
 @layer base {
   :root {
     --color-ivory: #F7F1E3;
-    --color-emerald: #32114E;
-    --color-peacock: #531D78;
+    --color-emerald: #4A0E4E;
+    --color-peacock: #6B21A8;
     --color-royal-blue: #315A78;
     --color-lotus: #D99A9D;
     --color-gold: #C6A66B;
-    --color-palace: #280B3E;
+    --color-palace: #3B0764;
   }
 
   body {
     background-color: #F7F1E3;
-    color: #280B3E;
+    color: #3B0764;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     letter-spacing: 0.01em;
@@ -51,7 +51,7 @@
   }
 
   .text-emerald-foil {
-    background: linear-gradient(135deg, #32114E 0%, #531D78 50%, #280B3E 100%);
+    background: linear-gradient(135deg, #4A0E4E 0%, #6B21A8 50%, #3B0764 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -73,18 +73,18 @@
   .paper-grain {
     background-color: #F7F1E3;
     background-image: radial-gradient(rgba(198, 166, 107, 0.08) 1px, transparent 0),
-                      radial-gradient(rgba(40, 11, 62, 0.035) 1px, transparent 0);
+                      radial-gradient(rgba(59, 7, 100, 0.04) 1px, transparent 0);
     background-size: 24px 24px;
     background-position: 0 0, 12px 12px;
   }
 
   /* Subtle Royal Jali Screen Lattice */
   .jali-watermark {
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z' fill='none' stroke='%23C6A66B' stroke-width='0.6' stroke-opacity='0.22'/%3E%3Ccircle cx='20' cy='20' r='6' fill='none' stroke='%2332114E' stroke-width='0.5' stroke-opacity='0.12'/%3E%3Ccircle cx='20' cy='20' r='1.5' fill='%23C6A66B' fill-opacity='0.25'/%3E%3Cpath d='M0 0 L20 20 L40 0 M0 40 L20 20 L40 40' fill='none' stroke='%23C6A66B' stroke-width='0.4' stroke-opacity='0.15'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z' fill='none' stroke='%23C6A66B' stroke-width='0.6' stroke-opacity='0.22'/%3E%3Ccircle cx='20' cy='20' r='6' fill='none' stroke='%234A0E4E' stroke-width='0.5' stroke-opacity='0.15'/%3E%3Ccircle cx='20' cy='20' r='1.5' fill='%23C6A66B' fill-opacity='0.25'/%3E%3Cpath d='M0 0 L20 20 L40 0 M0 40 L20 20 L40 40' fill='none' stroke='%23C6A66B' stroke-width='0.4' stroke-opacity='0.15'/%3E%3C/svg%3E");
   }
 
   .jali-dense {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23C6A66B' stroke-width='0.75' stroke-opacity='0.3'/%3E%3Cpath d='M30 10 L50 30 L30 50 L10 30 Z' fill='none' stroke='%23531D78' stroke-width='0.5' stroke-opacity='0.18'/%3E%3Ccircle cx='30' cy='30' r='4' fill='%23D99A9D' fill-opacity='0.15' stroke='%23C6A66B' stroke-width='0.5' stroke-opacity='0.3'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23C6A66B' stroke-width='0.75' stroke-opacity='0.3'/%3E%3Cpath d='M30 10 L50 30 L30 50 L10 30 Z' fill='none' stroke='%236B21A8' stroke-width='0.5' stroke-opacity='0.18'/%3E%3Ccircle cx='30' cy='30' r='4' fill='%23D99A9D' fill-opacity='0.15' stroke='%23C6A66B' stroke-width='0.5' stroke-opacity='0.3'/%3E%3C/svg%3E");
   }
 
   /* Gold champagne text utility for dark header backgrounds */
@@ -94,12 +94,12 @@
 
   /* Peacock-dark text for Mehendi day cells */
   .text-peacock-dark {
-    color: #3D125A;
+    color: #581C87;
   }
 
   /* Palace-dark bg for ClosingSection bottom areas */
   .bg-palace-dark {
-    background-color: #190528;
+    background-color: #240046;
   }
 
   /* Hover gold bg subtle */

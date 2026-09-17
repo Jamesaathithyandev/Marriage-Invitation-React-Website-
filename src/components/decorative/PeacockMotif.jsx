@@ -45,11 +45,11 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
                 stroke="#32114E" strokeWidth="0.6" strokeLinecap="round" opacity="0.55"/>
               {/* Feather eye — outer teal */}
               <g transform={`rotate(${rot} ${tx} ${ty})`}>
-                <ellipse cx={tx} cy={ty} rx="8" ry="12" fill="#176B70" stroke="#C6A66B" strokeWidth="1"/>
+                <ellipse cx={tx} cy={ty} rx="8" ry="12" fill="#6B21A8" stroke="#C6A66B" strokeWidth="1"/>
                 {/* Inner blue */}
                 <ellipse cx={tx} cy={ty + 1.5} rx="4.5" ry="7" fill="#315A78"/>
                 {/* Dark pupil */}
-                <ellipse cx={tx} cy={ty + 1} rx="2.2" ry="3.5" fill="#123A32"/>
+                <ellipse cx={tx} cy={ty + 1} rx="2.2" ry="3.5" fill="#3B0764"/>
                 {/* Gold highlight */}
                 <circle cx={tx} cy={ty - 1} r="2.2" fill="#DFC48E"/>
                 <circle cx={tx} cy={ty - 1} r="0.9" fill="#F5E0A0"/>
@@ -78,11 +78,11 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         <path d="M25 48 C15 36 10 24 16 13 C21 26 24 38 25 48 Z" fill="#32114E" fillOpacity="0.65" stroke="#C6A66B" strokeWidth="0.5"/>
         <path d="M25 48 C35 36 40 24 34 13 C29 26 26 38 25 48 Z" fill="#32114E" fillOpacity="0.65" stroke="#C6A66B" strokeWidth="0.5"/>
         {/* Eye outer */}
-        <ellipse cx="25" cy="18" rx="10" ry="14" fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"/>
+        <ellipse cx="25" cy="18" rx="10" ry="14" fill="#6B21A8" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Inner teardrop */}
         <path d="M25 10 C20 16 20 24 25 29 C30 24 30 16 25 10 Z" fill="#315A78"/>
         {/* Pupil */}
-        <ellipse cx="25" cy="20" rx="3.5" ry="5" fill="#123A32"/>
+        <ellipse cx="25" cy="20" rx="3.5" ry="5" fill="#3B0764"/>
         <circle cx="25" cy="18" r="3" fill="#DFC48E"/>
         <circle cx="25" cy="18" r="1.2" fill="#F5E0A0"/>
       </svg>
@@ -121,19 +121,19 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
             <path d={`M52 58 Q${52+dx*0.5} ${58+dy*0.5} ${52+dx} ${58+dy}`}
               stroke="#C6A66B" strokeWidth="0.9" strokeLinecap="round"/>
             <g transform={`rotate(${rot} ${52+dx} ${58+dy})`}>
-              <ellipse cx={52+dx} cy={58+dy} rx="7" ry="10" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+              <ellipse cx={52+dx} cy={58+dy} rx="7" ry="10" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.8"/>
               <ellipse cx={52+dx} cy={58+dy+1} rx="4" ry="6" fill="#315A78"/>
-              <ellipse cx={52+dx} cy={58+dy} rx="2" ry="3" fill="#123A32"/>
+              <ellipse cx={52+dx} cy={58+dy} rx="2" ry="3" fill="#3B0764"/>
               <circle cx={52+dx} cy={58+dy-1} r="1.8" fill="#DFC48E"/>
             </g>
           </g>
         ))}
         {/* Left body */}
-        <ellipse cx="70" cy="58" rx="14" ry="10" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+        <ellipse cx="70" cy="58" rx="14" ry="10" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.8"/>
         {/* Left neck */}
-        <path d="M75 50 C77 44 80 40 84 38 C86 40 86 44 84 48 C82 52 80 54 78 56 Z" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+        <path d="M75 50 C77 44 80 40 84 38 C86 40 86 44 84 48 C82 52 80 54 78 56 Z" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.8"/>
         {/* Left head */}
-        <circle cx="87" cy="36" r="7" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+        <circle cx="87" cy="36" r="7" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.8"/>
         {/* Crest */}
         <path d="M87 29 C84 24 82 20 84 17" stroke="#C6A66B" strokeWidth="0.8" strokeLinecap="round"/>
         <circle cx="84" cy="16" r="1.5" fill="#C6A66B"/>
@@ -141,7 +141,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         <circle cx="87" cy="15" r="1.5" fill="#D99A9D"/>
         {/* Eye */}
         <circle cx="90" cy="35" r="2.5" fill="#F3E4C8"/>
-        <circle cx="91" cy="35" r="1.2" fill="#123A32"/>
+        <circle cx="91" cy="35" r="1.2" fill="#3B0764"/>
         <circle cx="91.4" cy="34.6" r="0.4" fill="white"/>
         {/* Beak */}
         <path d="M93 37 L99 39 L93 40 Z" fill="#C6A66B"/>
@@ -164,22 +164,22 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
             <path d={`M188 58 Q${188+dx*0.5} ${58+dy*0.5} ${188+dx} ${58+dy}`}
               stroke="#C6A66B" strokeWidth="0.9" strokeLinecap="round"/>
             <g transform={`rotate(${rot} ${188+dx} ${58+dy})`}>
-              <ellipse cx={188+dx} cy={58+dy} rx="7" ry="10" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+              <ellipse cx={188+dx} cy={58+dy} rx="7" ry="10" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.8"/>
               <ellipse cx={188+dx} cy={58+dy+1} rx="4" ry="6" fill="#315A78"/>
-              <ellipse cx={188+dx} cy={58+dy} rx="2" ry="3" fill="#123A32"/>
+              <ellipse cx={188+dx} cy={58+dy} rx="2" ry="3" fill="#3B0764"/>
               <circle cx={188+dx} cy={58+dy-1} r="1.8" fill="#DFC48E"/>
             </g>
           </g>
         ))}
-        <ellipse cx="170" cy="58" rx="14" ry="10" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
-        <path d="M165 50 C163 44 160 40 156 38 C154 40 154 44 156 48 C158 52 160 54 162 56 Z" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
-        <circle cx="153" cy="36" r="7" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+        <ellipse cx="170" cy="58" rx="14" ry="10" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.8"/>
+        <path d="M165 50 C163 44 160 40 156 38 C154 40 154 44 156 48 C158 52 160 54 162 56 Z" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.8"/>
+        <circle cx="153" cy="36" r="7" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.8"/>
         <path d="M153 29 C156 24 158 20 156 17" stroke="#C6A66B" strokeWidth="0.8" strokeLinecap="round"/>
         <circle cx="156" cy="16" r="1.5" fill="#C6A66B"/>
         <path d="M153 29 C153 23 153 19 153 16" stroke="#C6A66B" strokeWidth="0.8" strokeLinecap="round"/>
         <circle cx="153" cy="15" r="1.5" fill="#D99A9D"/>
         <circle cx="150" cy="35" r="2.5" fill="#F3E4C8"/>
-        <circle cx="149" cy="35" r="1.2" fill="#123A32"/>
+        <circle cx="149" cy="35" r="1.2" fill="#3B0764"/>
         <circle cx="148.6" cy="34.6" r="0.4" fill="white"/>
         <path d="M147 37 L141 39 L147 40 Z" fill="#C6A66B"/>
         <path d="M178 54 C184 58 186 64 182 68" stroke="#C6A66B" strokeWidth="0.7" strokeLinecap="round" fill="none"/>
@@ -212,9 +212,9 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
               <path d={`M80 150 Q${80+dx*0.45} ${150+dy*0.4} ${x} ${y}`}
                 stroke="#C6A66B" strokeWidth="1.2" strokeLinecap="round"/>
               <g transform={`rotate(${-30+i*10} ${x} ${y})`}>
-                <ellipse cx={x} cy={y} rx="8" ry="12" fill="#176B70" stroke="#C6A66B" strokeWidth="0.8"/>
+                <ellipse cx={x} cy={y} rx="8" ry="12" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.8"/>
                 <ellipse cx={x} cy={y+2} rx="4.5" ry="7" fill="#315A78"/>
-                <ellipse cx={x} cy={y+1} rx="2.2" ry="3.5" fill="#123A32"/>
+                <ellipse cx={x} cy={y+1} rx="2.2" ry="3.5" fill="#3B0764"/>
                 <circle cx={x} cy={y} r="2.5" fill="#DFC48E"/>
                 <circle cx={x} cy={y} r="1" fill="#F5E0A0"/>
               </g>
@@ -223,14 +223,14 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
         })}
         {/* Neck */}
         <path d="M72 148 C70 140 68 128 70 118 C72 110 76 106 80 104 C84 106 88 110 90 118 C92 128 90 140 88 148 Z"
-          fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"/>
+          fill="#6B21A8" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Body */}
         <ellipse cx="80" cy="162" rx="18" ry="22" fill="#32114E" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Wing highlights */}
-        <path d="M64 155 C60 162 62 172 68 178 C70 170 68 162 64 155 Z" fill="#176B70" fillOpacity="0.5"/>
-        <path d="M96 155 C100 162 98 172 92 178 C90 170 92 162 96 155 Z" fill="#176B70" fillOpacity="0.5"/>
+        <path d="M64 155 C60 162 62 172 68 178 C70 170 68 162 64 155 Z" fill="#6B21A8" fillOpacity="0.5"/>
+        <path d="M96 155 C100 162 98 172 92 178 C90 170 92 162 96 155 Z" fill="#6B21A8" fillOpacity="0.5"/>
         {/* Head */}
-        <circle cx="80" cy="100" r="12" fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"/>
+        <circle cx="80" cy="100" r="12" fill="#6B21A8" stroke="#C6A66B" strokeWidth="1.2"/>
         {/* Crest */}
         {[-10,-4,0,4,10].map((dx,i) => (
           <g key={i}>
@@ -275,9 +275,9 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
               <path d={`M200 195 Q${200+dx*0.45} ${195+dy*0.4} ${x} ${y}`}
                 stroke="#C6A66B" strokeWidth="1.3" strokeLinecap="round"/>
               <g transform={`rotate(${rot} ${x} ${y})`}>
-                <ellipse cx={x} cy={y} rx="14" ry="18" fill="#176B70" stroke="#C6A66B" strokeWidth="1.2"/>
+                <ellipse cx={x} cy={y} rx="14" ry="18" fill="#6B21A8" stroke="#C6A66B" strokeWidth="1.2"/>
                 <ellipse cx={x} cy={y+2} rx="8" ry="10" fill="#315A78"/>
-                <ellipse cx={x} cy={y+1} rx="4" ry="6" fill="#123A32"/>
+                <ellipse cx={x} cy={y+1} rx="4" ry="6" fill="#3B0764"/>
                 <circle cx={x} cy={y} r="3.5" fill="#DFC48E"/>
                 <circle cx={x} cy={y} r="1.4" fill="#F5E0A0"/>
               </g>
@@ -295,7 +295,7 @@ export function PeacockMotif({ variant = 'feather-crown', className = '', size =
   return (
     <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
       className={`${sizeClasses[size]} ${className}`} aria-hidden="true">
-      <path d="M20 3 C12 12 10 24 20 37 C30 24 28 12 20 3 Z" fill="#176B70" stroke="#C6A66B" strokeWidth="0.75"/>
+      <path d="M20 3 C12 12 10 24 20 37 C30 24 28 12 20 3 Z" fill="#6B21A8" stroke="#C6A66B" strokeWidth="0.75"/>
       <ellipse cx="20" cy="16" rx="4" ry="6" fill="#315A78" stroke="#C6A66B" strokeWidth="0.5"/>
       <circle cx="20" cy="16" r="1.5" fill="#C6A66B"/>
     </svg>
